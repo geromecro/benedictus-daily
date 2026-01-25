@@ -1,18 +1,28 @@
 import type { Metadata, Viewport } from "next";
-import { Crimson_Text, Source_Serif_4 } from "next/font/google";
+import { Cormorant_Garamond, EB_Garamond, Cinzel } from "next/font/google";
 import "./globals.css";
 
-const crimsonText = Crimson_Text({
-  weight: ["400", "600", "700"],
+// Tipografía display para títulos - elegante y monástica
+const cinzel = Cinzel({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-crimson",
+  variable: "--font-cinzel",
   display: "swap",
 });
 
-const sourceSerif = Source_Serif_4({
+// Tipografía para subtítulos y énfasis
+const cormorant = Cormorant_Garamond({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+// Tipografía para cuerpo de texto - legible y clásica
+const ebGaramond = EB_Garamond({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
-  variable: "--font-source-serif",
+  variable: "--font-eb-garamond",
   display: "swap",
 });
 
@@ -58,7 +68,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body
-        className={`${crimsonText.variable} ${sourceSerif.variable} antialiased`}
+        className={`${cinzel.variable} ${cormorant.variable} ${ebGaramond.variable} antialiased`}
       >
         {children}
       </body>

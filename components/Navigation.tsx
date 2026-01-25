@@ -27,8 +27,12 @@ export default function Navigation() {
             href={item.href}
             className={`nav-item ${isActive ? "active" : ""}`}
           >
-            <Icon size={24} strokeWidth={isActive ? 2.5 : 2} />
-            <span>{item.label}</span>
+            <Icon
+              size={22}
+              strokeWidth={isActive ? 2.5 : 1.5}
+              className="transition-all duration-200"
+            />
+            <span style={{ fontFamily: 'var(--font-cormorant)' }}>{item.label}</span>
           </Link>
         );
       })}

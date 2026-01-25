@@ -25,21 +25,24 @@ export default function ChecklistItem({
       disabled={disabled}
       className={`checkbox-container w-full text-left ${checked ? "completed" : ""} ${
         disabled ? "opacity-50 cursor-not-allowed" : ""
-      }`}
+      } animate-fade-in`}
     >
       <div className={`custom-checkbox ${checked ? "checked" : ""}`}>
         {checked && <Check size={16} strokeWidth={3} />}
       </div>
       <div className="flex-1 min-w-0">
         <p
-          className={`font-medium ${
-            checked ? "text-[var(--success)] line-through" : "text-[var(--text-primary)]"
+          className={`font-medium transition-colors duration-300 ${
+            checked
+              ? "text-[var(--gold)] line-through decoration-[var(--gold-muted)] decoration-1"
+              : "text-[var(--text-primary)]"
           }`}
+          style={{ fontFamily: 'var(--font-cormorant)' }}
         >
           {label}
         </p>
         {description && (
-          <p className="text-sm text-[var(--text-muted)] mt-0.5">{description}</p>
+          <p className="text-sm text-[var(--text-muted)] mt-0.5 italic">{description}</p>
         )}
       </div>
     </button>

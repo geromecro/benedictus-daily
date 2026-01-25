@@ -1,39 +1,72 @@
 @import "tailwindcss";
 
 :root {
-  /* Paleta monástica tradicional */
-  --primary: #8B4513;
-  --primary-light: #A0522D;
-  --primary-dark: #5D2E0C;
-  --secondary: #D4A574;
-  --secondary-light: #E8C9A8;
-  --background: #FDF8F3;
+  /* === PALETA MONÁSTICA REFINADA === */
+
+  /* Marrones tierra - scriptorium */
+  --primary: #5C4033;
+  --primary-light: #7A5D4A;
+  --primary-dark: #3D2A22;
+
+  /* Crema pergamino */
+  --cream: #F7F3EB;
+  --cream-warm: #FAF6EE;
+  --cream-dark: #E8E0D0;
+
+  /* Fondos */
+  --background: #FDFBF7;
   --surface: #FFFFFF;
-  --surface-elevated: #FFFBF7;
-  --text-primary: #2C1810;
-  --text-secondary: #6B5344;
-  --text-muted: #9B8B7A;
-  --accent-gold: #C9A227;
-  --accent-gold-light: #E8D48A;
-  --purple-lent: #6B3FA0;
-  --purple-light: #8B5FC0;
-  --purple-passion: #4A2875;
-  --red-holy: #8B0000;
-  --success: #4A7C4E;
-  --success-light: #E8F5E9;
-  --border: #E5DDD4;
-  --border-light: #F0EBE5;
+  --surface-elevated: #FFFEFA;
+
+  /* Dorado litúrgico - iluminaciones */
+  --gold: #B8860B;
+  --gold-light: #D4AF37;
+  --gold-muted: #C9A959;
+  --gold-glow: rgba(184, 134, 11, 0.15);
+
+  /* Morado penitencial */
+  --purple-lent: #5B3A6E;
+  --purple-light: #7B5A8E;
+  --purple-deep: #402850;
+
+  /* Rojo martirial */
+  --red-holy: #8B2942;
+  --red-light: #A83A52;
+
+  /* Verde esperanza */
+  --green-ordinary: #3D5A45;
+  --green-light: #4A7050;
+
+  /* Blanco pascual */
+  --white-paschal: #FFFFF8;
+
+  /* Texto */
+  --text-primary: #2A241F;
+  --text-secondary: #5C5248;
+  --text-muted: #8C8379;
+  --text-light: #B5ADA3;
+
+  /* Bordes */
+  --border: #E0D8CC;
+  --border-light: #EDE8E0;
+  --border-gold: rgba(184, 134, 11, 0.3);
+
+  /* Sombras */
+  --shadow-soft: 0 2px 12px rgba(42, 36, 31, 0.06);
+  --shadow-medium: 0 4px 20px rgba(42, 36, 31, 0.08);
+  --shadow-gold: 0 2px 16px rgba(184, 134, 11, 0.12);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--text-primary);
   --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
+  --color-gold: var(--gold);
   --color-surface: var(--surface);
   --color-border: var(--border);
-  --font-serif: var(--font-crimson);
-  --font-body: var(--font-source-serif);
+  --font-display: var(--font-cinzel);
+  --font-heading: var(--font-cormorant);
+  --font-body: var(--font-eb-garamond);
 }
 
 * {
@@ -45,83 +78,170 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* === FONDO CON TEXTURA DE PERGAMINO === */
 body {
   background: var(--background);
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(184, 134, 11, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(92, 64, 51, 0.02) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-blend-mode: normal, normal, soft-light;
   color: var(--text-primary);
-  font-family: var(--font-source-serif), Georgia, 'Times New Roman', serif;
-  line-height: 1.6;
+  font-family: var(--font-eb-garamond), 'EB Garamond', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.65;
   min-height: 100vh;
   min-height: 100dvh;
+  letter-spacing: 0.01em;
 }
 
-/* Tipografía */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-crimson), Georgia, serif;
-  font-weight: 600;
-  line-height: 1.3;
+/* === TIPOGRAFÍA JERÁRQUICA === */
+h1, h2, h3 {
+  font-family: var(--font-cinzel), 'Cinzel', Georgia, serif;
+  font-weight: 500;
+  line-height: 1.25;
   color: var(--text-primary);
+  letter-spacing: 0.04em;
 }
 
 h1 {
-  font-size: 1.875rem;
-  letter-spacing: -0.02em;
+  font-size: 1.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
 }
 
-/* Cards estilo pergamino */
+/* Versículos y citas */
+.verse {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--gold-muted);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+/* === CARDS CON ESTILO PERGAMINO === */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(44, 24, 16, 0.06);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--gold-muted) 20%,
+    var(--gold) 50%,
+    var(--gold-muted) 80%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before,
+.card.active::before {
+  opacity: 1;
 }
 
 .card-elevated {
   background: var(--surface-elevated);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(44, 24, 16, 0.08);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  box-shadow: var(--shadow-gold);
 }
 
-/* Botones */
+/* Card especial para el contador de días */
+.card-liturgical {
+  background: linear-gradient(135deg, var(--cream-warm) 0%, var(--surface) 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: 20px;
+  box-shadow: var(--shadow-gold);
+  position: relative;
+}
+
+.card-liturgical::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--gold-light), transparent 50%, var(--gold-muted));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* === BOTONES === */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-family: var(--font-crimson), Georgia, serif;
-  font-weight: 500;
+  padding: 0.875rem 1.75rem;
+  border-radius: 10px;
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
   font-size: 1rem;
-  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+  transition: all 0.25s ease;
   cursor: pointer;
   border: none;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {
-  background: var(--primary);
-  color: white;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--cream);
+  box-shadow: 0 2px 8px rgba(92, 64, 51, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(92, 64, 51, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
 }
 
 .btn-secondary {
-  background: var(--secondary-light);
-  color: var(--primary-dark);
+  background: var(--cream);
+  color: var(--primary);
+  border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: var(--secondary);
+  background: var(--cream-dark);
+  border-color: var(--primary-light);
 }
 
 .btn-ghost {
@@ -131,156 +251,393 @@ h3 {
 }
 
 .btn-ghost:hover {
-  background: var(--surface-elevated);
+  background: var(--cream);
+  border-color: var(--gold-muted);
 }
 
-/* Checkboxes personalizados */
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-muted) 100%);
+  color: white;
+  box-shadow: var(--shadow-gold);
+}
+
+/* === CHECKBOXES ESTILO ILUMINACIÓN === */
 .checkbox-container {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  padding: 1rem;
-  border-radius: 8px;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
   background: var(--surface);
   border: 1px solid var(--border-light);
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .checkbox-container:hover {
-  border-color: var(--secondary);
-  background: var(--surface-elevated);
+  border-color: var(--gold-muted);
+  background: var(--cream-warm);
+  box-shadow: var(--shadow-soft);
 }
 
 .checkbox-container.completed {
-  background: var(--success-light);
-  border-color: var(--success);
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.05) 0%, rgba(184, 134, 11, 0.02) 100%);
+  border-color: var(--gold-muted);
+}
+
+.checkbox-container.completed::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  background: linear-gradient(180deg, var(--gold), var(--gold-muted));
+  border-radius: 0 2px 2px 0;
 }
 
 .custom-checkbox {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border: 2px solid var(--border);
-  border-radius: 6px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   background: var(--surface);
+  position: relative;
+}
+
+.custom-checkbox::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-muted));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.checkbox-container:hover .custom-checkbox::before {
+  opacity: 0.3;
 }
 
 .custom-checkbox.checked {
-  background: var(--success);
-  border-color: var(--success);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-muted) 100%);
+  border-color: var(--gold);
+  box-shadow: 0 2px 8px rgba(184, 134, 11, 0.3);
+}
+
+.custom-checkbox.checked::before {
+  opacity: 1;
 }
 
 .custom-checkbox svg {
   color: white;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
 }
 
-/* Badge litúrgico */
+/* === BADGES LITÚRGICOS === */
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.8rem;
   font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
 }
 
 .badge-septuagesima {
-  background: #E8D5E8;
+  background: linear-gradient(135deg, #EDE5F0 0%, #E0D5E8 100%);
   color: var(--purple-lent);
+  border-color: rgba(91, 58, 110, 0.2);
 }
 
 .badge-cuaresma {
-  background: #DCD0E8;
+  background: linear-gradient(135deg, #E8DDF0 0%, #D8CCE8 100%);
   color: var(--purple-lent);
+  border-color: rgba(91, 58, 110, 0.25);
 }
 
 .badge-pasion {
-  background: #D0C0D8;
-  color: var(--purple-passion);
+  background: linear-gradient(135deg, #DCD0E5 0%, #C8B8D8 100%);
+  color: var(--purple-deep);
+  border-color: rgba(64, 40, 80, 0.25);
 }
 
 .badge-semana-santa {
-  background: #F5E0E0;
+  background: linear-gradient(135deg, #F5E5E8 0%, #EBDADD 100%);
   color: var(--red-holy);
+  border-color: rgba(139, 41, 66, 0.2);
 }
 
 .badge-pascua {
-  background: var(--accent-gold-light);
-  color: #7A6A1A;
+  background: linear-gradient(135deg, #FDF5E0 0%, #F8EBD0 100%);
+  color: #8B6914;
+  border-color: rgba(184, 134, 11, 0.3);
+  box-shadow: 0 1px 4px rgba(184, 134, 11, 0.15);
 }
 
-/* Barra de progreso */
+/* === BARRA DE PROGRESO === */
 .progress-bar {
-  height: 8px;
-  background: var(--border-light);
-  border-radius: 9999px;
+  height: 6px;
+  background: var(--cream-dark);
+  border-radius: 10px;
   overflow: hidden;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
 }
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary) 0%, var(--accent-gold) 100%);
-  border-radius: 9999px;
-  transition: width 0.5s ease;
+  background: linear-gradient(90deg,
+    var(--primary) 0%,
+    var(--gold-muted) 50%,
+    var(--gold) 100%
+  );
+  border-radius: 10px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
-/* Navegación inferior móvil */
+.progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, transparent 100%);
+  border-radius: 10px 10px 0 0;
+}
+
+/* === NAVEGACIÓN INFERIOR === */
 .bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: var(--surface);
+  background: linear-gradient(180deg, var(--surface) 0%, var(--cream-warm) 100%);
   border-top: 1px solid var(--border);
-  padding: 0.5rem 0;
-  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  padding: 0.625rem 0;
+  padding-bottom: calc(0.625rem + env(safe-area-inset-bottom));
   display: flex;
   justify-content: space-around;
   z-index: 50;
+  box-shadow: 0 -4px 20px rgba(42, 36, 31, 0.06);
 }
 
 .nav-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.5rem 1rem;
+  gap: 0.3rem;
+  padding: 0.5rem 1.25rem;
   color: var(--text-muted);
   text-decoration: none;
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   font-size: 0.75rem;
-  transition: color 0.2s ease;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: all 0.25s ease;
+  border-radius: 12px;
+  position: relative;
+}
+
+.nav-item:hover {
+  color: var(--primary);
+  background: var(--cream);
 }
 
 .nav-item.active {
-  color: var(--primary);
+  color: var(--gold);
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-muted), var(--gold), var(--gold-muted));
+  border-radius: 2px 2px 0 0;
 }
 
 .nav-item svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s ease;
 }
 
-/* Safe area para PWA */
+.nav-item.active svg {
+  transform: scale(1.1);
+}
+
+/* === CONTADOR CIRCULAR === */
+.day-ring {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.day-ring-bg {
+  fill: none;
+  stroke: var(--cream-dark);
+  stroke-width: 8;
+}
+
+.day-ring-progress {
+  fill: none;
+  stroke: url(#goldGradient);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 4px rgba(184, 134, 11, 0.3));
+}
+
+.day-ring-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-number {
+  font-family: var(--font-cinzel), 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.day-label {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', serif;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: 0.25rem;
+}
+
+/* === SECCIONES === */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.section-icon.ora {
+  background: linear-gradient(135deg, rgba(184, 134, 11, 0.15) 0%, rgba(184, 134, 11, 0.05) 100%);
+  color: var(--gold);
+}
+
+.section-icon.lectio {
+  background: linear-gradient(135deg, rgba(92, 64, 51, 0.12) 0%, rgba(92, 64, 51, 0.04) 100%);
+  color: var(--primary);
+}
+
+.section-icon.labora {
+  background: linear-gradient(135deg, rgba(61, 90, 69, 0.12) 0%, rgba(61, 90, 69, 0.04) 100%);
+  color: var(--green-ordinary);
+}
+
+.section-icon.sacrificio {
+  background: linear-gradient(135deg, rgba(91, 58, 110, 0.12) 0%, rgba(91, 58, 110, 0.04) 100%);
+  color: var(--purple-lent);
+}
+
+.section-title {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.section-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* === ALERTA DE AYUNO === */
+.alert-fast {
+  background: linear-gradient(135deg, rgba(91, 58, 110, 0.08) 0%, rgba(91, 58, 110, 0.03) 100%);
+  border: 1px solid rgba(91, 58, 110, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.alert-fast-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--purple-lent) 0%, var(--purple-deep) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.alert-fast-text {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--purple-lent);
+}
+
+/* === SAFE AREA PARA PWA === */
 .safe-area-top {
   padding-top: env(safe-area-inset-top);
 }
 
 .safe-area-bottom {
-  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  padding-bottom: calc(85px + env(safe-area-inset-bottom));
 }
 
-/* Animaciones sutiles */
-@keyframes fadeIn {
+/* === ANIMACIONES === */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -288,24 +645,122 @@ h3 {
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.3s ease forwards;
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
-/* Scrollbar sutil */
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(184, 134, 11, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(184, 134, 11, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--cream) 0%,
+    var(--gold-glow) 50%,
+    var(--cream) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+/* Stagger animations */
+.stagger-1 { animation-delay: 0.05s; }
+.stagger-2 { animation-delay: 0.1s; }
+.stagger-3 { animation-delay: 0.15s; }
+.stagger-4 { animation-delay: 0.2s; }
+.stagger-5 { animation-delay: 0.25s; }
+
+/* === SCROLLBAR ELEGANTE === */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background);
+  background: var(--cream);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--border);
-  border-radius: 3px;
+  border-radius: 4px;
+  border: 2px solid var(--cream);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
+}
+
+/* === UTILIDADES === */
+.text-gold {
+  color: var(--gold);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-muted) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-gold {
+  border-color: var(--border-gold);
+}
+
+.bg-cream {
+  background: var(--cream);
+}
+
+/* Divider decorativo */
+.divider-ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.divider-ornament::before,
+.divider-ornament::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.divider-ornament-center {
+  color: var(--gold-muted);
+  font-size: 1rem;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--cream-dark);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
