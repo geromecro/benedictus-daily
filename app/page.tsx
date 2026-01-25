@@ -19,13 +19,13 @@ import {
   UserData,
 } from "@/lib/storage";
 import { estaDentroDeCuaresma, esDiaDeAyuno } from "@/lib/calendar";
-import { useIMassUrl } from "@/lib/imass";
+import { useOpenIMass } from "@/lib/imass";
 
 export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null);
   const [progress, setProgress] = useState<DailyProgress | null>(null);
   const [simulatedDay, setSimulatedDay] = useState<number>(1); // Para desarrollo
-  const imassUrl = useIMassUrl();
+  const openIMass = useOpenIMass();
 
   // Cargar datos al montar
   useEffect(() => {
@@ -267,11 +267,9 @@ export default function Home() {
 
         {/* Link a iMass */}
         <section className="mb-6">
-          <a
-            href={imassUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card p-4 flex items-center gap-3 hover:shadow-md transition-shadow"
+          <button
+            onClick={openIMass}
+            className="card p-4 flex items-center gap-3 hover:shadow-md transition-shadow w-full text-left cursor-pointer"
           >
             <div className="w-10 h-10 rounded-lg bg-[var(--primary)] bg-opacity-10 flex items-center justify-center">
               <BookOpen className="w-5 h-5 text-[var(--primary)]" />
@@ -285,7 +283,7 @@ export default function Home() {
               </p>
             </div>
             <span className="text-[var(--text-muted)]">→</span>
-          </a>
+          </button>
         </section>
       </div>
 

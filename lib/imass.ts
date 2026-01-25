@@ -1,29 +1,38 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback } from "react";
 
-const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=fssp.livemass.iMass";
-const ANDROID_INTENT = `intent://#Intent;package=fssp.livemass.iMass;S.browser_fallback_url=${encodeURIComponent(PLAY_STORE_URL)};end`;
+// URL schemes probables para iMass (sin documentación oficial, probamos los más comunes)
+const IOS_SCHEME = "imass://";
+const ANDROID_PACKAGE = "fssp.livemass.iMass";
 
 /**
- * Hook que devuelve la URL apropiada para abrir iMass:
- * - En Android: Intent URL que abre la app directamente (o Play Store si no está instalada)
- * - En otros dispositivos: Link al Play Store
+ * Hook que devuelve una función para abrir iMass.
+ * Intenta abrir la app directamente sin ir a las tiendas.
+ *
+ * - En Android: Usa Intent URL para abrir la app por package name
+ * - En iOS: Intenta abrir con el scheme imass://
  */
-export function useIMassUrl(): string {
-  const [url, setUrl] = useState(PLAY_STORE_URL);
+export function useOpenIMass() {
+  const openIMass = useCallback(() => {
+    if (typeof window === "undefined" || typeof navigator === "undefined") return;
 
-  useEffect(() => {
-    // Detectar si es Android
-    if (typeof navigator !== "undefined" && /android/i.test(navigator.userAgent)) {
-      setUrl(ANDROID_INTENT);
+    const ua = navigator.userAgent;
+
+    // Android: usar Intent URL
+    if (/android/i.test(ua)) {
+      // Intent sin fallback - solo intenta abrir la app
+      window.location.href = `intent://#Intent;package=${ANDROID_PACKAGE};end`;
+    }
+    // iOS: intentar abrir con scheme
+    else if (/iPhone|iPad|iPod/i.test(ua)) {
+      window.location.href = IOS_SCHEME;
+    }
+    // Otros (desktop, etc): intentar iOS scheme como fallback
+    else {
+      window.location.href = IOS_SCHEME;
     }
   }, []);
 
-  return url;
+  return openIMass;
 }
-
-/**
- * URL constante del Play Store (para uso en componentes server-side o fallback)
- */
-export const IMASS_PLAY_STORE_URL = PLAY_STORE_URL;

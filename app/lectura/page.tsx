@@ -5,7 +5,7 @@ import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturgicoBadgeClass } from "@/lib/calendar";
-import { useIMassUrl } from "@/lib/imass";
+import { useOpenIMass } from "@/lib/imass";
 
 // Lecturas placeholder - serán reemplazadas con el contenido real
 const LECTURAS_PLACEHOLDER: Record<number, { titulo: string; fuente: string; contenido: string }> = {
@@ -43,7 +43,7 @@ Esta lectura será provista próximamente. Mientras tanto, te invitamos a rezar 
 
 export default function LecturaPage() {
   const [diaSimulado, setDiaSimulado] = useState<number>(1);
-  const imassUrl = useIMassUrl();
+  const openIMass = useOpenIMass();
 
   useEffect(() => {
     const diaReal = getDiaActual();
@@ -116,11 +116,9 @@ export default function LecturaPage() {
             Oficio Divino
           </h3>
 
-          <a
-            href={imassUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card p-4 flex items-center gap-3 hover:shadow-md transition-shadow"
+          <button
+            onClick={openIMass}
+            className="card p-4 flex items-center gap-3 hover:shadow-md transition-shadow w-full text-left cursor-pointer"
           >
             <div className="w-10 h-10 rounded-lg bg-[var(--primary)] bg-opacity-10 flex items-center justify-center">
               <ExternalLink className="w-5 h-5 text-[var(--primary)]" />
@@ -134,7 +132,7 @@ export default function LecturaPage() {
               </p>
             </div>
             <span className="text-[var(--text-muted)]">→</span>
-          </a>
+          </button>
         </section>
 
         {/* Selector de día para desarrollo */}
