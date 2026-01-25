@@ -146,11 +146,11 @@ export default function CalendarioPage() {
                         </div>
                       </div>
 
-                      {/* Link a iMass */}
+                      {/* Link al Breviario */}
                       <button
                         onClick={openIMass}
                         className="p-2 text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors cursor-pointer"
-                        title="Abrir en iMass"
+                        title="Abrir Oficio Divino"
                       >
                         <ExternalLink className="w-4 h-4" />
                       </button>

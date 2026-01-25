@@ -125,10 +125,10 @@ export default function LecturaPage() {
             </div>
             <div className="flex-1">
               <p className="font-medium text-[var(--text-primary)]">
-                Rezar en iMass
+                Rezar el Oficio Divino
               </p>
               <p className="text-sm text-[var(--text-muted)]">
-                Laudes, Vísperas y Completas del día
+                Laudes, Vísperas, Completas en Divinum Officium
               </p>
             </div>
             <span className="text-[var(--text-muted)]">→</span>

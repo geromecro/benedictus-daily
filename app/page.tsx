@@ -276,10 +276,10 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <p className="font-medium text-[var(--text-primary)]">
-                Oficio Divino en iMass
+                Oficio Divino (Breviario)
               </p>
               <p className="text-sm text-[var(--text-muted)]">
-                Rezar Laudes, Vísperas o Completas
+                Laudes, Vísperas, Completas en Divinum Officium
               </p>
             </div>
             <span className="text-[var(--text-muted)]">→</span>
