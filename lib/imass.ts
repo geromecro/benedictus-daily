@@ -3,7 +3,8 @@
 import { useCallback } from "react";
 
 // URL schemes probables para iMass (sin documentación oficial, probamos los más comunes)
-const IOS_SCHEME = "imass://";
+// Intento 2: livemass:// (nombre de la plataforma principal)
+const IOS_SCHEME = "livemass://";
 const ANDROID_PACKAGE = "fssp.livemass.iMass";
 
 /**
