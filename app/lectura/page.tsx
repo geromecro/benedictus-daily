@@ -5,6 +5,7 @@ import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturgicoBadgeClass } from "@/lib/calendar";
+import { useIMassUrl } from "@/lib/imass";
 
 // Lecturas placeholder - serán reemplazadas con el contenido real
 const LECTURAS_PLACEHOLDER: Record<number, { titulo: string; fuente: string; contenido: string }> = {
@@ -42,6 +43,7 @@ Esta lectura será provista próximamente. Mientras tanto, te invitamos a rezar 
 
 export default function LecturaPage() {
   const [diaSimulado, setDiaSimulado] = useState<number>(1);
+  const imassUrl = useIMassUrl();
 
   useEffect(() => {
     const diaReal = getDiaActual();
@@ -115,7 +117,7 @@ export default function LecturaPage() {
           </h3>
 
           <a
-            href="https://play.google.com/store/apps/details?id=fssp.livemass.iMass"
+            href={imassUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="card p-4 flex items-center gap-3 hover:shadow-md transition-shadow"

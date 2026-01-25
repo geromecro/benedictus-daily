@@ -11,10 +11,12 @@ import {
   getTiempoLiturgicoBadgeClass,
   TiempoLiturgico,
 } from "@/lib/calendar";
+import { useIMassUrl } from "@/lib/imass";
 
 export default function CalendarioPage() {
   const diaActual = getDiaActual();
   const [filtroTiempo, setFiltroTiempo] = useState<TiempoLiturgico | "todos">("todos");
+  const imassUrl = useIMassUrl();
 
   const diasFiltrados = filtroTiempo === "todos"
     ? CALENDARIO
@@ -146,7 +148,7 @@ export default function CalendarioPage() {
 
                       {/* Link a iMass */}
                       <a
-                        href="https://play.google.com/store/apps/details?id=fssp.livemass.iMass"
+                        href={imassUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 text-[var(--text-muted)] hover:text-[var(--primary)] transition-colors"

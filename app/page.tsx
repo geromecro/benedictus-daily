@@ -19,11 +19,13 @@ import {
   UserData,
 } from "@/lib/storage";
 import { estaDentroDeCuaresma, esDiaDeAyuno } from "@/lib/calendar";
+import { useIMassUrl } from "@/lib/imass";
 
 export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null);
   const [progress, setProgress] = useState<DailyProgress | null>(null);
   const [simulatedDay, setSimulatedDay] = useState<number>(1); // Para desarrollo
+  const imassUrl = useIMassUrl();
 
   // Cargar datos al montar
   useEffect(() => {
@@ -266,7 +268,7 @@ export default function Home() {
         {/* Link a iMass */}
         <section className="mb-6">
           <a
-            href="https://play.google.com/store/apps/details?id=fssp.livemass.iMass"
+            href={imassUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="card p-4 flex items-center gap-3 hover:shadow-md transition-shadow"
