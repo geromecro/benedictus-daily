@@ -5,6 +5,7 @@ import { Flame, BookOpen, Hammer, Cross, ChevronRight, Sparkles } from "lucide-r
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import DayCounter from "@/components/DayCounter";
+import SplashScreen from "@/components/SplashScreen";
 import ChecklistItem from "@/components/ChecklistItem";
 import ProgressBar from "@/components/ProgressBar";
 import {
@@ -26,13 +27,25 @@ export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null);
   const [progress, setProgress] = useState<DailyProgress | null>(null);
   const [simulatedDay, setSimulatedDay] = useState<number>(1);
+  const [showSplash, setShowSplash] = useState(true);
   const openIMass = useOpenIMass();
 
   useEffect(() => {
+    // Verificar si ya vio el splash en esta sesión
+    const hasSeenSplash = sessionStorage.getItem('benedictus_splash_seen');
+    if (hasSeenSplash) {
+      setShowSplash(false);
+    }
+
     const data = getUserData();
     setUserData(data);
     setProgress(getDailyProgress());
   }, []);
+
+  const handleSplashComplete = () => {
+    sessionStorage.setItem('benedictus_splash_seen', 'true');
+    setShowSplash(false);
+  };
 
   const handleOraToggle = (id: string) => {
     const newProgress = toggleOraCommitment(id);
@@ -53,6 +66,11 @@ export default function Home() {
     const newProgress = toggleSacrifice(index);
     setProgress(newProgress);
   };
+
+  // Mostrar splash screen si es la primera visita de la sesión
+  if (showSplash) {
+    return <SplashScreen onComplete={handleSplashComplete} />;
+  }
 
   if (!userData || !progress) {
     return (
