@@ -26,6 +26,8 @@ export default function NotificationSettings({ className = "" }: NotificationSet
   const [success, setSuccess] = useState<string | null>(null);
   const [laudesTime, setLaudesTime] = useState("07:00");
   const [completasTime, setCompletasTime] = useState("21:30");
+  const [rosarioTime, setRosarioTime] = useState("12:00");
+  const [lectioTime, setLectioTime] = useState("21:00");
   const [permissionStatus, setPermissionStatus] = useState<NotificationPermission | "unsupported">("default");
   const [pushSupport, setPushSupport] = useState<{ supported: boolean; reason?: string }>({ supported: false, reason: "" });
   const [iosStatus, setIosStatus] = useState({ isIOS: false, isStandalone: false, canReceivePush: true });
@@ -49,6 +51,8 @@ export default function NotificationSettings({ className = "" }: NotificationSet
       const userData = getUserData();
       setLaudesTime(userData.reminderTimes.laudes);
       setCompletasTime(userData.reminderTimes.completas);
+      setRosarioTime(userData.reminderTimes.rosario || "12:00");
+      setLectioTime(userData.reminderTimes.lectio || "21:00");
 
       // Verificar si está suscrito
       if (support.supported) {
@@ -78,7 +82,9 @@ export default function NotificationSettings({ className = "" }: NotificationSet
         const saved = await saveSubscriptionToBackend(
           subscription,
           laudesTime,
-          completasTime
+          completasTime,
+          rosarioTime,
+          lectioTime
         );
 
         if (!saved) {
@@ -89,7 +95,7 @@ export default function NotificationSettings({ className = "" }: NotificationSet
         const userData = getUserData();
         saveUserData({
           ...userData,
-          reminderTimes: { laudes: laudesTime, completas: completasTime },
+          reminderTimes: { laudes: laudesTime, completas: completasTime, rosario: rosarioTime, lectio: lectioTime },
         });
 
         setIsEnabled(true);
@@ -112,11 +118,21 @@ export default function NotificationSettings({ className = "" }: NotificationSet
     }
   };
 
-  const handleTimeChange = async (type: "laudes" | "completas", value: string) => {
-    if (type === "laudes") {
-      setLaudesTime(value);
-    } else {
-      setCompletasTime(value);
+  const handleTimeChange = async (type: "laudes" | "completas" | "rosario" | "lectio", value: string) => {
+    // Actualizar el estado local correspondiente
+    switch (type) {
+      case "laudes":
+        setLaudesTime(value);
+        break;
+      case "completas":
+        setCompletasTime(value);
+        break;
+      case "rosario":
+        setRosarioTime(value);
+        break;
+      case "lectio":
+        setLectioTime(value);
+        break;
     }
 
     // Guardar en localStorage
@@ -131,8 +147,10 @@ export default function NotificationSettings({ className = "" }: NotificationSet
     if (isEnabled) {
       const newLaudes = type === "laudes" ? value : laudesTime;
       const newCompletas = type === "completas" ? value : completasTime;
+      const newRosario = type === "rosario" ? value : rosarioTime;
+      const newLectio = type === "lectio" ? value : lectioTime;
 
-      await updateNotificationTimes(newLaudes, newCompletas);
+      await updateNotificationTimes(newLaudes, newCompletas, newRosario, newLectio);
     }
   };
 
@@ -247,6 +265,36 @@ export default function NotificationSettings({ className = "" }: NotificationSet
               type="time"
               value={completasTime}
               onChange={(e) => handleTimeChange("completas", e.target.value)}
+              className="px-2 py-1 border border-[var(--border)] rounded text-sm"
+            />
+          </div>
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-[var(--text-muted)]" />
+              <span className="text-sm text-[var(--text-primary)]">
+                Rosario
+              </span>
+            </div>
+            <input
+              type="time"
+              value={rosarioTime}
+              onChange={(e) => handleTimeChange("rosario", e.target.value)}
+              className="px-2 py-1 border border-[var(--border)] rounded text-sm"
+            />
+          </div>
+
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-[var(--text-muted)]" />
+              <span className="text-sm text-[var(--text-primary)]">
+                Lectio Divina
+              </span>
+            </div>
+            <input
+              type="time"
+              value={lectioTime}
+              onChange={(e) => handleTimeChange("lectio", e.target.value)}
               className="px-2 py-1 border border-[var(--border)] rounded text-sm"
             />
           </div>

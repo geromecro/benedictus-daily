@@ -23,12 +23,16 @@ interface SubscribeRequest {
   subscription: PushSubscriptionJSON;
   laudesTime: string;
   completasTime: string;
+  rosarioTime?: string;
+  lectioTime?: string;
 }
 
 interface UpdateTimesRequest {
   deviceId: string;
   laudesTime: string;
   completasTime: string;
+  rosarioTime?: string;
+  lectioTime?: string;
 }
 
 interface DeleteRequest {
@@ -39,7 +43,7 @@ interface DeleteRequest {
 export async function POST(request: NextRequest) {
   try {
     const body: SubscribeRequest = await request.json();
-    const { deviceId, subscription, laudesTime, completasTime } = body;
+    const { deviceId, subscription, laudesTime, completasTime, rosarioTime, lectioTime } = body;
 
     if (!deviceId || !subscription || !subscription.endpoint) {
       return NextResponse.json(
@@ -63,6 +67,8 @@ export async function POST(request: NextRequest) {
           p256dh_key: p256dhKey,
           laudes_time: laudesTime || '07:00',
           completas_time: completasTime || '21:30',
+          rosario_time: rosarioTime || '12:00',
+          lectio_time: lectioTime || '21:00',
           is_active: true,
         },
         {
@@ -81,7 +87,7 @@ export async function POST(request: NextRequest) {
     }
 
     // También actualizar/crear los schedules de notificación
-    await updateNotificationSchedules(deviceId, laudesTime, completasTime);
+    await updateNotificationSchedules(deviceId, laudesTime, completasTime, rosarioTime, lectioTime);
 
     return NextResponse.json({
       success: true,
@@ -101,7 +107,7 @@ export async function POST(request: NextRequest) {
 export async function PUT(request: NextRequest) {
   try {
     const body: UpdateTimesRequest = await request.json();
-    const { deviceId, laudesTime, completasTime } = body;
+    const { deviceId, laudesTime, completasTime, rosarioTime, lectioTime } = body;
 
     if (!deviceId) {
       return NextResponse.json(
@@ -115,6 +121,8 @@ export async function PUT(request: NextRequest) {
       .update({
         laudes_time: laudesTime,
         completas_time: completasTime,
+        rosario_time: rosarioTime,
+        lectio_time: lectioTime,
       })
       .eq('device_id', deviceId)
       .select()
@@ -129,7 +137,7 @@ export async function PUT(request: NextRequest) {
     }
 
     // Actualizar los schedules
-    await updateNotificationSchedules(deviceId, laudesTime, completasTime);
+    await updateNotificationSchedules(deviceId, laudesTime, completasTime, rosarioTime, lectioTime);
 
     return NextResponse.json({
       success: true,
@@ -195,7 +203,9 @@ export async function DELETE(request: NextRequest) {
 async function updateNotificationSchedules(
   deviceId: string,
   laudesTime: string,
-  completasTime: string
+  completasTime: string,
+  rosarioTime?: string,
+  lectioTime?: string
 ) {
   const supabase = getSupabaseAdmin();
 
@@ -218,6 +228,24 @@ async function updateNotificationSchedules(
       scheduled_time: completasTime,
     },
   ];
+
+  // Agregar rosario si tiene horario configurado
+  if (rosarioTime) {
+    schedules.push({
+      device_id: deviceId,
+      notification_type: 'rosario',
+      scheduled_time: rosarioTime,
+    });
+  }
+
+  // Agregar lectio si tiene horario configurado
+  if (lectioTime) {
+    schedules.push({
+      device_id: deviceId,
+      notification_type: 'lectio',
+      scheduled_time: lectioTime,
+    });
+  }
 
   await supabase
     .from('notification_schedule')

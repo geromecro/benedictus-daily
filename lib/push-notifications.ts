@@ -190,7 +190,9 @@ export async function isSubscribed(): Promise<boolean> {
 export async function saveSubscriptionToBackend(
   subscription: PushSubscriptionJSON,
   laudesTime: string,
-  completasTime: string
+  completasTime: string,
+  rosarioTime?: string,
+  lectioTime?: string
 ): Promise<boolean> {
   try {
     const response = await fetch('/api/push/subscribe', {
@@ -203,6 +205,8 @@ export async function saveSubscriptionToBackend(
         subscription,
         laudesTime,
         completasTime,
+        rosarioTime,
+        lectioTime,
       }),
     });
 
@@ -245,7 +249,9 @@ export async function removeSubscriptionFromBackend(): Promise<boolean> {
  */
 export async function updateNotificationTimes(
   laudesTime: string,
-  completasTime: string
+  completasTime: string,
+  rosarioTime?: string,
+  lectioTime?: string
 ): Promise<boolean> {
   try {
     const response = await fetch('/api/push/subscribe', {
@@ -257,6 +263,8 @@ export async function updateNotificationTimes(
         deviceId: getDeviceId(),
         laudesTime,
         completasTime,
+        rosarioTime,
+        lectioTime,
       }),
     });
 

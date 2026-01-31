@@ -6,6 +6,8 @@ const STORAGE_KEY = "benedictus_data";
 export interface ReminderTimes {
   laudes: string; // "07:00"
   completas: string; // "21:30"
+  rosario: string; // "12:00"
+  lectio: string; // "21:00"
 }
 
 export interface DailyProgress {
@@ -80,6 +82,8 @@ const DEFAULT_USER_DATA: UserData = {
   reminderTimes: {
     laudes: "07:00",
     completas: "21:30",
+    rosario: "12:00",
+    lectio: "21:00",
   },
   notificationsEnabled: false,
   dailyProgress: {},
