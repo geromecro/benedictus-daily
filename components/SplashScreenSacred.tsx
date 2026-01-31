@@ -48,39 +48,13 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
       <div className="splash-sacred-vignette" />
       <div className="splash-sacred-noise" />
 
-      {/* Decorative cross that emerges from darkness */}
-      <div className="splash-sacred-cross">
-        <svg viewBox="0 0 100 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="goldGradientCross" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#D4AF37" />
-              <stop offset="50%" stopColor="#FFD700" />
-              <stop offset="100%" stopColor="#C9A227" />
-            </linearGradient>
-            <filter id="goldGlow">
-              <feGaussianBlur stdDeviation="2" result="blur" />
-              <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-              </feMerge>
-            </filter>
-          </defs>
-          {/* Ornate cross */}
-          <path
-            d="M50 0 L50 140 M20 35 L80 35"
-            stroke="url(#goldGradientCross)"
-            strokeWidth="3"
-            strokeLinecap="round"
-            filter="url(#goldGlow)"
-          />
-          {/* Cross terminals - fleur-de-lis style */}
-          <circle cx="50" cy="0" r="4" fill="url(#goldGradientCross)" />
-          <circle cx="50" cy="140" r="4" fill="url(#goldGradientCross)" />
-          <circle cx="20" cy="35" r="4" fill="url(#goldGradientCross)" />
-          <circle cx="80" cy="35" r="4" fill="url(#goldGradientCross)" />
-          {/* Center ornament */}
-          <circle cx="50" cy="35" r="8" fill="none" stroke="url(#goldGradientCross)" strokeWidth="1.5" />
-        </svg>
+      {/* St. Benedict Medal that emerges from darkness */}
+      <div className="splash-sacred-medal">
+        <img
+          src="/images/benedict-medal-bg.jpg"
+          alt="Medalla de San Benito"
+          className="splash-medal-image"
+        />
       </div>
 
       {/* Main content container */}
