@@ -51,7 +51,7 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
       {/* St. Benedict Medal that emerges from darkness */}
       <div className="splash-sacred-medal">
         <img
-          src="/images/benedict-medal-bg.jpg"
+          src="/images/benedict-medal.svg"
           alt="Medalla de San Benito"
           className="splash-medal-image"
         />
