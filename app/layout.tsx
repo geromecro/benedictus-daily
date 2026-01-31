@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, EB_Garamond, Cinzel } from "next/font/google";
 import "./globals.css";
+import ServiceWorkerRegistration from "@/components/ServiceWorkerRegistration";
 
 // Tipografía display para títulos - elegante y monástica
 const cinzel = Cinzel({
@@ -70,6 +71,7 @@ export default function RootLayout({
       <body
         className={`${cinzel.variable} ${cormorant.variable} ${ebGaramond.variable} antialiased`}
       >
+        <ServiceWorkerRegistration />
         {children}
       </body>
     </html>

@@ -23,6 +23,9 @@ export interface UserData {
   sacrifices: string[]; // 3 sacrificios elegidos
   reminderTimes: ReminderTimes;
 
+  // Notificaciones push
+  notificationsEnabled: boolean;
+
   // Progreso diario
   dailyProgress: {
     [date: string]: DailyProgress; // "2026-02-15"
@@ -78,6 +81,7 @@ const DEFAULT_USER_DATA: UserData = {
     laudes: "07:00",
     completas: "21:30",
   },
+  notificationsEnabled: false,
   dailyProgress: {},
   currentStreak: 0,
   longestStreak: 0,

@@ -15,6 +15,7 @@ import {
   SUGGESTED_SACRIFICES,
   UserData,
 } from "@/lib/storage";
+import NotificationSettings from "@/components/NotificationSettings";
 
 export default function ConfiguracionPage() {
   const [userData, setUserData] = useState<UserData | null>(null);
@@ -135,6 +136,9 @@ export default function ConfiguracionPage() {
           </div>
         </header>
 
+        {/* Recordatorios de Oración (Push Notifications) */}
+        <NotificationSettings className="mb-6" />
+
         {/* Compromisos ORA */}
         <section className="card p-6 mb-6">
           <h2 className="font-semibold text-[var(--text-primary)] mb-4">
@@ -235,7 +239,7 @@ export default function ConfiguracionPage() {
                 {userData.sacrifices.map((sacrifice, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-between p-3 bg-[var(--purple-lent)] bg-opacity-10 rounded-lg"
+                    className="flex items-center justify-between p-3 bg-[var(--ultramarine)] bg-opacity-10 rounded-lg"
                   >
                     <span className="text-[var(--text-primary)]">{sacrifice}</span>
                     <button
@@ -261,7 +265,7 @@ export default function ConfiguracionPage() {
                   <button
                     key={sacrifice.id}
                     onClick={() => handleAddSacrifice(sacrifice.label)}
-                    className="p-2 text-sm text-left bg-[var(--surface)] border border-[var(--border-light)] rounded-lg hover:border-[var(--purple-lent)] transition-colors"
+                    className="p-2 text-sm text-left bg-[var(--surface)] border border-[var(--border-light)] rounded-lg hover:border-[var(--ultramarine)] transition-colors"
                   >
                     {sacrifice.label}
                   </button>
