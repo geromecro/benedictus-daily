@@ -5,7 +5,7 @@ import { Flame, BookOpen, Hammer, Cross, ChevronRight, Sparkles } from "lucide-r
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import DayCounter from "@/components/DayCounter";
-import SplashScreen from "@/components/SplashScreen";
+import SplashScreenSacred from "@/components/SplashScreenSacred";
 import ChecklistItem from "@/components/ChecklistItem";
 import ProgressBar from "@/components/ProgressBar";
 import {
@@ -70,7 +70,7 @@ export default function Home() {
     // Si aún no sabemos si mostrar splash, mostrar splash directamente
     // (evita flash de loading)
     if (showSplash === null) {
-      return <SplashScreen onComplete={handleSplashComplete} />;
+      return <SplashScreenSacred onComplete={handleSplashComplete} />;
     }
     return (
       <div className="min-h-screen flex items-center justify-center bg-[var(--background)]">
@@ -86,7 +86,7 @@ export default function Home() {
 
   // Mostrar splash screen si es la primera visita de la sesión
   if (showSplash) {
-    return <SplashScreen onComplete={handleSplashComplete} />;
+    return <SplashScreenSacred onComplete={handleSplashComplete} />;
   }
 
   const activeOra = DEFAULT_ORA_COMMITMENTS.filter((c) =>

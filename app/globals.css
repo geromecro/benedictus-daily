@@ -870,6 +870,399 @@ h3 {
   50% { opacity: 0.8; }
 }
 
+/* ========================================
+   SPLASH SCREEN SACRED - Illuminated Manuscript Style
+   ======================================== */
+
+.splash-sacred {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #0a0908;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Background layers */
+.splash-sacred-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(139, 69, 19, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 70%, rgba(139, 0, 0, 0.05) 0%, transparent 50%),
+    linear-gradient(180deg, #0d0b09 0%, #1a1512 50%, #0d0b09 100%);
+}
+
+.splash-sacred-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+  pointer-events: none;
+}
+
+.splash-sacred-noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* Cross that emerges */
+.splash-sacred-cross {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 84px;
+  opacity: 0;
+  z-index: 1;
+}
+
+.splash-sacred.reveal .splash-sacred-cross,
+.splash-sacred.text .splash-sacred-cross {
+  animation: sacred-cross-emerge 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.splash-sacred.text .splash-sacred-cross {
+  animation: sacred-cross-rise 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Content container */
+.splash-sacred-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 340px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.splash-sacred.text .splash-sacred-content {
+  animation: sacred-content-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+/* Ornamental lines */
+.splash-sacred-ornament {
+  width: 180px;
+  height: 20px;
+  opacity: 0;
+}
+
+.splash-sacred.text .splash-sacred-ornament-top {
+  animation: sacred-ornament-in 0.8s ease-out 0.5s forwards;
+}
+
+.splash-sacred.text .splash-sacred-ornament-bottom {
+  animation: sacred-ornament-in 0.8s ease-out 2.5s forwards;
+}
+
+/* Main verse text */
+.splash-sacred-verse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 1.5rem 0;
+}
+
+.splash-sacred-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.15em;
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.splash-sacred.text .splash-sacred-line.line-1 {
+  animation: sacred-line-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.6s forwards;
+}
+.splash-sacred.text .splash-sacred-line.line-2 {
+  animation: sacred-line-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+}
+.splash-sacred.text .splash-sacred-line.line-3 {
+  animation: sacred-line-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.2s forwards;
+}
+.splash-sacred.text .splash-sacred-line.line-4 {
+  animation: sacred-line-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.5s forwards;
+}
+
+/* Typography - Illuminated Initial Capitals */
+.splash-sacred-initial {
+  font-family: var(--font-cinzel), 'Cinzel', 'Times New Roman', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #8B0000;
+  text-shadow:
+    0 0 10px rgba(139, 0, 0, 0.5),
+    0 0 20px rgba(139, 0, 0, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.splash-sacred-initial.accent {
+  color: #722F37;
+  font-size: 2rem;
+  text-shadow:
+    0 0 15px rgba(114, 47, 55, 0.6),
+    0 0 30px rgba(114, 47, 55, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.splash-sacred-initial.gold {
+  color: #D4AF37;
+  text-shadow:
+    0 0 10px rgba(212, 175, 55, 0.6),
+    0 0 25px rgba(212, 175, 55, 0.4),
+    0 0 40px rgba(255, 215, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  animation: sacred-gold-glow 3s ease-in-out infinite;
+}
+
+/* Main word text */
+.splash-sacred-word {
+  font-family: var(--font-cinzel), 'Cinzel', 'Times New Roman', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #E8DCC4;
+  letter-spacing: 0.2em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.splash-sacred-word.small {
+  font-size: 0.95rem;
+  color: #C4B8A4;
+}
+
+.splash-sacred-word.accent {
+  color: #D4C4B0;
+  letter-spacing: 0.25em;
+}
+
+.splash-sacred-word.gold {
+  color: #D4AF37;
+  text-shadow:
+    0 0 8px rgba(212, 175, 55, 0.5),
+    0 0 20px rgba(212, 175, 55, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.8);
+  animation: sacred-gold-glow 3s ease-in-out infinite;
+}
+
+.splash-sacred-space {
+  width: 0.5em;
+}
+
+/* Chi-Rho divider */
+.splash-sacred-divider {
+  margin: 1.5rem 0 1rem;
+  opacity: 0;
+}
+
+.splash-sacred.text .splash-sacred-divider {
+  animation: sacred-divider-in 0.6s ease-out 1.8s forwards;
+}
+
+.splash-sacred-chi-rho {
+  font-size: 1.5rem;
+  color: #C9A227;
+  text-shadow:
+    0 0 10px rgba(201, 162, 39, 0.5),
+    0 0 20px rgba(201, 162, 39, 0.3);
+  animation: sacred-chi-rho-glow 4s ease-in-out infinite;
+}
+
+/* Translation */
+.splash-sacred-translation {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #9A8E7A;
+  text-align: center;
+  line-height: 1.7;
+  max-width: 280px;
+  opacity: 0;
+}
+
+.splash-sacred.text .splash-sacred-translation {
+  animation: sacred-text-fade 0.8s ease-out 2s forwards;
+}
+
+/* Attribution */
+.splash-sacred-attribution {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.75rem;
+  color: #6B6052;
+  margin-top: 0.75rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+}
+
+.splash-sacred.text .splash-sacred-attribution {
+  animation: sacred-text-fade 0.8s ease-out 2.3s forwards;
+}
+
+/* Tap hint */
+.splash-sacred-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.8rem;
+  color: #5A5045;
+  letter-spacing: 0.1em;
+  opacity: 0;
+}
+
+.splash-sacred.text .splash-sacred-hint {
+  animation: sacred-hint-pulse 2.5s ease-in-out 3s infinite;
+}
+
+/* Exit animation */
+.splash-sacred.exiting {
+  animation: sacred-exit 0.8s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.splash-sacred.exiting .splash-sacred-content {
+  animation: sacred-content-exit 0.5s ease-in forwards;
+}
+
+/* ======== KEYFRAME ANIMATIONS ======== */
+
+@keyframes sacred-cross-emerge {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes sacred-cross-rise {
+  0% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0.15;
+    transform: translate(-50%, -70%) scale(1.5);
+  }
+}
+
+@keyframes sacred-content-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sacred-ornament-in {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes sacred-line-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sacred-divider-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sacred-text-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes sacred-gold-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(212, 175, 55, 0.6),
+      0 0 25px rgba(212, 175, 55, 0.4),
+      0 0 40px rgba(255, 215, 0, 0.2),
+      0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(212, 175, 55, 0.8),
+      0 0 35px rgba(212, 175, 55, 0.5),
+      0 0 55px rgba(255, 215, 0, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes sacred-chi-rho-glow {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(201, 162, 39, 0.5),
+      0 0 20px rgba(201, 162, 39, 0.3);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(201, 162, 39, 0.7),
+      0 0 30px rgba(201, 162, 39, 0.4);
+  }
+}
+
+@keyframes sacred-hint-pulse {
+  0%, 100% { opacity: 0; }
+  15%, 85% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes sacred-exit {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes sacred-content-exit {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+}
+
 /* Divider decorativo */
 .divider-ornament {
   display: flex;
