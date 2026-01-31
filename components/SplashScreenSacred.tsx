@@ -64,16 +64,16 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
           <svg viewBox="0 0 200 20" fill="none">
             <path
               d="M0 10 Q50 0 100 10 Q150 20 200 10"
-              stroke="url(#goldGradientLine)"
+              stroke="url(#redGradientLine)"
               strokeWidth="1"
               fill="none"
             />
             <defs>
-              <linearGradient id="goldGradientLine" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="redGradientLine" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="transparent" />
-                <stop offset="20%" stopColor="#C9A227" />
-                <stop offset="50%" stopColor="#FFD700" />
-                <stop offset="80%" stopColor="#C9A227" />
+                <stop offset="20%" stopColor="#8B0000" />
+                <stop offset="50%" stopColor="#A52A2A" />
+                <stop offset="80%" stopColor="#8B0000" />
                 <stop offset="100%" stopColor="transparent" />
               </linearGradient>
             </defs>
@@ -102,8 +102,8 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
             <span className="splash-sacred-initial">G</span>
             <span className="splash-sacred-word">RATIA</span>
             <span className="splash-sacred-space"> </span>
-            <span className="splash-sacred-initial gold">B</span>
-            <span className="splash-sacred-word gold">ENEDICTUS</span>
+            <span className="splash-sacred-initial red">B</span>
+            <span className="splash-sacred-word red">ENEDICTUS</span>
           </span>
 
           <span className="splash-sacred-line line-4">
@@ -135,16 +135,16 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
           <svg viewBox="0 0 200 20" fill="none">
             <path
               d="M0 10 Q50 20 100 10 Q150 0 200 10"
-              stroke="url(#goldGradientLine2)"
+              stroke="url(#redGradientLine2)"
               strokeWidth="1"
               fill="none"
             />
             <defs>
-              <linearGradient id="goldGradientLine2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <linearGradient id="redGradientLine2" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stopColor="transparent" />
-                <stop offset="20%" stopColor="#C9A227" />
-                <stop offset="50%" stopColor="#FFD700" />
-                <stop offset="80%" stopColor="#C9A227" />
+                <stop offset="20%" stopColor="#8B0000" />
+                <stop offset="50%" stopColor="#A52A2A" />
+                <stop offset="80%" stopColor="#8B0000" />
                 <stop offset="100%" stopColor="transparent" />
               </linearGradient>
             </defs>

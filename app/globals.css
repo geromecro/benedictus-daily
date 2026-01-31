@@ -872,6 +872,7 @@ h3 {
 
 /* ========================================
    SPLASH SCREEN SACRED - Illuminated Manuscript Style
+   Parchment/Red scheme inspired by medieval Benedictine codices
    ======================================== */
 
 .splash-sacred {
@@ -882,34 +883,36 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #0a0908;
+  background: #F5F0E6;
   cursor: pointer;
   overflow: hidden;
 }
 
-/* Background layers */
+/* Background layers - parchment texture */
 .splash-sacred-bg {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(139, 69, 19, 0.08) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 70%, rgba(139, 0, 0, 0.05) 0%, transparent 50%),
-    linear-gradient(180deg, #0d0b09 0%, #1a1512 50%, #0d0b09 100%);
+    radial-gradient(ellipse at 50% 30%, rgba(139, 34, 34, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 70%, rgba(90, 60, 40, 0.03) 0%, transparent 50%),
+    linear-gradient(180deg, #F8F4EC 0%, #F5F0E6 50%, #EDE8DC 100%);
 }
 
+/* Subtle sepia vignette toward edges */
 .splash-sacred-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(90, 70, 50, 0.15) 100%);
   pointer-events: none;
 }
 
 .splash-sacred-noise {
   position: absolute;
   inset: 0;
-  opacity: 0.03;
+  opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   pointer-events: none;
+  mix-blend-mode: multiply;
 }
 
 /* St. Benedict Medal that emerges */
@@ -929,10 +932,9 @@ h3 {
   height: 100%;
   object-fit: contain;
   filter:
-    sepia(20%)
-    brightness(0.9)
+    brightness(1.05)
     contrast(1.1)
-    drop-shadow(0 0 20px rgba(201, 162, 39, 0.4));
+    drop-shadow(0 0 15px rgba(139, 0, 0, 0.25));
   border-radius: 50%;
 }
 
@@ -1008,16 +1010,15 @@ h3 {
   animation: sacred-line-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.5s forwards;
 }
 
-/* Typography - Illuminated Initial Capitals */
+/* Typography - Illuminated Initial Capitals (Rubrics) */
 .splash-sacred-initial {
   font-family: var(--font-cinzel), 'Cinzel', 'Times New Roman', serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #8B0000;
   text-shadow:
-    0 0 10px rgba(139, 0, 0, 0.5),
-    0 0 20px rgba(139, 0, 0, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.8);
+    0 1px 2px rgba(139, 0, 0, 0.3),
+    0 0 8px rgba(139, 0, 0, 0.15);
   letter-spacing: 0.05em;
   line-height: 1;
 }
@@ -1026,48 +1027,64 @@ h3 {
   color: #722F37;
   font-size: 2rem;
   text-shadow:
-    0 0 15px rgba(114, 47, 55, 0.6),
-    0 0 30px rgba(114, 47, 55, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.8);
+    0 1px 2px rgba(114, 47, 55, 0.4),
+    0 0 10px rgba(114, 47, 55, 0.2);
 }
 
-.splash-sacred-initial.gold {
-  color: #D4AF37;
+/* Red accent for BENEDICTUS - replacing gold */
+.splash-sacred-initial.red {
+  color: #B22222;
   text-shadow:
-    0 0 10px rgba(212, 175, 55, 0.6),
-    0 0 25px rgba(212, 175, 55, 0.4),
-    0 0 40px rgba(255, 215, 0, 0.2),
-    0 2px 4px rgba(0, 0, 0, 0.8);
-  animation: sacred-gold-glow 3s ease-in-out infinite;
+    0 1px 2px rgba(178, 34, 34, 0.4),
+    0 0 12px rgba(178, 34, 34, 0.2);
+  animation: sacred-red-glow 3s ease-in-out infinite;
 }
 
-/* Main word text */
+/* Keep gold class for backwards compatibility but change to red */
+.splash-sacred-initial.gold {
+  color: #B22222;
+  text-shadow:
+    0 1px 2px rgba(178, 34, 34, 0.4),
+    0 0 12px rgba(178, 34, 34, 0.2);
+  animation: sacred-red-glow 3s ease-in-out infinite;
+}
+
+/* Main word text - scriptura (black ink) */
 .splash-sacred-word {
   font-family: var(--font-cinzel), 'Cinzel', 'Times New Roman', serif;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #E8DCC4;
+  color: #1A1A1A;
   letter-spacing: 0.2em;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: none;
 }
 
 .splash-sacred-word.small {
   font-size: 0.95rem;
-  color: #C4B8A4;
+  color: #3A3A3A;
 }
 
 .splash-sacred-word.accent {
-  color: #D4C4B0;
+  color: #2A2A2A;
   letter-spacing: 0.25em;
 }
 
-.splash-sacred-word.gold {
-  color: #D4AF37;
+/* Red accent for ENEDICTUS - replacing gold */
+.splash-sacred-word.red {
+  color: #B22222;
   text-shadow:
-    0 0 8px rgba(212, 175, 55, 0.5),
-    0 0 20px rgba(212, 175, 55, 0.3),
-    0 2px 4px rgba(0, 0, 0, 0.8);
-  animation: sacred-gold-glow 3s ease-in-out infinite;
+    0 1px 2px rgba(178, 34, 34, 0.3),
+    0 0 8px rgba(178, 34, 34, 0.15);
+  animation: sacred-red-glow 3s ease-in-out infinite;
+}
+
+/* Keep gold class for backwards compatibility but change to red */
+.splash-sacred-word.gold {
+  color: #B22222;
+  text-shadow:
+    0 1px 2px rgba(178, 34, 34, 0.3),
+    0 0 8px rgba(178, 34, 34, 0.15);
+  animation: sacred-red-glow 3s ease-in-out infinite;
 }
 
 .splash-sacred-space {
@@ -1086,10 +1103,10 @@ h3 {
 
 .splash-sacred-chi-rho {
   font-size: 1.5rem;
-  color: #C9A227;
+  color: #8B0000;
   text-shadow:
-    0 0 10px rgba(201, 162, 39, 0.5),
-    0 0 20px rgba(201, 162, 39, 0.3);
+    0 0 8px rgba(139, 0, 0, 0.3),
+    0 0 16px rgba(139, 0, 0, 0.15);
   animation: sacred-chi-rho-glow 4s ease-in-out infinite;
 }
 
@@ -1098,7 +1115,7 @@ h3 {
   font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   font-style: italic;
   font-size: 0.9rem;
-  color: #9A8E7A;
+  color: #4A4A4A;
   text-align: center;
   line-height: 1.7;
   max-width: 280px;
@@ -1131,7 +1148,7 @@ h3 {
   transform: translateX(-50%);
   font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   font-size: 0.8rem;
-  color: #5A5045;
+  color: #8B7355;
   letter-spacing: 0.1em;
   opacity: 0;
 }
@@ -1222,33 +1239,44 @@ h3 {
   100% { opacity: 1; }
 }
 
-@keyframes sacred-gold-glow {
+/* Red glow animation for BENEDICTUS text */
+@keyframes sacred-red-glow {
   0%, 100% {
     text-shadow:
-      0 0 10px rgba(212, 175, 55, 0.6),
-      0 0 25px rgba(212, 175, 55, 0.4),
-      0 0 40px rgba(255, 215, 0, 0.2),
-      0 2px 4px rgba(0, 0, 0, 0.8);
+      0 1px 2px rgba(178, 34, 34, 0.4),
+      0 0 12px rgba(178, 34, 34, 0.2);
   }
   50% {
     text-shadow:
-      0 0 15px rgba(212, 175, 55, 0.8),
-      0 0 35px rgba(212, 175, 55, 0.5),
-      0 0 55px rgba(255, 215, 0, 0.3),
-      0 2px 4px rgba(0, 0, 0, 0.8);
+      0 1px 3px rgba(178, 34, 34, 0.5),
+      0 0 20px rgba(178, 34, 34, 0.3);
+  }
+}
+
+/* Keep for backwards compatibility - same as red glow */
+@keyframes sacred-gold-glow {
+  0%, 100% {
+    text-shadow:
+      0 1px 2px rgba(178, 34, 34, 0.4),
+      0 0 12px rgba(178, 34, 34, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 1px 3px rgba(178, 34, 34, 0.5),
+      0 0 20px rgba(178, 34, 34, 0.3);
   }
 }
 
 @keyframes sacred-chi-rho-glow {
   0%, 100% {
     text-shadow:
-      0 0 10px rgba(201, 162, 39, 0.5),
-      0 0 20px rgba(201, 162, 39, 0.3);
+      0 0 8px rgba(139, 0, 0, 0.3),
+      0 0 16px rgba(139, 0, 0, 0.15);
   }
   50% {
     text-shadow:
-      0 0 15px rgba(201, 162, 39, 0.7),
-      0 0 30px rgba(201, 162, 39, 0.4);
+      0 0 12px rgba(139, 0, 0, 0.4),
+      0 0 24px rgba(139, 0, 0, 0.2);
   }
 }
 
