@@ -27,15 +27,13 @@ export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null);
   const [progress, setProgress] = useState<DailyProgress | null>(null);
   const [simulatedDay, setSimulatedDay] = useState<number>(1);
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState<boolean | null>(null);
   const openIMass = useOpenIMass();
 
   useEffect(() => {
-    // Verificar si ya vio el splash en esta sesión
+    // Verificar si ya vio el splash en esta sesión (solo en cliente)
     const hasSeenSplash = sessionStorage.getItem('benedictus_splash_seen');
-    if (hasSeenSplash) {
-      setShowSplash(false);
-    }
+    setShowSplash(!hasSeenSplash);
 
     const data = getUserData();
     setUserData(data);
@@ -67,12 +65,13 @@ export default function Home() {
     setProgress(newProgress);
   };
 
-  // Mostrar splash screen si es la primera visita de la sesión
-  if (showSplash) {
-    return <SplashScreen onComplete={handleSplashComplete} />;
-  }
-
-  if (!userData || !progress) {
+  // Mostrar loading mientras se verifica sessionStorage
+  if (showSplash === null || !userData || !progress) {
+    // Si aún no sabemos si mostrar splash, mostrar splash directamente
+    // (evita flash de loading)
+    if (showSplash === null) {
+      return <SplashScreen onComplete={handleSplashComplete} />;
+    }
     return (
       <div className="min-h-screen flex items-center justify-center bg-[var(--background)]">
         <div className="text-center">
@@ -83,6 +82,11 @@ export default function Home() {
         </div>
       </div>
     );
+  }
+
+  // Mostrar splash screen si es la primera visita de la sesión
+  if (showSplash) {
+    return <SplashScreen onComplete={handleSplashComplete} />;
   }
 
   const activeOra = DEFAULT_ORA_COMMITMENTS.filter((c) =>
