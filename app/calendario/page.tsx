@@ -62,20 +62,21 @@ export default function CalendarioPage() {
         </header>
 
         {/* Filtros */}
-        <div className="mb-6 flex gap-2 overflow-x-auto pb-2">
-          <button
-            onClick={() => setFiltroTiempo("todos")}
-            className={`btn ${filtroTiempo === "todos" ? "btn-primary" : "btn-ghost"} text-sm whitespace-nowrap`}
-          >
-            Todos
-          </button>
-          {(["septuagesima", "cuaresma", "pasion", "semana_santa", "pascua"] as TiempoLiturgico[]).map(tiempo => (
+        <div className="mb-6 flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+          {[
+            { key: "todos", label: "Todos" },
+            { key: "septuagesima", label: "Sept." },
+            { key: "cuaresma", label: "Cuaresma" },
+            { key: "pasion", label: "Pasión" },
+            { key: "semana_santa", label: "S. Santa" },
+            { key: "pascua", label: "Pascua" },
+          ].map(({ key, label }) => (
             <button
-              key={tiempo}
-              onClick={() => setFiltroTiempo(tiempo)}
-              className={`btn ${filtroTiempo === tiempo ? "btn-primary" : "btn-ghost"} text-sm whitespace-nowrap`}
+              key={key}
+              onClick={() => setFiltroTiempo(key as TiempoLiturgico | "todos")}
+              className={`btn ${filtroTiempo === key ? "btn-primary" : "btn-ghost"} text-sm whitespace-nowrap px-3`}
             >
-              {getTiempoLiturgicoLabel(tiempo)}
+              {label}
             </button>
           ))}
         </div>
