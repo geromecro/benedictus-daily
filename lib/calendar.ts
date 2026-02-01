@@ -161,6 +161,13 @@ export function estaDentroDeCuaresma(fecha?: string): boolean {
   return fechaCheck >= MIERCOLES_CENIZA;
 }
 
+export function esViernesDeCuaresma(): boolean {
+  const dia = getDiaLiturgico();
+  if (!dia) return false;
+  // Es viernes de Cuaresma si: es viernes (V) Y estamos después del Miércoles de Ceniza
+  return dia.diaSemana === "V" && estaDentroDeCuaresma();
+}
+
 export function getTiempoLiturgicoLabel(tiempo: TiempoLiturgico): string {
   const labels: Record<TiempoLiturgico, string> = {
     septuagesima: "Septuagésima",

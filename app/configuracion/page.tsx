@@ -220,20 +220,20 @@ export default function ConfiguracionPage() {
           </div>
         </section>
 
-        {/* Sacrificios personales */}
+        {/* REALITAS - Compromisos personales */}
         <section className="card p-6 mb-6">
           <h2 className="font-semibold text-[var(--text-primary)] mb-2">
-            Sacrificios personales
+            Realitas
           </h2>
           <p className="text-sm text-[var(--text-muted)] mb-4">
-            Elige 3 sacrificios para la Cuaresma (desde el Miércoles de Ceniza):
+            Elige 3 compromisos para habitar la realidad (desde el Miércoles de Ceniza):
           </p>
 
-          {/* Sacrificios elegidos */}
+          {/* Compromisos elegidos */}
           {userData.sacrifices.length > 0 && (
             <div className="mb-4">
               <p className="text-xs text-[var(--text-secondary)] mb-2 uppercase tracking-wide">
-                Tus sacrificios ({userData.sacrifices.length}/3):
+                Tus compromisos ({userData.sacrifices.length}/3):
               </p>
               <div className="space-y-2">
                 {userData.sacrifices.map((sacrifice, index) => (

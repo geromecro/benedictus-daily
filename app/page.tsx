@@ -20,7 +20,7 @@ import {
   DailyProgress,
   UserData,
 } from "@/lib/storage";
-import { estaDentroDeCuaresma, esDiaDeAyuno } from "@/lib/calendar";
+import { estaDentroDeCuaresma, esDiaDeAyuno, esViernesDeCuaresma } from "@/lib/calendar";
 import { useOpenIMass } from "@/lib/imass";
 
 export default function Home() {
@@ -88,8 +88,10 @@ export default function Home() {
     return <SplashScreenSacred onComplete={handleSplashComplete} />;
   }
 
+  // Filtrar compromisos ORA activos, excluyendo Vía Crucis si no es viernes de Cuaresma
   const activeOra = DEFAULT_ORA_COMMITMENTS.filter((c) =>
-    userData.activeOraCommitments.includes(c.id)
+    userData.activeOraCommitments.includes(c.id) &&
+    (c.id !== "via_crucis" || esViernesDeCuaresma())
   );
   const activeLabora = DEFAULT_LABORA_COMMITMENTS.filter((c) =>
     userData.activeLaboraCommitments.includes(c.id)
@@ -245,16 +247,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Sección Sacrificios (solo en Cuaresma) */}
+        {/* Sección REALITAS (solo en Cuaresma) */}
         {enCuaresma && sacrificiosActivos && (
           <section className="mb-8 animate-fade-in stagger-4">
             <div className="section-header">
-              <div className="section-icon sacrificio">
+              <div className="section-icon realitas">
                 <Cross size={18} />
               </div>
               <div className="flex-1">
-                <h2 className="section-title">Sacrificios</h2>
-                <p className="section-subtitle">Mortificación personal</p>
+                <h2 className="section-title">Realitas</h2>
+                <p className="section-subtitle">Habitar la realidad</p>
               </div>
             </div>
 
@@ -272,13 +274,13 @@ export default function Home() {
           </section>
         )}
 
-        {/* Mensaje si no está en Cuaresma pero tiene sacrificios configurados */}
+        {/* Mensaje si no está en Cuaresma pero tiene REALITAS configurados */}
         {!enCuaresma && sacrificiosActivos && (
           <section className="mb-8 animate-fade-in">
             <div className="card p-5 text-center border-dashed">
               <Cross size={24} className="mx-auto mb-3 text-[var(--purple-lent)] opacity-50" />
               <p className="text-sm text-[var(--text-muted)] italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
-                Los sacrificios personales comienzan el Miércoles de Ceniza
+                Los compromisos de Realitas comienzan el Miércoles de Ceniza
               </p>
             </div>
           </section>

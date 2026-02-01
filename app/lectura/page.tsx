@@ -124,6 +124,18 @@ export default function LecturaPage() {
           </div>
         </header>
 
+        {/* Indicador de lectura dominical extensa */}
+        {diaLiturgico?.diaSemana === "D" && (
+          <div className="card p-4 mb-6 bg-[var(--gold)] bg-opacity-10 border border-[var(--gold)] border-opacity-30">
+            <div className="flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-[var(--gold)]" />
+              <p className="text-sm font-medium text-[var(--gold)]">
+                Lectura dominical extensa (45 minutos)
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Comentario del día (si existe) */}
         {lectura.comentario && (
           <article className="card p-6 mb-6 bg-amber-50 border-amber-200">
