@@ -26,7 +26,6 @@ import { useOpenIMass } from "@/lib/imass";
 export default function Home() {
   const [userData, setUserData] = useState<UserData | null>(null);
   const [progress, setProgress] = useState<DailyProgress | null>(null);
-  const [simulatedDay, setSimulatedDay] = useState<number>(1);
   const [showSplash, setShowSplash] = useState<boolean | null>(null);
   const openIMass = useOpenIMass();
 
@@ -125,23 +124,7 @@ export default function Home() {
 
         {/* Contador de días */}
         <div className="mb-8">
-          <DayCounter simulatedDay={simulatedDay} />
-        </div>
-
-        {/* Selector de día para desarrollo */}
-        <div className="mb-6 p-4 bg-[var(--cream)] border border-[var(--border-light)] rounded-xl opacity-70">
-          <label className="text-xs text-[var(--text-muted)] block mb-2 uppercase tracking-wider">
-            Simular día (desarrollo):
-          </label>
-          <input
-            type="range"
-            min="1"
-            max="64"
-            value={simulatedDay}
-            onChange={(e) => setSimulatedDay(parseInt(e.target.value))}
-            className="w-full accent-[var(--gold)]"
-          />
-          <span className="text-xs text-[var(--text-muted)]">Día {simulatedDay}</span>
+          <DayCounter />
         </div>
 
         {/* Alerta de día de ayuno */}

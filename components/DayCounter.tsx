@@ -2,12 +2,8 @@
 
 import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturgicoBadgeClass, TOTAL_DIAS } from "@/lib/calendar";
 
-interface DayCounterProps {
-  simulatedDay?: number;
-}
-
-export default function DayCounter({ simulatedDay }: DayCounterProps) {
-  const diaActual = simulatedDay || getDiaActual();
+export default function DayCounter() {
+  const diaActual = getDiaActual();
   const diaLiturgico = getDiaLiturgico(diaActual);
 
   // Estado: antes, durante o después del programa

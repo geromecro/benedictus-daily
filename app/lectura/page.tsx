@@ -1,25 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { ArrowLeft, BookOpen, ExternalLink, MessageSquare, Cross } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturgicoBadgeClass } from "@/lib/calendar";
 import { useOpenIMass } from "@/lib/imass";
-import { getLectura, tieneContenido } from "@/lib/lecturas";
+import { getLectura } from "@/lib/lecturas";
 
 export default function LecturaPage() {
-  const [diaSimulado, setDiaSimulado] = useState<number>(1);
   const openIMass = useOpenIMass();
 
-  useEffect(() => {
-    const diaReal = getDiaActual();
-    setDiaSimulado(diaReal > 0 && diaReal <= 64 ? diaReal : 1);
-  }, []);
-
-  const diaLiturgico = getDiaLiturgico(diaSimulado);
-  const lectura = getLectura(diaSimulado);
-  const hayContenido = tieneContenido(diaSimulado);
+  const diaActual = getDiaActual();
+  const dia = diaActual > 0 && diaActual <= 64 ? diaActual : 1;
+  const diaLiturgico = getDiaLiturgico(dia);
+  const lectura = getLectura(dia);
 
   return (
     <main className="min-h-screen bg-[var(--background)] safe-area-top safe-area-bottom">
@@ -41,7 +35,7 @@ export default function LecturaPage() {
               </h1>
               {diaLiturgico && (
                 <p className="text-[var(--text-muted)] mt-1">
-                  Día {diaSimulado} — {diaLiturgico.fiesta}
+                  Día {dia} — {diaLiturgico.fiesta}
                 </p>
               )}
             </div>
@@ -154,28 +148,6 @@ export default function LecturaPage() {
           </button>
         </section>
 
-        {/* Selector de día para desarrollo */}
-        <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <label className="text-xs text-yellow-700 block mb-1">
-            Ver lectura del día (desarrollo):
-          </label>
-          <input
-            type="range"
-            min="1"
-            max="64"
-            value={diaSimulado}
-            onChange={(e) => setDiaSimulado(parseInt(e.target.value))}
-            className="w-full"
-          />
-          <div className="flex justify-between items-center">
-            <span className="text-xs text-yellow-700">Día {diaSimulado}</span>
-            {hayContenido ? (
-              <span className="text-xs text-green-600 font-medium">✓ Contenido cargado</span>
-            ) : (
-              <span className="text-xs text-orange-600">⏳ Pendiente</span>
-            )}
-          </div>
-        </div>
       </div>
 
       <Navigation />
