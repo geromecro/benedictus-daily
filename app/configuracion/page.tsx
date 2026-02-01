@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ArrowLeft, Settings, Check, Trash2, Download, Upload } from "lucide-react";
+import { ArrowLeft, Settings, Check, Trash2, Download, Upload, FileText } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import {
@@ -355,6 +355,29 @@ export default function ConfiguracionPage() {
             </div>
           </div>
         )}
+
+        {/* Guía del Itinerario */}
+        <section className="card p-6 mb-6">
+          <a
+            href="https://docs.google.com/document/d/1ThA-xnXO47V3r-8dm8DM3Wvl2YwbJf0CjZa7OVUj6l8/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 hover:opacity-80 transition-opacity"
+          >
+            <div className="w-10 h-10 rounded-xl bg-[var(--gold)] bg-opacity-10 flex items-center justify-center">
+              <FileText className="w-5 h-5 text-[var(--gold)]" />
+            </div>
+            <div className="flex-1">
+              <p className="font-medium text-[var(--text-primary)]">
+                Guía del Itinerario
+              </p>
+              <p className="text-sm text-[var(--text-muted)]">
+                Indicaciones, explicaciones y más
+              </p>
+            </div>
+            <span className="text-[var(--text-muted)]">→</span>
+          </a>
+        </section>
 
         {/* Info de la app */}
         <section className="text-center text-sm text-[var(--text-muted)] mb-6">

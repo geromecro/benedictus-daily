@@ -59,27 +59,6 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
 
       {/* Main content container */}
       <div className="splash-sacred-content">
-        {/* Upper ornamental line */}
-        <div className="splash-sacred-ornament splash-sacred-ornament-top">
-          <svg viewBox="0 0 200 20" fill="none">
-            <path
-              d="M0 10 Q50 0 100 10 Q150 20 200 10"
-              stroke="url(#redGradientLine)"
-              strokeWidth="1"
-              fill="none"
-            />
-            <defs>
-              <linearGradient id="redGradientLine" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="transparent" />
-                <stop offset="20%" stopColor="#8B0000" />
-                <stop offset="50%" stopColor="#A52A2A" />
-                <stop offset="80%" stopColor="#8B0000" />
-                <stop offset="100%" stopColor="transparent" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-
         {/* Latin Text - Line 1 */}
         <div className="splash-sacred-verse">
           <span className="splash-sacred-line line-1">
@@ -114,11 +93,6 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
           </span>
         </div>
 
-        {/* Divider */}
-        <div className="splash-sacred-divider">
-          <span className="splash-sacred-chi-rho">☧</span>
-        </div>
-
         {/* Translation */}
         <p className="splash-sacred-translation">
           "Hubo un hombre de vida venerable,<br />
@@ -129,27 +103,6 @@ export default function SplashScreenSacred({ onComplete }: SplashScreenSacredPro
         <p className="splash-sacred-attribution">
           — San Gregorio Magno, <em>Diálogos II</em>
         </p>
-
-        {/* Lower ornamental line */}
-        <div className="splash-sacred-ornament splash-sacred-ornament-bottom">
-          <svg viewBox="0 0 200 20" fill="none">
-            <path
-              d="M0 10 Q50 20 100 10 Q150 0 200 10"
-              stroke="url(#redGradientLine2)"
-              strokeWidth="1"
-              fill="none"
-            />
-            <defs>
-              <linearGradient id="redGradientLine2" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="transparent" />
-                <stop offset="20%" stopColor="#8B0000" />
-                <stop offset="50%" stopColor="#A52A2A" />
-                <stop offset="80%" stopColor="#8B0000" />
-                <stop offset="100%" stopColor="transparent" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
       </div>
 
       {/* Tap hint */}

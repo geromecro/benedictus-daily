@@ -34,82 +34,72 @@ const TELEGRAM_GROUP_CHAT_ID = Deno.env.get("TELEGRAM_GROUP_CHAT_ID")!;
 const APP_URL = "https://benedictus-daily.vercel.app";
 
 // Los Instrumentos de las Buenas Obras - Regla de San Benito, Cap. 4
-// 74 instrumentos, uno por día (los últimos 10 se repiten en días 65+)
+// 64 instrumentos, uno por cada día del desafío
 const INSTRUMENTOS: string[] = [
-  "Primero, amar al Señor Dios con todo el corazón, con toda el alma y con todas las fuerzas",
-  "Después, al prójimo como a sí mismo",
-  "Luego, no matar",
-  "No cometer adulterio",
-  "No hurtar",
-  "No codiciar",
-  "No levantar falso testimonio",
-  "Honrar a todos los hombres",
-  "No hacer a otro lo que uno no quiere para sí",
-  "Negarse a sí mismo para seguir a Cristo",
-  "Castigar el cuerpo",
-  "No entregarse a los deleites",
-  "Amar el ayuno",
-  "Alegrar a los pobres",
-  "Vestir al desnudo",
-  "Visitar al enfermo",
-  "Sepultar al muerto",
-  "Socorrer al atribulado",
-  "Consolar al afligido",
-  "Hacerse extraño al proceder del mundo",
-  "No anteponer nada al amor de Cristo",
-  "No ceder a la ira",
-  "No guardar rencor",
-  "No tener dolo en el corazón",
-  "No dar paz falsa",
-  "No abandonar la caridad",
-  "No jurar, no sea que acaso perjure",
-  "Decir la verdad con el corazón y con la boca",
-  "No devolver mal por mal",
-  "No hacer injurias, sino soportar pacientemente las que le hicieren",
-  "Amar a los enemigos",
-  "No maldecir a los que lo maldicen, sino más bien bendecirlos",
-  "Sufrir persecución por la justicia",
-  "No ser soberbio",
-  "Ni aficionado al vino",
-  "Ni glotón",
-  "Ni dormilón",
-  "Ni perezoso",
-  "Ni murmurador",
-  "Ni detractor",
-  "Poner su esperanza en Dios",
-  "Cuando viere en sí algo bueno, atribúyalo a Dios, no a sí mismo",
-  "En cambio, sepa que el mal siempre lo ha hecho él, e impúteselo a sí mismo",
-  "Temer el día del juicio",
-  "Sentir terror del infierno",
-  "Desear la vida eterna con la mayor avidez espiritual",
-  "Tener la muerte presente ante los ojos cada día",
-  "Velar a toda hora sobre las acciones de su vida",
-  "Saber de cierto que, en todo lugar, Dios lo está mirando",
-  "Estrellar inmediatamente contra Cristo los malos pensamientos que vienen a su corazón",
-  "Guardar su boca de conversación mala o perversa",
-  "No amar hablar mucho",
-  "No hablar palabras vanas o que mueven a risa",
-  "No amar la risa excesiva o destemplada",
-  "Oír con gusto las lecturas santas",
-  "Darse frecuentemente a la oración",
-  "Confesar diariamente a Dios en la oración, con lágrimas y gemidos, las culpas pasadas",
-  "Enmendarse en adelante de esas mismas faltas",
-  "No ceder a los deseos de la carne",
-  "Odiar la propia voluntad",
-  "Obedecer en todo los preceptos del abad",
-  "No querer ser llamado santo antes de serlo, sino serlo primero para que lo digan con verdad",
-  "Poner por obra diariamente los preceptos de Dios",
-  "Amar la castidad",
-  "No odiar a nadie",
-  "No tener celos",
-  "No tener envidia",
-  "No amar la contienda",
-  "Huir la vanagloria",
-  "Venerar a los ancianos",
-  "Amar a los más jóvenes",
-  "Orar por los enemigos en el amor de Cristo",
-  "Reconciliarse antes de la puesta del sol con quien se haya tenido alguna discordia",
-  "Y no desesperar nunca de la misericordia de Dios",
+  "Primero, amar al Señor Dios con todo el corazón, con toda el alma y con todas las fuerzas", // 1
+  "Después, al prójimo como a sí mismo", // 2
+  "Luego, no matar", // 3
+  "No cometer adulterio", // 4
+  "No hurtar", // 5
+  "No codiciar", // 6
+  "No levantar falso testimonio", // 7
+  "Honrar a todos los hombres", // 8
+  "No hacer a otro lo que uno no quiere para sí", // 9
+  "Negarse a sí mismo para seguir a Cristo", // 10
+  "Castigar el cuerpo", // 11
+  "No entregarse a los deleites", // 12
+  "Amar el ayuno", // 13
+  "Alegrar a los pobres, vestir al desnudo", // 14
+  "Visitar al enfermo, sepultar al muerto", // 15
+  "Socorrer al atribulado, consolar al afligido", // 16
+  "Hacerse extraño al proceder del mundo", // 17
+  "No anteponer nada al amor de Cristo", // 18
+  "No ceder a la ira", // 19
+  "No guardar rencor", // 20
+  "No tener dolo en el corazón", // 21
+  "No dar paz falsa", // 22
+  "No abandonar la caridad", // 23
+  "No jurar, no sea que acaso perjure", // 24
+  "Decir la verdad con el corazón y con la boca", // 25
+  "No devolver mal por mal", // 26
+  "No hacer injurias, sino soportar pacientemente las que le hicieren", // 27
+  "Amar a los enemigos. No maldecir a los que lo maldicen, sino más bien bendecirlos", // 28
+  "Sufrir persecución por la justicia", // 29
+  "No ser soberbio", // 30
+  "No ser aficionado al vino, ni glotón", // 31
+  "No ser dormilón, ni perezoso", // 32
+  "No ser murmurador, ni detractor", // 33
+  "Poner su esperanza en Dios", // 34
+  "Cuando viere en sí algo bueno, atribúyalo a Dios, no a sí mismo", // 35
+  "En cambio, sepa que el mal siempre lo ha hecho él, e impúteselo a sí mismo", // 36
+  "Temer el día del juicio", // 37
+  "Sentir terror del infierno", // 38
+  "Tener la muerte presente ante los ojos cada día", // 39
+  "Velar a toda hora sobre las acciones de su vida", // 40
+  "Saber de cierto que, en todo lugar, Dios lo está mirando", // 41
+  "Estrellar inmediatamente contra Cristo los malos pensamientos que vienen a su corazón, y manifestarlos al anciano espiritual", // 42
+  "Guardar su boca de conversación mala o perversa", // 43
+  "No amar hablar mucho", // 44
+  "No hablar palabras vanas o que mueven a risa, no amar la risa excesiva o destemplada", // 45
+  "Venerar a los ancianos", // 46
+  "Amar a los más jóvenes", // 47
+  "No ceder a los deseos de la carne", // 48
+  "Desear la vida eterna con la mayor avidez espiritual", // 49
+  "No odiar a nadie", // 50
+  "No tener celos, no tener envidia", // 51
+  "No amar la contienda", // 52
+  "Obedecer en todo los preceptos del abad, aun cuando él -lo que no suceda- obre de otro modo, acordándose de aquel precepto del Señor: «Hagan lo que ellos dicen, pero no hagan lo que ellos hacen»", // 53
+  "No querer ser llamado santo antes de serlo, sino serlo primero para que lo digan con verdad", // 54
+  "Poner por obra diariamente los preceptos de Dios", // 55
+  "Amar la castidad", // 56
+  "Huir la vanagloria", // 57
+  "Oír con gusto las lecturas santas", // 58
+  "Darse frecuentemente a la oración", // 59
+  "Orar por los enemigos en el amor de Cristo. Reconciliarse antes de la puesta del sol con quien se haya tenido alguna discordia", // 60
+  "Odiar la propia voluntad", // 61
+  "Confesar diariamente a Dios en la oración, con lágrimas y gemidos, las culpas pasadas", // 62
+  "Enmendarse en adelante de esas mismas faltas", // 63
+  "Y no desesperar nunca de la misericordia de Dios", // 64
 ];
 
 // Calendario litúrgico completo (64 días)
@@ -189,18 +179,29 @@ function getDiaLiturgico(dia: number): DiaLiturgico | null {
   return CALENDARIO[dia - 1];
 }
 
-// Calcular día actual del programa
+// Calcular día actual del programa (con timezone de Argentina)
 function getDiaActual(): number {
   const FECHA_INICIO = "2026-02-01";
-  const hoy = new Date();
-  const inicio = new Date(FECHA_INICIO);
+  const FECHA_FIN = "2026-04-05";
 
-  if (hoy < inicio) return 0;
+  // Obtener fecha actual en Argentina
+  const now = new Date();
+  const hoyStr = now.toLocaleDateString("en-CA", { timeZone: "America/Argentina/Buenos_Aires" });
 
-  const diffTime = hoy.getTime() - inicio.getTime();
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  if (hoyStr < FECHA_INICIO) return 0; // Antes del programa
+  if (hoyStr > FECHA_FIN) return 65; // Después del programa
 
-  return Math.min(64, diffDays + 1);
+  // Calcular diferencia de días
+  const hoyParts = hoyStr.split("-").map(Number);
+  const inicioParts = FECHA_INICIO.split("-").map(Number);
+
+  const hoyUtc = Date.UTC(hoyParts[0], hoyParts[1] - 1, hoyParts[2]);
+  const inicioUtc = Date.UTC(inicioParts[0], inicioParts[1] - 1, inicioParts[2]);
+
+  const diffMs = hoyUtc - inicioUtc;
+  const diffDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
+
+  return diffDays + 1; // Día 1-64
 }
 
 // Función para formatear fecha en español
@@ -225,41 +226,63 @@ function getInstrumentoDelDia(dia: number): string {
 }
 
 // Generar mensaje de Laudes (06:00)
-function generarMensajeLaudes(): string {
+function generarMensajeLaudes(): string | null {
   const diaActual = getDiaActual();
+
+  // Si el programa no ha comenzado, no enviar mensaje
+  if (diaActual === 0) {
+    console.log("Programa no iniciado, saltando mensaje de Laudes");
+    return null;
+  }
+
+  // Si el programa terminó, no enviar mensaje
+  if (diaActual > 64) {
+    console.log("Programa finalizado, saltando mensaje de Laudes");
+    return null;
+  }
+
   const diaLiturgico = getDiaLiturgico(diaActual);
+  if (!diaLiturgico) return null;
 
-  // Si estamos fuera del programa, usar día 1 como fallback
-  const dia = diaLiturgico || CALENDARIO[0];
-  const fechaLegible = formatearFechaLegible(dia.fecha);
-  const instrumento = getInstrumentoDelDia(dia.dia);
+  const fechaLegible = formatearFechaLegible(diaLiturgico.fecha);
+  const instrumento = getInstrumentoDelDia(diaLiturgico.dia);
 
-  let mensaje = `🗓 Día ${dia.dia} - *${dia.fiesta}*
-
+  let mensaje = `🗓 Día ${diaLiturgico.dia} - ${diaLiturgico.fiesta}
 ${fechaLegible}`;
 
   // Agregar aviso de ayuno solo si corresponde
-  if (dia.esAyuno) {
+  if (diaLiturgico.esAyuno) {
     mensaje += `
 
-🍽️ Hoy es día de ayuno y abstinencia`;
+🍽 Día de ayuno y abstinencia de carne`;
   }
 
-  // Instrumento de las Buenas Obras del día
   mensaje += `
 
-📜 *Instrumento del día:*
-_"${instrumento}"_`;
+🌅 LAUDES
+
+👉 Rezar Laudes: ${APP_URL}/
+
+📖 Instrumento de las buenas obras del día:
+"${instrumento}"`;
 
   return mensaje;
 }
 
 // Generar mensaje de Completas (21:30)
-function generarMensajeCompletas(): string {
+function generarMensajeCompletas(): string | null {
   const diaActual = getDiaActual();
+
+  // Si el programa no ha comenzado o terminó, no enviar mensaje
+  if (diaActual === 0 || diaActual > 64) {
+    console.log(`Programa fuera de rango (día ${diaActual}), saltando mensaje de Completas`);
+    return null;
+  }
+
   const diaLiturgico = getDiaLiturgico(diaActual);
-  const dia = diaLiturgico || CALENDARIO[0];
-  const fechaLegible = formatearFechaLegible(dia.fecha);
+  if (!diaLiturgico) return null;
+
+  const fechaLegible = formatearFechaLegible(diaLiturgico.fecha);
 
   return `🌙 COMPLETAS
 ${fechaLegible}
@@ -273,7 +296,15 @@ Terminemos el día encomendándonos a Dios.
 }
 
 // Generar mensaje de Lectio (18:30)
-function generarMensajeLectio(_diaActual: number): string {
+function generarMensajeLectio(): string | null {
+  const diaActual = getDiaActual();
+
+  // Si el programa no ha comenzado o terminó, no enviar mensaje
+  if (diaActual === 0 || diaActual > 64) {
+    console.log(`Programa fuera de rango (día ${diaActual}), saltando mensaje de Lectio`);
+    return null;
+  }
+
   return `📖 Lectura del día
 
 👉 ${APP_URL}/lectura`;
@@ -354,7 +385,7 @@ serve(async (req: Request) => {
     const body: TelegramRequest = await req.json();
     const { type, custom_text, dia_actual } = body;
 
-    let message: string;
+    let message: string | null;
 
     switch (type) {
       case "laudes":
@@ -364,7 +395,7 @@ serve(async (req: Request) => {
         message = generarMensajeCompletas();
         break;
       case "lectio":
-        message = generarMensajeLectio(dia_actual || 1);
+        message = generarMensajeLectio();
         break;
       case "test":
         message = generarMensajeTest();
@@ -377,6 +408,19 @@ serve(async (req: Request) => {
         break;
       default:
         throw new Error(`Tipo de mensaje no válido: ${type}`);
+    }
+
+    // Si el mensaje es null (fuera del programa), retornar éxito sin enviar
+    if (message === null) {
+      return new Response(
+        JSON.stringify({
+          success: true,
+          type,
+          skipped: true,
+          reason: "Programa fuera de rango - no se envió mensaje",
+        }),
+        { status: 200, headers }
+      );
     }
 
     console.log(`Enviando mensaje tipo: ${type}`);

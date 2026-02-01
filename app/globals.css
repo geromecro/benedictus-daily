@@ -740,12 +740,14 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: var(--background);
+  background: var(--parchment);
+  -webkit-animation: splash-fade-in 1s ease-out;
   animation: splash-fade-in 1s ease-out;
   cursor: pointer;
 }
 
 .splash-screen.splash-exit {
+  -webkit-animation: splash-fade-out 0.6s ease-in forwards;
   animation: splash-fade-out 0.6s ease-in forwards;
 }
 
@@ -753,29 +755,35 @@ h3 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, transparent 0%, var(--background) 70%),
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A962' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.5;
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.3) 0%, transparent 70%),
+    url('/images/benedict-medal-bg.jpg');
+  background-size: cover, 70% auto;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  opacity: 0.06;
 }
 
 .splash-content {
   position: relative;
   text-align: center;
   padding: 2rem;
+  -webkit-animation: splash-content-rise 1.2s ease-out 0.3s both;
   animation: splash-content-rise 1.2s ease-out 0.3s both;
 }
 
 .splash-cross {
   color: var(--gold);
-  opacity: 0.6;
+  opacity: 0.7;
   margin: 1.5rem 0;
 }
 
 .splash-cross-top {
+  -webkit-animation: splash-cross-fade 1s ease-out 0.5s both;
   animation: splash-cross-fade 1s ease-out 0.5s both;
 }
 
 .splash-cross-bottom {
+  -webkit-animation: splash-cross-fade 1s ease-out 0.7s both;
   animation: splash-cross-fade 1s ease-out 0.7s both;
 }
 
@@ -785,17 +793,26 @@ h3 {
   font-weight: 600;
   letter-spacing: 0.15em;
   line-height: 2;
-  color: var(--text-primary);
+  color: var(--black-vellum);
 }
 
 .splash-line {
   display: block;
+  color: var(--black-vellum);
+}
+
+.splash-word {
+  display: inline-block;
 }
 
 .splash-drop-cap {
-  color: var(--red-holy);
-  font-size: 1.8em;
+  color: var(--red-manuscript);
+  font-size: 1.4em;
   font-weight: 700;
+}
+
+.splash-word-accent {
+  color: var(--ultramarine);
 }
 
 .splash-word-benedictus {
@@ -806,19 +823,21 @@ h3 {
   font-family: var(--font-cormorant);
   font-style: italic;
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: var(--brown-ink);
   margin-top: 2rem;
   max-width: 280px;
   line-height: 1.6;
+  -webkit-animation: splash-text-fade 1s ease-out 1s both;
   animation: splash-text-fade 1s ease-out 1s both;
 }
 
 .splash-attribution {
   font-family: var(--font-cormorant);
   font-size: 0.75rem;
-  color: var(--text-muted);
-  opacity: 0.6;
+  color: var(--brown-ink);
+  opacity: 0.7;
   margin-top: 0.5rem;
+  -webkit-animation: splash-text-fade 1s ease-out 1.2s both;
   animation: splash-text-fade 1s ease-out 1.2s both;
 }
 
@@ -829,42 +848,77 @@ h3 {
   transform: translateX(-50%);
   font-family: var(--font-cormorant);
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--brown-ink);
   opacity: 0;
+  -webkit-animation: splash-hint-pulse 2s ease-in-out 2.5s infinite;
   animation: splash-hint-pulse 2s ease-in-out 2.5s infinite;
 }
 
+@-webkit-keyframes splash-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 @keyframes splash-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
+@-webkit-keyframes splash-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
 @keyframes splash-fade-out {
   from { opacity: 1; }
   to { opacity: 0; }
 }
 
-@keyframes splash-content-rise {
+@-webkit-keyframes splash-content-rise {
   from {
     opacity: 0;
+    -webkit-transform: translateY(20px);
     transform: translateY(20px);
   }
   to {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes splash-content-rise {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
+@-webkit-keyframes splash-cross-fade {
+  from { opacity: 0; }
+  to { opacity: 0.7; }
+}
 @keyframes splash-cross-fade {
   from { opacity: 0; }
-  to { opacity: 0.6; }
+  to { opacity: 0.7; }
 }
 
+@-webkit-keyframes splash-text-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 @keyframes splash-text-fade {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
+@-webkit-keyframes splash-hint-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
 @keyframes splash-hint-pulse {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 0.8; }

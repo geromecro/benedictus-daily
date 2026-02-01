@@ -100,17 +100,33 @@ export const CALENDARIO: DiaLiturgico[] = [
   { dia: 64, fecha: "2026-04-05", diaSemana: "D", fiesta: "Domingo de Resurrección", tiempo: "pascua", esFiesta: true, esAyuno: false },
 ];
 
+// Timezone de Argentina para cálculos consistentes
+const TIMEZONE_ARGENTINA = "America/Argentina/Buenos_Aires";
+
+// Obtener fecha actual en Argentina como string YYYY-MM-DD
+export function getFechaArgentina(): string {
+  const now = new Date();
+  return now.toLocaleDateString("en-CA", { timeZone: TIMEZONE_ARGENTINA }); // en-CA da formato YYYY-MM-DD
+}
+
 // Funciones auxiliares
 export function getDiaActual(): number {
-  const hoy = new Date();
-  const inicio = new Date(FECHA_INICIO);
-  const fin = new Date(FECHA_FIN);
+  const hoyStr = getFechaArgentina();
 
-  if (hoy < inicio) return 0; // Antes del programa
-  if (hoy > fin) return 65; // Después del programa
+  // Comparar strings de fecha directamente para evitar problemas de timezone
+  if (hoyStr < FECHA_INICIO) return 0; // Antes del programa
+  if (hoyStr > FECHA_FIN) return 65; // Después del programa
 
-  const diffTime = hoy.getTime() - inicio.getTime();
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  // Calcular diferencia de días usando las fechas como strings
+  const hoyParts = hoyStr.split("-").map(Number);
+  const inicioParts = FECHA_INICIO.split("-").map(Number);
+
+  // Crear fechas a medianoche UTC para cálculo limpio
+  const hoyUtc = Date.UTC(hoyParts[0], hoyParts[1] - 1, hoyParts[2]);
+  const inicioUtc = Date.UTC(inicioParts[0], inicioParts[1] - 1, inicioParts[2]);
+
+  const diffMs = hoyUtc - inicioUtc;
+  const diffDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
 
   return diffDays + 1; // Día 1-64
 }
@@ -141,7 +157,7 @@ export function esFiesta(fecha?: string): boolean {
 }
 
 export function estaDentroDeCuaresma(fecha?: string): boolean {
-  const fechaCheck = fecha || new Date().toISOString().split("T")[0];
+  const fechaCheck = fecha || getFechaArgentina();
   return fechaCheck >= MIERCOLES_CENIZA;
 }
 

@@ -11,9 +11,86 @@ export default function LecturaPage() {
   const openIMass = useOpenIMass();
 
   const diaActual = getDiaActual();
-  const dia = diaActual > 0 && diaActual <= 64 ? diaActual : 1;
+
+  // Determinar estado del programa
+  const programaNoIniciado = diaActual === 0;
+  const programaFinalizado = diaActual > 64;
+  const dentroDelPrograma = diaActual > 0 && diaActual <= 64;
+
+  const dia = dentroDelPrograma ? diaActual : 1;
   const diaLiturgico = getDiaLiturgico(dia);
   const lectura = getLectura(dia);
+
+  // Pantalla especial si el programa no ha iniciado
+  if (programaNoIniciado) {
+    return (
+      <main className="min-h-screen bg-[var(--background)] safe-area-top safe-area-bottom">
+        <div className="max-w-lg mx-auto px-4 py-6">
+          <header className="mb-6">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-[var(--primary)] mb-4 hover:underline"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Volver</span>
+            </Link>
+          </header>
+
+          <div className="card p-8 text-center">
+            <BookOpen className="w-16 h-16 mx-auto mb-4 text-[var(--gold)] opacity-60" />
+            <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+              El camino aún no comienza
+            </h1>
+            <p className="text-[var(--text-muted)] mb-6">
+              Las lecturas del programa Benedictus comenzarán el <strong>1 de febrero de 2026</strong>, Domingo de Septuagésima.
+            </p>
+            <p className="text-sm text-[var(--text-muted)] italic">
+              Prepárate espiritualmente para este camino de 64 días hacia la Pascua.
+            </p>
+          </div>
+        </div>
+        <Navigation />
+      </main>
+    );
+  }
+
+  // Pantalla especial si el programa terminó
+  if (programaFinalizado) {
+    return (
+      <main className="min-h-screen bg-[var(--background)] safe-area-top safe-area-bottom">
+        <div className="max-w-lg mx-auto px-4 py-6">
+          <header className="mb-6">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 text-[var(--primary)] mb-4 hover:underline"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Volver</span>
+            </Link>
+          </header>
+
+          <div className="card p-8 text-center">
+            <Cross className="w-16 h-16 mx-auto mb-4 text-[var(--gold)]" />
+            <h1 className="text-2xl font-bold text-[var(--text-primary)] mb-4">
+              ¡Cristo ha Resucitado!
+            </h1>
+            <p className="text-[var(--text-muted)] mb-6">
+              El camino Benedictus ha concluido. Has completado los 64 días de preparación desde Septuagésima hasta la Pascua.
+            </p>
+            <p className="text-sm text-[var(--text-muted)] italic">
+              Que la alegría pascual te acompañe siempre.
+            </p>
+            <div className="mt-6 p-4 bg-[var(--gold)] bg-opacity-10 rounded-lg">
+              <p className="text-[var(--gold)] font-semibold">
+                Alleluia! Alleluia!
+              </p>
+            </div>
+          </div>
+        </div>
+        <Navigation />
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-[var(--background)] safe-area-top safe-area-bottom">

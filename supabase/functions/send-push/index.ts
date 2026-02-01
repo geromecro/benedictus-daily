@@ -29,6 +29,7 @@ interface RequestBody {
   device_id?: string;
   notification_type?: "laudes" | "completas" | "test";
   custom_payload?: NotificationPayload;
+  schedule_id?: number; // ID del schedule para actualizar last_sent después del envío
 }
 
 // Configuración VAPID
@@ -132,7 +133,7 @@ serve(async (req: Request) => {
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
     const body: RequestBody = await req.json();
-    const { device_id, notification_type, custom_payload } = body;
+    const { device_id, notification_type, custom_payload, schedule_id } = body;
 
     let subscriptions: PushSubscription[] = [];
     let payload: NotificationPayload;
@@ -203,6 +204,17 @@ serve(async (req: Request) => {
 
     const successCount = results.filter((r) => r.success).length;
     const failedCount = results.filter((r) => !r.success).length;
+
+    // Si el envío fue exitoso y tenemos schedule_id, actualizar last_sent
+    // Esto garantiza que solo se marca como enviado DESPUÉS de confirmar el envío
+    if (successCount > 0 && schedule_id) {
+      const today = new Date().toISOString().split("T")[0];
+      await supabase
+        .from("notification_schedule")
+        .update({ last_sent: today })
+        .eq("id", schedule_id);
+      console.log(`Updated last_sent for schedule ${schedule_id}`);
+    }
 
     return new Response(
       JSON.stringify({

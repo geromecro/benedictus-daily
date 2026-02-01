@@ -122,21 +122,46 @@ export function saveUserData(data: Partial<UserData>): void {
   }
 }
 
+// Timezone de Argentina para consistencia con calendar.ts
+const TIMEZONE_ARGENTINA = "America/Argentina/Buenos_Aires";
+
 // Funciones específicas para progreso diario
 export function getTodayKey(): string {
   const now = new Date();
-  return now.toISOString().split("T")[0]; // "2026-02-15"
+  // Usar timezone de Argentina para consistencia con getDiaActual() de calendar.ts
+  return now.toLocaleDateString("en-CA", { timeZone: TIMEZONE_ARGENTINA }); // "2026-02-15"
 }
 
 export function getDailyProgress(date?: string): DailyProgress {
   const key = date || getTodayKey();
   const data = getUserData();
 
-  return data.dailyProgress[key] || {
+  // Crear array de sacrificios con el tamaño correcto basado en la configuración del usuario
+  const numSacrifices = data.sacrifices.length || 3;
+  const defaultSacrifices = Array(numSacrifices).fill(false);
+
+  const existingProgress = data.dailyProgress[key];
+
+  if (existingProgress) {
+    // Si ya existe progreso, asegurar que el array de sacrificios tenga el tamaño correcto
+    // Si el usuario agregó más sacrificios después, expandir el array
+    // Si redujo sacrificios, truncar el array
+    const currentSacrifices = existingProgress.sacrifices || [];
+    const adjustedSacrifices = Array(numSacrifices)
+      .fill(false)
+      .map((_, i) => currentSacrifices[i] ?? false);
+
+    return {
+      ...existingProgress,
+      sacrifices: adjustedSacrifices,
+    };
+  }
+
+  return {
     ora: [],
     lectio: false,
     labora: [],
-    sacrifices: [false, false, false],
+    sacrifices: defaultSacrifices,
   };
 }
 
@@ -209,9 +234,10 @@ function calculateStreak(data: UserData): { currentStreak: number; longestStreak
   let tempStreak = 0;
 
   const today = getTodayKey();
-  const yesterday = new Date();
-  yesterday.setDate(yesterday.getDate() - 1);
-  const yesterdayKey = yesterday.toISOString().split("T")[0];
+  // Calcular "ayer" usando timezone de Argentina
+  const todayParts = today.split("-").map(Number);
+  const yesterdayDate = new Date(Date.UTC(todayParts[0], todayParts[1] - 1, todayParts[2] - 1));
+  const yesterdayKey = yesterdayDate.toISOString().split("T")[0];
 
   // Verificar si el día más reciente es hoy o ayer
   const mostRecent = dates[0];
@@ -250,48 +276,6 @@ function isConsecutiveDay(prev: string, current: string): boolean {
   const currentDate = new Date(current);
   const diff = prevDate.getTime() - currentDate.getTime();
   return Math.abs(diff) === 24 * 60 * 60 * 1000;
-}
-
-// Estadísticas
-export function getStats(): {
-  currentStreak: number;
-  longestStreak: number;
-  totalDays: number;
-  completedDays: number;
-  oraPercentage: number;
-  laboraPercentage: number;
-  lectioPercentage: number;
-} {
-  const data = getUserData();
-  const dates = Object.keys(data.dailyProgress);
-
-  let oraTotal = 0;
-  let oraCompleted = 0;
-  let laboraTotal = 0;
-  let laboraCompleted = 0;
-  let lectioCompleted = 0;
-
-  dates.forEach(date => {
-    const progress = data.dailyProgress[date];
-    oraTotal += data.activeOraCommitments.length;
-    oraCompleted += progress.ora.filter(id => data.activeOraCommitments.includes(id)).length;
-    laboraTotal += data.activeLaboraCommitments.length;
-    laboraCompleted += progress.labora.filter(id => data.activeLaboraCommitments.includes(id)).length;
-    if (progress.lectio) lectioCompleted++;
-  });
-
-  return {
-    currentStreak: data.currentStreak,
-    longestStreak: data.longestStreak,
-    totalDays: dates.length,
-    completedDays: dates.filter(date => {
-      const p = data.dailyProgress[date];
-      return p.ora.length > 0 || p.labora.length > 0 || p.lectio;
-    }).length,
-    oraPercentage: oraTotal > 0 ? Math.round((oraCompleted / oraTotal) * 100) : 0,
-    laboraPercentage: laboraTotal > 0 ? Math.round((laboraCompleted / laboraTotal) * 100) : 0,
-    lectioPercentage: dates.length > 0 ? Math.round((lectioCompleted / dates.length) * 100) : 0,
-  };
 }
 
 // Exportar datos (backup)

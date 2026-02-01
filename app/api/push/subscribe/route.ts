@@ -39,6 +39,33 @@ interface DeleteRequest {
   deviceId: string;
 }
 
+// Validar formato de hora HH:MM (00:00 - 23:59)
+function isValidTimeFormat(time: string | undefined): boolean {
+  if (!time) return true; // undefined/null es válido (significa no configurado)
+  const regex = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+  return regex.test(time);
+}
+
+// Validar todas las horas de una request
+function validateTimes(times: { laudesTime?: string; completasTime?: string; rosarioTime?: string; lectioTime?: string }): string | null {
+  const { laudesTime, completasTime, rosarioTime, lectioTime } = times;
+
+  if (laudesTime && !isValidTimeFormat(laudesTime)) {
+    return `Formato de hora inválido para Laudes: "${laudesTime}". Use formato HH:MM (ej: 07:00)`;
+  }
+  if (completasTime && !isValidTimeFormat(completasTime)) {
+    return `Formato de hora inválido para Completas: "${completasTime}". Use formato HH:MM (ej: 21:30)`;
+  }
+  if (rosarioTime && !isValidTimeFormat(rosarioTime)) {
+    return `Formato de hora inválido para Rosario: "${rosarioTime}". Use formato HH:MM (ej: 12:00)`;
+  }
+  if (lectioTime && !isValidTimeFormat(lectioTime)) {
+    return `Formato de hora inválido para Lectio: "${lectioTime}". Use formato HH:MM (ej: 21:00)`;
+  }
+
+  return null; // Todas las horas son válidas
+}
+
 // POST: Crear o actualizar subscription
 export async function POST(request: NextRequest) {
   try {
@@ -48,6 +75,15 @@ export async function POST(request: NextRequest) {
     if (!deviceId || !subscription || !subscription.endpoint) {
       return NextResponse.json(
         { error: 'Datos incompletos' },
+        { status: 400 }
+      );
+    }
+
+    // Validar formato de horas
+    const timeError = validateTimes({ laudesTime, completasTime, rosarioTime, lectioTime });
+    if (timeError) {
+      return NextResponse.json(
+        { error: timeError },
         { status: 400 }
       );
     }
@@ -112,6 +148,15 @@ export async function PUT(request: NextRequest) {
     if (!deviceId) {
       return NextResponse.json(
         { error: 'deviceId requerido' },
+        { status: 400 }
+      );
+    }
+
+    // Validar formato de horas
+    const timeError = validateTimes({ laudesTime, completasTime, rosarioTime, lectioTime });
+    if (timeError) {
+      return NextResponse.json(
+        { error: timeError },
         { status: 400 }
       );
     }
