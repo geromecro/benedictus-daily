@@ -13,10 +13,19 @@ npm run dev      # Start dev server (localhost:3000) - uses webpack, not turbopa
 npm run build    # Production build
 npm start        # Run production server
 npm run lint     # Run ESLint
-
-# Deploy to production
-vercel --prod
 ```
+
+## Deployment
+
+**IMPORTANTE**: Siempre usar Vercel CLI para deployar. Los deploys automáticos de GitHub no funcionan correctamente.
+
+```bash
+# Después de hacer cambios y commit:
+git push origin main          # Push a GitHub (para backup/historial)
+vercel --prod                 # Deploy a producción (OBLIGATORIO)
+```
+
+**URL de producción**: https://benedictus-daily.vercel.app
 
 ## Tech Stack
 
