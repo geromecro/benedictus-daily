@@ -7,6 +7,8 @@ const withPWA = withPWAInit({
   aggressiveFrontEndNavCaching: true,
   reloadOnOnline: true,
   disable: process.env.NODE_ENV === "development",
+  // Incluir service worker personalizado para push notifications
+  customWorkerSrc: "custom-sw.js",
   workboxOptions: {
     disableDevLogs: true,
   },
