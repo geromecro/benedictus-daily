@@ -123,12 +123,17 @@ export async function POST(request: NextRequest) {
     }
 
     // También actualizar/crear los schedules de notificación
-    await updateNotificationSchedules(deviceId, laudesTime, completasTime, rosarioTime, lectioTime);
+    const scheduleResult = await updateNotificationSchedules(deviceId, laudesTime, completasTime, rosarioTime, lectioTime);
+
+    if (!scheduleResult.success) {
+      console.error('Advertencia: Subscription guardada pero schedules fallaron:', scheduleResult.error);
+    }
 
     return NextResponse.json({
       success: true,
       message: 'Subscription guardada correctamente',
       data,
+      schedulesCreated: scheduleResult.success,
     });
   } catch (error) {
     console.error('Error en POST /api/push/subscribe:', error);
@@ -182,12 +187,17 @@ export async function PUT(request: NextRequest) {
     }
 
     // Actualizar los schedules
-    await updateNotificationSchedules(deviceId, laudesTime, completasTime, rosarioTime, lectioTime);
+    const scheduleResult = await updateNotificationSchedules(deviceId, laudesTime, completasTime, rosarioTime, lectioTime);
+
+    if (!scheduleResult.success) {
+      console.error('Advertencia: Horarios actualizados pero schedules fallaron:', scheduleResult.error);
+    }
 
     return NextResponse.json({
       success: true,
       message: 'Horarios actualizados',
       data,
+      schedulesCreated: scheduleResult.success,
     });
   } catch (error) {
     console.error('Error en PUT /api/push/subscribe:', error);
@@ -251,48 +261,66 @@ async function updateNotificationSchedules(
   completasTime: string,
   rosarioTime?: string,
   lectioTime?: string
-) {
-  const supabase = getSupabaseAdmin();
+): Promise<{ success: boolean; error?: string }> {
+  try {
+    const supabase = getSupabaseAdmin();
 
-  // Eliminar schedules existentes
-  await supabase
-    .from('notification_schedule')
-    .delete()
-    .eq('device_id', deviceId);
+    // Eliminar schedules existentes
+    const { error: deleteError } = await supabase
+      .from('notification_schedule')
+      .delete()
+      .eq('device_id', deviceId);
 
-  // Crear nuevos schedules
-  const schedules = [
-    {
-      device_id: deviceId,
-      notification_type: 'laudes',
-      scheduled_time: laudesTime,
-    },
-    {
-      device_id: deviceId,
-      notification_type: 'completas',
-      scheduled_time: completasTime,
-    },
-  ];
+    if (deleteError) {
+      console.error('Error eliminando schedules existentes:', deleteError);
+      // No es crítico, continuamos
+    }
 
-  // Agregar rosario si tiene horario configurado
-  if (rosarioTime) {
-    schedules.push({
-      device_id: deviceId,
-      notification_type: 'rosario',
-      scheduled_time: rosarioTime,
-    });
+    // Crear nuevos schedules
+    const schedules = [
+      {
+        device_id: deviceId,
+        notification_type: 'laudes',
+        scheduled_time: laudesTime,
+      },
+      {
+        device_id: deviceId,
+        notification_type: 'completas',
+        scheduled_time: completasTime,
+      },
+    ];
+
+    // Agregar rosario si tiene horario configurado
+    if (rosarioTime) {
+      schedules.push({
+        device_id: deviceId,
+        notification_type: 'rosario',
+        scheduled_time: rosarioTime,
+      });
+    }
+
+    // Agregar lectio si tiene horario configurado
+    if (lectioTime) {
+      schedules.push({
+        device_id: deviceId,
+        notification_type: 'lectio',
+        scheduled_time: lectioTime,
+      });
+    }
+
+    const { error: insertError } = await supabase
+      .from('notification_schedule')
+      .insert(schedules);
+
+    if (insertError) {
+      console.error('Error insertando schedules:', insertError);
+      return { success: false, error: insertError.message };
+    }
+
+    console.log(`Schedules creados exitosamente para dispositivo ${deviceId}:`, schedules.map(s => s.notification_type));
+    return { success: true };
+  } catch (error) {
+    console.error('Error inesperado en updateNotificationSchedules:', error);
+    return { success: false, error: error instanceof Error ? error.message : 'Error desconocido' };
   }
-
-  // Agregar lectio si tiene horario configurado
-  if (lectioTime) {
-    schedules.push({
-      device_id: deviceId,
-      notification_type: 'lectio',
-      scheduled_time: lectioTime,
-    });
-  }
-
-  await supabase
-    .from('notification_schedule')
-    .insert(schedules);
 }
