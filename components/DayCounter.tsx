@@ -1,12 +1,22 @@
 "use client";
 
+import { useState } from "react";
 import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturgicoBadgeClass, TOTAL_DIAS } from "@/lib/calendar";
 
 export default function DayCounter() {
   const diaActual = getDiaActual();
-  const diaLiturgico = getDiaLiturgico(diaActual);
 
-  // Estado: antes, durante o después del programa
+  // Estado para navegación manual entre días
+  const [diaSeleccionado, setDiaSeleccionado] = useState(() => diaActual);
+
+  // Funciones de navegación
+  const irAnterior = () => setDiaSeleccionado(d => Math.max(1, d - 1));
+  const irSiguiente = () => setDiaSeleccionado(d => Math.min(TOTAL_DIAS, d + 1));
+
+  // Usar diaSeleccionado para mostrar info (pero diaActual para determinar estado)
+  const diaLiturgico = getDiaLiturgico(diaSeleccionado);
+
+  // Estado: antes, durante o después del programa (basado en día real)
   const estado = diaActual === 0 ? "antes" : diaActual > 64 ? "despues" : "durante";
 
   // Cálculos para el anillo circular
@@ -123,9 +133,27 @@ export default function DayCounter() {
             />
           </svg>
 
-          {/* Centro con número */}
+          {/* Centro con número y flechas de navegación */}
           <div className="day-ring-center">
-            <span className="day-number">{diaActual}</span>
+            <div className="flex items-center gap-1">
+              <button
+                onClick={irAnterior}
+                disabled={diaSeleccionado <= 1}
+                className="text-[var(--gold)] hover:text-[var(--gold-light)] disabled:opacity-30 disabled:cursor-not-allowed text-xl font-bold px-1 transition-opacity"
+                aria-label="Día anterior"
+              >
+                ‹
+              </button>
+              <span className="day-number">{diaSeleccionado}</span>
+              <button
+                onClick={irSiguiente}
+                disabled={diaSeleccionado >= TOTAL_DIAS}
+                className="text-[var(--gold)] hover:text-[var(--gold-light)] disabled:opacity-30 disabled:cursor-not-allowed text-xl font-bold px-1 transition-opacity"
+                aria-label="Día siguiente"
+              >
+                ›
+              </button>
+            </div>
             <span className="day-label">de {TOTAL_DIAS}</span>
           </div>
         </div>

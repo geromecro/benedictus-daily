@@ -278,6 +278,72 @@ function isConsecutiveDay(prev: string, current: string): boolean {
   return Math.abs(diff) === 24 * 60 * 60 * 1000;
 }
 
+// Obtener estadísticas calculadas
+export function getStats() {
+  const userData = getUserData();
+  const dailyProgressMap = userData.dailyProgress || {};
+  const days = Object.keys(dailyProgressMap);
+
+  // Calcular días completados (al menos una actividad)
+  let completedDays = 0;
+  let oraCompleted = 0;
+  let laboraCompleted = 0;
+  let lectioCompleted = 0;
+
+  days.forEach(day => {
+    const progress = dailyProgressMap[day];
+    if (progress) {
+      const hasOra = progress.ora?.length > 0;
+      const hasLabora = progress.labora?.length > 0;
+      const hasLectio = progress.lectio;
+
+      if (hasOra || hasLabora || hasLectio) completedDays++;
+      if (hasOra) oraCompleted++;
+      if (hasLabora) laboraCompleted++;
+      if (hasLectio) lectioCompleted++;
+    }
+  });
+
+  const totalDays = days.length || 1;
+
+  // Calcular racha actual y más larga
+  const sortedDays = days.sort().reverse();
+  let currentStreak = 0;
+  let longestStreak = 0;
+  let tempStreak = 0;
+
+  for (let i = 0; i < sortedDays.length; i++) {
+    const progress = dailyProgressMap[sortedDays[i]];
+    const hasActivity = progress && (
+      progress.ora?.length > 0 ||
+      progress.labora?.length > 0 ||
+      progress.lectio
+    );
+
+    if (hasActivity) {
+      tempStreak++;
+      if (i === 0 || isConsecutiveDay(sortedDays[i], sortedDays[i - 1])) {
+        if (i === 0) currentStreak = tempStreak;
+      } else {
+        tempStreak = 1;
+      }
+    } else {
+      tempStreak = 0;
+    }
+    longestStreak = Math.max(longestStreak, tempStreak);
+  }
+
+  return {
+    currentStreak,
+    longestStreak,
+    totalDays,
+    completedDays,
+    oraPercentage: Math.round((oraCompleted / totalDays) * 100),
+    laboraPercentage: Math.round((laboraCompleted / totalDays) * 100),
+    lectioPercentage: Math.round((lectioCompleted / totalDays) * 100),
+  };
+}
+
 // Exportar datos (backup)
 export function exportData(): string {
   const data = getUserData();
