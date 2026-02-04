@@ -1,5 +1,7 @@
 "use client";
 
+import { Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { ArrowLeft, BookOpen, ExternalLink, MessageSquare, Cross } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
@@ -7,17 +9,28 @@ import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturg
 import { useOpenIMass } from "@/lib/imass";
 import { getLectura } from "@/lib/lecturas";
 
-export default function LecturaPage() {
+function LecturaContent() {
   const openIMass = useOpenIMass();
+  const searchParams = useSearchParams();
 
   const diaActual = getDiaActual();
+  const dayParam = searchParams.get("day");
 
-  // Determinar estado del programa
-  const programaNoIniciado = diaActual === 0;
-  const programaFinalizado = diaActual > 64;
-  const dentroDelPrograma = diaActual > 0 && diaActual <= 64;
+  // Usar día del URL si es válido, si no usar día actual
+  let diaSeleccionado = diaActual;
+  if (dayParam) {
+    const parsed = parseInt(dayParam, 10);
+    if (!isNaN(parsed) && parsed >= 1 && parsed <= 64) {
+      diaSeleccionado = parsed;
+    }
+  }
 
-  const dia = dentroDelPrograma ? diaActual : 1;
+  // Determinar estado del programa (basado en día real para mensajes especiales)
+  const programaNoIniciado = diaActual === 0 && !dayParam;
+  const programaFinalizado = diaActual > 64 && !dayParam;
+
+  // Usar el día seleccionado para mostrar la lectura
+  const dia = diaSeleccionado > 0 && diaSeleccionado <= 64 ? diaSeleccionado : 1;
   const diaLiturgico = getDiaLiturgico(dia);
   const lectura = getLectura(dia);
 
@@ -241,5 +254,31 @@ export default function LecturaPage() {
 
       <Navigation />
     </main>
+  );
+}
+
+// Wrapper con Suspense (requerido por Next.js 16 para useSearchParams)
+export default function LecturaPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="min-h-screen bg-[var(--background)] safe-area-top safe-area-bottom">
+          <div className="max-w-lg mx-auto px-4 py-6">
+            <div className="animate-pulse">
+              <div className="h-8 bg-gray-200 rounded w-1/4 mb-4"></div>
+              <div className="h-6 bg-gray-200 rounded w-3/4 mb-8"></div>
+              <div className="card p-6 mb-6">
+                <div className="h-4 bg-gray-200 rounded w-full mb-4"></div>
+                <div className="h-4 bg-gray-200 rounded w-5/6 mb-4"></div>
+                <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+              </div>
+            </div>
+          </div>
+          <Navigation />
+        </main>
+      }
+    >
+      <LecturaContent />
+    </Suspense>
   );
 }

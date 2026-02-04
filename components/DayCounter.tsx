@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturgicoBadgeClass, TOTAL_DIAS } from "@/lib/calendar";
 
 export default function DayCounter() {
@@ -197,6 +198,15 @@ export default function DayCounter() {
                   </span>
                 )}
               </div>
+
+              {/* Link a la lectura del día seleccionado */}
+              <Link
+                href={`/lectura?day=${diaSeleccionado}`}
+                className="inline-flex items-center gap-1 mt-3 text-sm text-[var(--gold)] hover:text-[var(--gold-light)] transition-colors"
+              >
+                Ver lectura del día
+                <span className="text-xs">→</span>
+              </Link>
             </div>
           )}
         </div>
