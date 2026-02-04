@@ -1,16 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import { getDiaActual, getDiaLiturgico, getTiempoLiturgicoLabel, getTiempoLiturgicoBadgeClass, TOTAL_DIAS } from "@/lib/calendar";
 
-export default function DayCounter() {
+interface DayCounterProps {
+  diaSeleccionado: number;
+  setDiaSeleccionado: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export default function DayCounter({ diaSeleccionado, setDiaSeleccionado }: DayCounterProps) {
   const diaActual = getDiaActual();
 
-  // Estado para navegación manual entre días
-  const [diaSeleccionado, setDiaSeleccionado] = useState(() => diaActual);
-
-  // Funciones de navegación
+  // Funciones de navegación (usan props)
   const irAnterior = () => setDiaSeleccionado(d => Math.max(1, d - 1));
   const irSiguiente = () => setDiaSeleccionado(d => Math.min(TOTAL_DIAS, d + 1));
 

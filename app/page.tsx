@@ -20,7 +20,7 @@ import {
   DailyProgress,
   UserData,
 } from "@/lib/storage";
-import { estaDentroDeCuaresma, esDiaDeAyuno, esViernesDeCuaresma } from "@/lib/calendar";
+import { estaDentroDeCuaresma, esDiaDeAyuno, esViernesDeCuaresma, getDiaActual } from "@/lib/calendar";
 import { useOpenIMass } from "@/lib/imass";
 
 export default function Home() {
@@ -28,6 +28,12 @@ export default function Home() {
   const [progress, setProgress] = useState<DailyProgress | null>(null);
   const [showSplash, setShowSplash] = useState<boolean | null>(null);
   const openIMass = useOpenIMass();
+
+  // Estado para navegación manual entre días (compartido con DayCounter)
+  const diaActual = getDiaActual();
+  const [diaSeleccionado, setDiaSeleccionado] = useState(() =>
+    diaActual > 0 && diaActual <= 64 ? diaActual : 1
+  );
 
   useEffect(() => {
     // Verificar si ya vio el splash en esta sesión (solo en cliente)
@@ -126,7 +132,10 @@ export default function Home() {
 
         {/* Contador de días */}
         <div className="mb-8">
-          <DayCounter />
+          <DayCounter
+            diaSeleccionado={diaSeleccionado}
+            setDiaSeleccionado={setDiaSeleccionado}
+          />
         </div>
 
         {/* Alerta de día de ayuno */}
@@ -197,7 +206,7 @@ export default function Home() {
           />
 
           <Link
-            href="/lectura"
+            href={`/lectura?day=${diaSeleccionado}`}
             className="mt-4 card p-4 flex items-center gap-3 hover:shadow-md transition-all group"
           >
             <div className="w-10 h-10 rounded-xl bg-[var(--cream)] flex items-center justify-center group-hover:bg-[var(--gold)] group-hover:bg-opacity-10 transition-colors">
