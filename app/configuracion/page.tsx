@@ -153,6 +153,8 @@ export default function ConfiguracionPage() {
               <button
                 key={commitment.id}
                 onClick={() => handleToggleOra(commitment.id)}
+                role="checkbox"
+                aria-checked={userData.activeOraCommitments.includes(commitment.id)}
                 className={`w-full flex items-center gap-3 p-3 rounded-lg border transition-colors ${
                   userData.activeOraCommitments.includes(commitment.id)
                     ? "bg-[var(--success-light)] border-[var(--success)]"
@@ -192,6 +194,8 @@ export default function ConfiguracionPage() {
               <button
                 key={commitment.id}
                 onClick={() => handleToggleLabora(commitment.id)}
+                role="checkbox"
+                aria-checked={userData.activeLaboraCommitments.includes(commitment.id)}
                 className={`w-full flex items-center gap-3 p-3 rounded-lg border transition-colors ${
                   userData.activeLaboraCommitments.includes(commitment.id)
                     ? "bg-[var(--success-light)] border-[var(--success)]"

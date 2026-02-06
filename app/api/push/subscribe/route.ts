@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error('Error guardando subscription:', error);
       return NextResponse.json(
-        { error: 'Error guardando subscription', details: error.message },
+        { error: 'Error guardando subscription' },
         { status: 500 }
       );
     }
@@ -181,7 +181,7 @@ export async function PUT(request: NextRequest) {
     if (error) {
       console.error('Error actualizando horarios:', error);
       return NextResponse.json(
-        { error: 'Error actualizando horarios', details: error.message },
+        { error: 'Error actualizando horarios' },
         { status: 500 }
       );
     }
@@ -230,7 +230,7 @@ export async function DELETE(request: NextRequest) {
     if (error) {
       console.error('Error desactivando subscription:', error);
       return NextResponse.json(
-        { error: 'Error desactivando subscription', details: error.message },
+        { error: 'Error desactivando subscription' },
         { status: 500 }
       );
     }

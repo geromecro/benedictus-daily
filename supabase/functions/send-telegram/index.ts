@@ -363,7 +363,7 @@ async function sendTelegramMessagePlain(text: string): Promise<TelegramResponse>
 serve(async (req: Request) => {
   // CORS headers
   const headers = {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "https://benedictus-daily.vercel.app",
     "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
     "Content-Type": "application/json",
   };

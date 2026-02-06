@@ -23,12 +23,14 @@ export default function ChecklistItem({
     <button
       onClick={() => !disabled && onToggle(id)}
       disabled={disabled}
+      role="checkbox"
+      aria-checked={checked}
       className={`checkbox-container w-full text-left ${checked ? "completed" : ""} ${
         disabled ? "opacity-50 cursor-not-allowed" : ""
       } animate-fade-in`}
     >
       <div className={`custom-checkbox ${checked ? "checked" : ""}`}>
-        {checked && <Check size={16} strokeWidth={3} />}
+        {checked && <Check size={16} strokeWidth={3} aria-hidden="true" />}
       </div>
       <div className="flex-1 min-w-0">
         <p

@@ -15,7 +15,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bottom-nav">
+    <nav className="bottom-nav" aria-label="Navegación principal">
       {navItems.map((item) => {
         const isActive = pathname === item.href;
         const Icon = item.icon;
@@ -25,11 +25,13 @@ export default function Navigation() {
             key={item.href}
             href={item.href}
             className={`nav-item ${isActive ? "active" : ""}`}
+            aria-current={isActive ? "page" : undefined}
           >
             <Icon
               size={22}
               strokeWidth={isActive ? 2.5 : 1.5}
               className="transition-all duration-200"
+              aria-hidden="true"
             />
             <span style={{ fontFamily: 'var(--font-cormorant)' }}>{item.label}</span>
           </Link>

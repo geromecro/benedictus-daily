@@ -37,7 +37,14 @@ export default function ProgressBar({
           )}
         </div>
       )}
-      <div className={`progress-bar ${heights[size]}`}>
+      <div
+        className={`progress-bar ${heights[size]}`}
+        role="progressbar"
+        aria-valuenow={Math.round(clampedValue)}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label={label || "Progreso"}
+      >
         <div
           className="progress-bar-fill"
           style={{ width: `${clampedValue}%` }}

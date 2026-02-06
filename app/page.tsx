@@ -142,7 +142,7 @@ export default function Home() {
         {hoyEsAyuno && (
           <div className="alert-fast mb-6 animate-fade-in">
             <div className="alert-fast-icon">
-              <Cross size={16} />
+              <Cross size={16} aria-hidden="true" />
             </div>
             <p className="alert-fast-text">
               Hoy es día de ayuno y abstinencia
@@ -154,7 +154,7 @@ export default function Home() {
         <section className="mb-8 animate-fade-in stagger-1">
           <div className="section-header">
             <div className="section-icon ora">
-              <Flame size={18} />
+              <Flame size={18} aria-hidden="true" />
             </div>
             <div className="flex-1">
               <h2 className="section-title">Ora</h2>
@@ -189,7 +189,7 @@ export default function Home() {
         <section className="mb-8 animate-fade-in stagger-2">
           <div className="section-header">
             <div className="section-icon lectio">
-              <BookOpen size={18} />
+              <BookOpen size={18} aria-hidden="true" />
             </div>
             <div className="flex-1">
               <h2 className="section-title">Lectio</h2>
@@ -210,14 +210,14 @@ export default function Home() {
             className="mt-4 card p-4 flex items-center gap-3 hover:shadow-md transition-all group"
           >
             <div className="w-10 h-10 rounded-xl bg-[var(--cream)] flex items-center justify-center group-hover:bg-[var(--gold)] group-hover:bg-opacity-10 transition-colors">
-              <Sparkles size={18} className="text-[var(--gold)]" />
+              <Sparkles size={18} className="text-[var(--gold)]" aria-hidden="true" />
             </div>
             <div className="flex-1">
               <p className="font-medium text-[var(--text-primary)]" style={{ fontFamily: 'var(--font-cormorant)' }}>
                 Ver lectura del día
               </p>
             </div>
-            <ChevronRight size={18} className="text-[var(--text-muted)] group-hover:text-[var(--gold)] transition-colors" />
+            <ChevronRight size={18} className="text-[var(--text-muted)] group-hover:text-[var(--gold)] transition-colors" aria-hidden="true" />
           </Link>
         </section>
 
@@ -225,7 +225,7 @@ export default function Home() {
         <section className="mb-8 animate-fade-in stagger-3">
           <div className="section-header">
             <div className="section-icon labora">
-              <Hammer size={18} />
+              <Hammer size={18} aria-hidden="true" />
             </div>
             <div className="flex-1">
               <h2 className="section-title">Labora</h2>
@@ -261,7 +261,7 @@ export default function Home() {
           <section className="mb-8 animate-fade-in stagger-4">
             <div className="section-header">
               <div className="section-icon realitas">
-                <Cross size={18} />
+                <Cross size={18} aria-hidden="true" />
               </div>
               <div className="flex-1">
                 <h2 className="section-title">Realitas</h2>
@@ -287,7 +287,7 @@ export default function Home() {
         {!enCuaresma && sacrificiosActivos && (
           <section className="mb-8 animate-fade-in">
             <div className="card p-5 text-center border-dashed">
-              <Cross size={24} className="mx-auto mb-3 text-[var(--purple-lent)] opacity-50" />
+              <Cross size={24} className="mx-auto mb-3 text-[var(--purple-lent)] opacity-50" aria-hidden="true" />
               <p className="text-sm text-[var(--text-muted)] italic" style={{ fontFamily: 'var(--font-cormorant)' }}>
                 Los compromisos de Realitas comienzan el Miércoles de Ceniza
               </p>
@@ -302,7 +302,7 @@ export default function Home() {
             className="card p-5 flex items-center gap-4 hover:shadow-lg transition-all w-full text-left group"
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--gold)] to-[var(--gold-muted)] flex items-center justify-center shadow-md">
-              <BookOpen size={22} className="text-white" />
+              <BookOpen size={22} className="text-white" aria-hidden="true" />
             </div>
             <div className="flex-1">
               <p className="font-semibold text-[var(--text-primary)]" style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.1rem' }}>
@@ -312,7 +312,7 @@ export default function Home() {
                 Laudes, Vísperas, Completas
               </p>
             </div>
-            <ChevronRight size={20} className="text-[var(--gold)] group-hover:translate-x-1 transition-transform" />
+            <ChevronRight size={20} className="text-[var(--gold)] group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </button>
         </section>
 

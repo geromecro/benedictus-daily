@@ -222,6 +222,9 @@ export default function NotificationSettings({ className = "" }: NotificationSet
         <button
           onClick={handleToggle}
           disabled={isLoading || (iosStatus.isIOS && !iosStatus.isStandalone)}
+          role="switch"
+          aria-checked={isEnabled}
+          aria-label="Activar notificaciones"
           className={`relative w-12 h-6 rounded-full transition-colors duration-200 ${
             isEnabled
               ? "bg-[var(--success)]"
