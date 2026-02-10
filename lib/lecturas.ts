@@ -45,7 +45,7 @@ No conozco todos los hechos de su vida, pero los que voy a narrar aquí los sé 
   // DÍA 2
   {
     dia: 2,
-    comentario: `Hoy es día de Fiesta, acompañemos la festividad en lo posible con la Santa Misa. Que esta celebración llene de alegría nuestra jornada, y acompañemos con el rezo del Oficio Divino la festividad.`,
+    comentario: `Hoy es día de Fiesta, acompañemos la festividad en lo posible con la Santa Misa y/o Vísperas, prestando atención a las lecturas. Que esta celebración llene de alegría nuestra jornada. Acompañemos con el rezo del Oficio Divino para que la liturgia vaya empapando toda la jornada.`,
     lecturaLiturgica: {
       titulo: "La Candelaria o Fiesta de la Purificación de la Sma. Virgen",
       contenido: `Con esta fiesta se cierra el Ciclo de Navidad. Es ésta una fiesta muy antigua, tanto en Oriente como en Occidente. A la Misa del día precedía una procesión, en la que el pueblo llevaba antorchas o cirios encendidos, hasta el siglo X ordinarios, pero en lo sucesivo santificados con una bendición especial, que es como ahora se usa.
@@ -87,6 +87,11 @@ También por aquel entonces le encontraron unos pastores oculto en su cueva. Vi�
   // DÍA 3
   {
     dia: 3,
+    comentario: `Un pequeño comentario sobre la frase que recibimos al iniciar cada día en el mensaje de Laudes: las mismas son extraídas del capítulo IV de la Regla, "Los instrumentos de las buenas obras". Consiste en un listado de consejos de San Benito para alcanzar la Santidad.
+
+El capítulo contiene 74 instrumentos, por ello es que cada día iremos compartiendo uno (o en algunas ocasiones dos) para poder ir teniéndolo especialmente presente en esa jornada.
+
+El objetivo es que nos ayude a mantener el espíritu benedictino presente durante todo el itinerario.`,
     lecturaEspiritual: {
       titulo: "Cómo venció una tentación de la carne",
       fuente: "Vida de San Benito - Capítulo II",
@@ -107,6 +112,11 @@ PEDRO.- Bien, estoy de acuerdo. Pero ya que me has manifestado el sentido oculto
   // DÍA 4
   {
     dia: 4,
+    comentario: `Como indica el mensaje miércoles y viernes es día de ayuno y abstinencia siguiendo la tradición de la Iglesia.
+
+Se considera ayuno a hacer una sola comida formal al día, bien sea al mediodía o por la noche. Y dos colaciones.
+
+El mate y otras infusiones no rompen el ayuno.`,
     lecturaEspiritual: {
       titulo: "El jarro roto por la señal de la cruz",
       fuente: "Vida de San Benito - Capítulo III",
@@ -231,6 +241,457 @@ DEL MONJE JOVEN APLASTADO POR UNA PARED Y SANADO
 En otra ocasión, mientras los monjes estaban levantando una pared, porque así convenía, el hombre de Dios se hallaba en el recinto de su celda entregado a la oración. Apareciósele el antiguo enemigo insultándole y diciéndole que se iba al lugar donde los monjes estaban trabajando. Comunicólo rápidamente el hombre de Dios a los monjes, por medio de un enviado, diciéndoles: "Hermanos, id con cuidado, porque ahora mismo va a vosotros el espíritu del mal". Apenas había acabado de hablar el enviado, cuando el maligno espíritu derrumbó la pared que levantaban, y atrapando entre las ruinas a un monje joven, hijo de un curial, lo aplastó. Consternados todos y profundamente afligidos, no por el daño ocasionado a la pared, sino por el quebrantamiento del hermano, se apresuraron a anunciárselo al venerable Benito con gran llanto.
 
 El abad mandó que le trajeran al muchacho destrozado, cosa que no pudieron hacer sino envolviéndole en una manta, ya que las piedras de la pared le habían triturado no sólo las carnes sino hasta los huesos. El hombre de Dios ordenó enseguida que lo dejasen en su celda sobre el psiathium -es decir, sobre la estera-, donde él solía orar; y despidiendo a los monjes, cerró la puerta de la celda y se puso a orar con más intensidad que nunca. ¡Cosa admirable! Al punto se levantó curado aquel monje y tan sano como antes. Y el santo envió de nuevo a acabar la pared a aquel monje con cuya muerte el antiguo enemigo había creído insultar a Benito.`,
+    },
+  },
+
+  // DÍA 10
+  {
+    dia: 10,
+    comentario: `Hoy recordamos a Santa Escolástica, hermana de San Benito, con quien compartió la vocación monástica y la santidad.`,
+    lecturaEspiritual: {
+      titulo: "El milagro de su hermana Escolástica / Cómo vio salir el alma del cuerpo de su hermana",
+      fuente: "Vida de San Benito - Capítulos XXXIII & XXXIV",
+      contenido: `GREGORIO.- ¿Quién habrá, Pedro, en esta vida más grande que san Pablo? Y sin embargo tres veces rogó al Señor que le librara del aguijón de la carne (2Co 12,8) y no pudo alcanzar lo que deseaba. Por eso, es preciso que te cuente del venerable abad Benito cómo deseó algo y no pudo obtenerlo.
+
+En efecto, una hermana suya, llamada Santa Escolástica, consagrada a Dios todopoderoso desde su infancia, acostumbraba a visitarle una vez al año. Para verla, el hombre de Dios descendía a una posesión del monasterio, situada no lejos de la puerta del mismo. Un día vino como de costumbre y su venerable hermano bajó donde ella, acompañado de algunos de sus discípulos. Pasaron todo el día ocupados en la alabanza divina y en santos coloquios, y al acercarse las tinieblas de la noche tomaron juntos la refección. Estando aún sentados a la mesa entretenidos en santos coloquios, y siendo ya la hora muy avanzada, dicha religiosa hermana suya le rogó: "Te suplico que no me dejes esta noche, para que podamos hablar hasta mañana de los goces de la vida celestial". A lo que él respondió: "¡Qué es lo que dices, hermana! En modo alguno puedo permanecer fuera del monasterio".
+
+Estaba entonces el cielo tan despejado que no se veía en él ni una sola nube. Pero la religiosa mujer, al oír la negativa de su hermano, juntó las manos sobre la mesa con los dedos entrelazados y apoyó en ellas la cabeza para orar a Dios todopoderoso. Cuando levantó la cabeza de la mesa, era tanta la violencia de los relámpagos y truenos y la inundación de la lluvia, que ni el venerable Benito ni los monjes que con él estaban pudieron trasponer el umbral del lugar donde estaban sentados. En efecto, la religiosa mujer, mientras tenía la cabeza apoyada en las manos había derramado sobre la mesa tal río de lágrimas, que trocaron en lluvia la serenidad del cielo. Y no tardó en seguir a la oración la inundación del agua, sino que de tal manera fueron simultáneas la oración y la copiosa lluvia, que cuando fue a levantar la cabeza de la mesa se oyó el estallido del trueno y lo mismo fue levantarla que caer al momento la lluvia. Entonces, viendo el hombre de Dios, que en medio de tantos relámpagos y truenos y de aquella lluvia torrencial no le era posible regresar al monasterio, entristecido, empezó a quejarse diciendo: "¡Que Dios todopoderoso te perdone, hermana! ¿Qué es lo que has hecho?". A lo que ella respondió: "Te lo supliqué y no quisiste escucharme; rogué a mi Señor y él me ha oído. Ahora, sal si puedes. Déjame y regresa al monasterio". Pero no pudiendo salir fuera de la estancia, hubo de quedarse a la fuerza, ya que no había querido permanecer con ella de buena gana. Y así fue cómo pasaron toda la noche en vela, saciándose mutuamente con coloquios sobre la vida espiritual.
+
+Por eso te dije, que quiso algo que no pudo alcanzar. Porque si bien nos fijamos en el pensamiento del venerable varón, no hay duda que deseaba se mantuviera el cielo despejado como cuando había bajado del monasterio, pero contra lo que deseaba se hizo el milagro, por el poder de Dios todopoderoso y gracias al corazón de aquella santa mujer. Y no es de maravillar que, en esta ocasión, aquella mujer que deseaba ver a su hermano pudiese más que él, porque según la sentencia de san Juan: Dios es amor (1Jn 4,16), y con razón pudo más la que amó más (Lc 7,47).
+
+PEDRO.- Ciertamente, me gusta mucho lo que dices.
+
+CÓMO VIO SALIR EL ALMA DEL CUERPO DE SU HERMANA
+
+GREGORIO.- Al día siguiente, la venerable mujer volvió a su morada y el hombre de Dios regresó también al monasterio. Tres días después, estando en su celda con los ojos levantados al cielo, vio el alma de su hermana, que saliendo de su cuerpo en forma de paloma penetraba en lo más alto del cielo. Gozándose con ella de tan gran gloria, dio gracias a Dios todopoderoso con himnos de alabanza y anunció su muerte a los monjes, a quienes envió en seguida para que trajeran su cuerpo al monasterio y lo depositaran en el sepulcro que había preparado para sí. De esta manera, ni la tumba pudo separar los cuerpos de aquellos cuyas almas habían estado siempre unidas en el Señor.`,
+    },
+  },
+
+  // DÍA 11
+  {
+    dia: 11,
+    lecturaEspiritual: {
+      titulo: "Del pensamiento de soberbia de un monje, conocido en espíritu",
+      fuente: "Vida de San Benito - Capítulo XX",
+      contenido: `En otra ocasión, mientras el venerable abad tomaba su alimento hacia el atardecer, cierto monje, hijo de un abogado, le sostenía la lámpara delante de la mesa. Y mientras el hombre de Dios comía y él le alumbraba, comenzó a pensar y decir secretamente en su interior: "¿Quién es éste para que yo tenga que servirle y sostenerle la lámpara mientras come? ¿Y siendo yo quien soy, he de servirle?". Al punto, dirigiéndose a él el hombre de Dios, comenzó a increparle ásperamente, diciéndole: "¡Santigua tu corazón, hermano! ¿Qué es lo que estás pensando? ¡Santigua tu corazón!". Inmediatamente llamó a los monjes, mandó que le quitasen la lámpara de sus manos, y a él le ordenó que cesara en su servicio y se sentara.
+
+Preguntado luego por los monjes qué es lo que había pensado, les contó prolijamente cómo se había envanecido por espíritu de soberbia y lo que había dicho interiormente en su pensamiento contra el hombre de Dios. Con esto, todos vieron claramente que nada podía ocultarse al venerable Benito, pues había percibido hasta un simple discurso mental.`,
+    },
+  },
+
+  // DÍA 12
+  {
+    dia: 12,
+    lecturaEspiritual: {
+      titulo: "De unos monjes que tomaron alimento contra lo establecido por la Regla / Del hermano del monje Valentiniano",
+      fuente: "Vida de San Benito - Capítulos XII & XIII",
+      contenido: `En esto empezó el hombre de Dios a tener también espíritu de profecía, prediciendo sucesos futuros y revelando a los presentes cosas que sucedían lejos.
+
+Era costumbre en el cenobio, que cuando los monjes salieran a hacer alguna diligencia, no comieran ni bebieran fuera del monasterio. Este punto de la observancia se guardaba escrupulosamente, según lo establecido por la Regla. Un día salieron unos monjes a cumplir cierto encargo, en el que estuvieron ocupados hasta muy tarde. Y como conocían a cierta piadosa mujer, entraron en su casa y tomaron alimento. Llegaron muy tarde al monasterio y, según la costumbre, pidieron la bendición al abad. Éste les interpeló al punto diciendo: "¿Dónde habéis comido?". "En ninguna parte", respondieron ellos. Pero él les reprochó: "¿Por qué mentís de ese modo? ¿Acaso no entrasteis en casa de tal mujer y comisteis allí tal y tal cosa y bebisteis tantas veces?". Cuando vieron que el venerable abad les iba refiriendo la hospitalidad de la mujer, la clase de manjares que habían comido y el número de veces que habían bebido, reconocieron todo lo que habían hecho, y temblando cayeron a sus pies y confesaron su culpa. Pero él al instante los perdonó, creyendo que en adelante no volverían a hacer semejante cosa, pues sabían que, aun ausente, les estaba presente en espíritu.
+
+DEL HERMANO DEL MONJE VALENTINIANO
+
+El hermano del monje Valentiniano, de quien más arriba hice mención, era un hombre seglar, pero muy piadoso. Para encomendarse a las oraciones del siervo de Dios y ver a su hermano, acostumbraba a ir todos los años en ayunas al monasterio desde el lugar donde vivía. Cierto día, yendo de camino hacia el monasterio, se le juntó otro caminante que llevaba consigo comida para el viaje. Siendo ya la hora avanzada, le dijo: "Ven, hermano, tomemos alimento para no desfallecer en el camino". A lo que respondió aquél: "De ninguna manera, hermano; no lo tomaré, porque he tenido siempre la costumbre de ir en ayunas a visitar al venerable Benito". Recibida esta respuesta, el compañero de viaje no insistió más por el momento. Pero habiendo andado otro pequeño trecho, invitóle de nuevo a comer. Tampoco esta vez quiso aceptar, porque había hecho propósito de llegar en ayunas. Calló nuevamente el que le había invitado a comer y consintió en caminar con él todavía un poco más sin probar alimento. Pero después de haber recorrido un largo trecho, cuando la hora era ya avanzada y los viajeros estaban fatigados, encontraron a la vera del camino un prado con una fuente y con todo lo que podía parecerles a propósito para reparar sus fuerzas. Entonces díjole el compañero de viaje: "Aquí hay agua, un prado y un lugar ameno donde podemos comer y descansar un poco, para que luego podamos acabar nuestro viaje sin novedad".
+
+Como estas palabras halagaron sus oídos y el lugar sus ojos, persuadido por esta tercera invitación, aceptó y comió. Al anochecer llegó al monasterio; presentóse al venerable abad Benito y le pidió la bendición. Pero al instante el santo varón le reprochó lo que había hecho en el camino, diciéndole: "¿Cómo ha sido, hermano, que el maligno enemigo, que te habló por boca de tu compañero de viaje, no pudo persuadirte la primera vez ni tampoco la segunda, pero logró persuadirte a la tercera y te venció en lo que quería?". Entonces él, reconoció su culpa, fruto de su débil voluntad; se echó a sus pies y comenzó a llorar avergonzado de su falta, tanto más cuanto que se dio cuenta que, aunque ausente, había prevaricado a la vista del abad Benito.
+
+PEDRO.- Veo que en el corazón de este santo varón había el espíritu de Elíseo, que aunque estaba lejos, estuvo presente a lo que su discípulo Guejazi hacía (2Re 5,26).`,
+    },
+  },
+
+  // DÍA 13
+  {
+    dia: 13,
+    comentario: `Estamos a pocos días de iniciar la Cuaresma, e intensificar este camino que iniciamos en Septuagésima. Vayamos rezando y consultando a nuestro director espiritual o confesor, para seleccionar 3 sacrificios para ofrecer durante los 40 días de la Cuaresma.
+
+En la app, en la sección de ajustes, en el apartado de "Realitas" podrán seleccionarlas para ir recordando y marcando todos los días a partir del miércoles de cenizas.`,
+    lecturaEspiritual: {
+      titulo: "Descubrimiento del engaño del rey Totila / Profecía que hizo al rey Totila",
+      fuente: "Vida de San Benito - Capítulos XIV & XV",
+      contenido: `GREGORIO.- Ahora, Pedro, es necesario que calles un poco, para que puedas conocer aún mayores cosas.
+
+En tiempo de los godos, su rey Totila oyó decir que el santo varón tenía espíritu de profecía. Dirigióse a su monasterio y deteniéndose a poca distancia del mismo, le anunció su visita. Enseguida se le pasó aviso del monasterio, diciéndole que podía venir, pero él, pérfido como era, intentó cerciorarse de si el hombre de Dios tenía espíritu de profecía. Para ello, prestó su calzado a cierto escudero suyo llamado Rigo, le hizo vestir con la indumentaria real y le mandó que se presentara al hombre de Dios como si fuera él mismo en persona. Envió para su séquito a tres compañeros de los que solían ir en su comitiva, a saber: Vulderico, Rodrigo y Blidino, para que formando cortejo con él hicieran creer al siervo de Dios que se trataba del mismo rey Totila. Dióle además otros honores y acompañamiento, para que tanto por el séquito como por los vestidos de púrpura le tuviese por el propio rey.
+
+Cuando Rigo llegó al monasterio ostentando las vestiduras reales y rodeado de numeroso séquito, el hombre de Dios estaba sentado a la puerta. Vio cómo iba acercándose y cuando podía ya hacerse oír de él, gritó diciendo: "¡Quítate eso, hijo, quítate eso que llevas, que no es tuyo!". Al instante Rigo cayó en tierra lleno de espanto por haber intentado burlarse de tan santo varón; y todos los que con él habían ido a ver al hombre de Dios, cayeron consternados en tierra. Al levantarse, no se atrevieron a acercársele, sino que regresaron adonde estaba su rey y temblando le contaron la rapidez con que habían sido descubiertos.
+
+PROFECÍA QUE HIZO AL REY TOTILA
+
+Entonces el rey Totila en persona llegóse al hombre de Dios, y viéndole a lo lejos sentado no se atrevió a acercársele, sino que cayó de hinojos en tierra. El hombre de Dios le dijo dos o tres veces: "¡Levántate!". Pero como él no se atrevía a levantarse en su presencia, Benito, siervo de nuestro Señor Jesucristo, se dignó acercarse al rey -que permanecía postrado-, le levantó, le increpó por sus desmanes y en pocas palabras le vaticinó todo cuanto había de sucederle. Le dijo: "Has hecho y haces mucho daño; es ya hora de poner término a tu maldad. Ciertamente, entrarás en Roma, atravesarás el mar y reinarás nueve años, pero al décimo morirás". Oídas estas palabras, el rey quedó fuertemente impresionado, le pidió la bendición y se marchó. Y desde entonces fue menos cruel. Poco tiempo después entró en Roma, pasó luego a Sicilia y al décimo año de su reinado, por disposición de Dios todopoderoso, perdió el reino con la vida.
+
+También el obispo de la iglesia de Canosa, a quien el hombre de Dios amaba entrañablemente por los méritos de su vida ejemplar, acostumbraba a visitar al siervo de Dios. Un día, conversando con él acerca de la entrada del rey Totila en Roma y de la devastación de la ciudad, díjole el obispo: "Este rey destruirá de tal manera la ciudad, que ya no podrá ser jamás habitada". A lo que respondió el hombre de Dios: "Roma no será destruida por los hombres, sino que se consumirá en sí misma, abatida por tempestades, huracanes, tormentas y terremotos".
+
+Los misterios de esta profecía nos son ya más patentes que la luz, puesto que vemos demolidas las murallas de la ciudad, arruinadas sus casas, destruidas sus iglesias por los huracanes y que se van desmoronando sus edificios, como cansados por una larga vejez.
+
+Su discípulo Honorato, de quien es la relación de todo lo que voy diciendo, confiesa que esto no lo oyó de su boca, pero afirma que los monjes le aseguraron que así lo había dicho el santo.`,
+    },
+  },
+
+  // DÍA 14
+  {
+    dia: 14,
+    lecturaEspiritual: {
+      titulo: "De un clérigo librado del demonio",
+      fuente: "Vida de San Benito - Capítulo XVI",
+      contenido: `En este tiempo, cierto clérigo de la iglesia de Aquino, era atormentado por el demonio. Había sido enviado por el venerable varón Constancio, obispo de la misma iglesia, a visitar muchos sepulcros de mártires, a fin de obtener de ellos la curación. Pero los santos mártires no quisieron concederle la salud, para que con este motivo se manifestara la santidad de Benito.
+
+Así pues, fue conducido a la presencia del siervo de Dios Benito, que oró a nuestro Señor Jesucristo y al momento expulsó al antiguo enemigo del hombre poseso. Después de haberle curado le ordenó: "Ve, y en lo sucesivo no comas carne ni te atrevas jamás a recibir orden sagrada alguna, porque el día que intentares temerariamente acceder a orden sacro alguno, al instante volverás a ser esclavo de Satanás".
+
+Marchó, pues, el clérigo curado, y como la pena reciente suele atemorizar al espíritu, cumplió por el momento lo que el hombre de Dios le había ordenado. Pero transcurridos muchos años, cuando vio que los que le habían precedido habían muerto y que otros más jóvenes que él recibían las órdenes sagradas, no acordándose de las palabras del hombre de Dios por el largo tiempo transcurrido, hizo caso omiso de ellas, acercándose a recibir otra orden sagrada. Inmediatamente tomó posesión de él aquel demonio que le había dejado y no cesó de atormentarle hasta que le quitó la vida.
+
+PEDRO.- Por lo que veo, este hombre de Dios penetró hasta los secretos de la divinidad, puesto que sabía que este clérigo había sido entregado a Satanás, precisamente para que no osara recibir orden sagrada alguna.
+
+GREGORIO.- ¿Cómo no iba a conocer los secretos de la divinidad, el que guardaba tan fielmente los preceptos del mismo Dios, estando como está escrito que: El que se adhiere al Señor, se hace un espíritu con él? (1 Co 6,17).
+
+PEDRO.- Si el que se adhiere al Señor se hace un mismo espíritu con él, ¿por qué el mismo egregio predicador dice también: Quién conoció el pensamiento del Señor, o quién fue su consejero? (Rom 11,34). Pues parece ilógico que uno ignore el pensamiento de aquel con el cual ha sido hecho un solo espíritu.
+
+GREGORIO.- Los hombres santos, en cuanto son una misma cosa con el Señor, no ignoran su pensamiento, pues también el mismo Apóstol dice: ¿Qué hombre conoce lo que en el hombre hay, sino el espíritu del hombre que está en él? Así también, nadie conoce las cosas de Dios sino el Espíritu de Dios (1Co 2,11). Y para mostrarnos que conocía las cosas de Dios, añadió: Nosotros no hemos recibido el espíritu de este mundo, sino el espíritu de Dios (1Co 2,12). Por eso dice también: Lo que ni el ojo vio ni el oído oyó, ni imaginó el corazón del hombre, eso es lo que Dios tiene preparado para los que le aman; pero a nosotros nos lo ha revelado por su Espíritu (1 Co 2,9).
+
+PEDRO.- Si, pues, las cosas que son de Dios fueron reveladas al mismo Apóstol por el Espíritu de Dios, ¿cómo responde a lo que propuse antes, diciendo: ¡Oh profundidad de la riqueza, de la sabiduría y de la ciencia de Dios! ¡Cuán insondables son sus juicios e inescrutables sus caminos! (Rm 11,33). Además de esto, me viene ahora a la mente otra duda. Pues el profeta David, hablando con el Señor, dice: Con mis labios he pronunciado todos los juicios de tu boca (Sal 119,13). Y como conocer es menor que pronunciar, ¿por qué afirma san Pablo que los juicios de Dios son inescrutables, cuando David asegura, no sólo que los conoce, sino también que los ha pronunciado con sus labios?
+
+GREGORIO.- A ambas cosas te respondí brevemente más arriba, cuando te dije que los hombres santos, en cuanto son una misma cosa con el Señor, no ignoran su pensamiento. En efecto, todos los que siguen devotamente al Señor están unidos a Dios por su devoción, pero mientras están abrumados por el peso de la carne corruptible, no están aún junto a Dios. Y así, en cuanto le están unidos, conocen los ocultos designios de Dios, y en cuanto están separados de él, los ignoran. Por eso, en tanto no penetran aún perfectamente sus secretos aseguran que sus juicios son incomprensibles, pero en cuanto se adhieren a él por el espíritu, y por esta unión, instruidos por las palabras de la Sagrada Escritura o por secretas revelaciones, reciben algún conocimiento, entonces saben estas cosas y las anuncian. Así, pues, ignoran lo que Dios calla y conocen lo que les habla. Por eso cuando el profeta David dijo: Con mis labios pronuncié todos tus decretos, añadió a continuación: salidos de tu boca (Sal 119,13); como si dijera abiertamente: "Pude conocer y proclamar estos decretos, porque tú los proferiste. Puesto que aquellas cosas que tú no dices, por lo mismo las ocultas a nuestra inteligencia". Concuerda, pues, la sentencia del Profeta y la del Apóstol, porque si es cierto que los juicios de Dios son inescrutables, también lo es que una vez han sido proferidos por su boca, pueden ser pronunciados por labios humanos, porque lo que Dios revela puede ser conocido, pero no lo que oculta.
+
+PEDRO.- Has resuelto esta pequeña objeción mía con razones bien claras. Pero, te ruego, que prosigas, si tienes algo que decir aún sobre los milagros de este varón.`,
+    },
+  },
+
+  // DÍA 15
+  {
+    dia: 15,
+    lecturaLiturgica: {
+      titulo: "El Oficio Divino (II)",
+      contenido: `FINES DEL OFICIO DIVINO
+
+Por los elementos o piezas constitutivas del Oficio Divino, que son: lecturas, salmos, alocuciones y peticiones, podemos distinguir en él cuatro fines extrínsecos, a saber:
+el "latréutico", representado oficialmente por los salmos;
+el "impetratorio", por las peticiones;
+el "didáctico", por las lecturas;
+y el "moral", por las alocuciones.
+
+Efectivamente, la Iglesia, por medio del Oficio Divino, alaba (fin latréutico), pide (fin impetratorio), enseña (fin didáctico) y exhorta (fin moral).
+
+Con el fin "latréutico" se propone la Iglesia promover la gloria de Dios; con el "impetratorio", el bien de la Iglesia y del mundo en general; con el "didáctico", la instrucción de los que rezan o cantan; con el "moral", la santificación de todos; cosas todas éstas extrínsecas al rezo del Oficio, y materia, por consiguiente, de esos cuatro fines extrínsecos.
+
+Pero además de estos fines extrínsecos, el Oficio Divino tiene otros intrínsecos, uno de los cuales, que podríamos llamar eucarístico, merece señalarse entre otros. El Oficio Divino, en efecto, tiene la misión sublime de preparar y continuar la Acción del Sacrificio de la Misa y de rodear este rito de pompa y majestad.
+
+SU EFICACIA
+
+La eficacia del Oficio Divino para adorar y alabar a Dios como se merece (fin "latréutico"), si bien no es infinita, como lo es la de la Misa, es, sin embargo, incomparablemente mayor que la que pueden tener todas nuestras oraciones y homenajes privados.
+
+Ello es así, en primer lugar, porque las alabanzas que tributamos a Dios en el Oficio Divino han sido elegidas y dictadas por el Espíritu Santo; además, porque la voz que pronuncia esas alabanzas es la voz de la Esposa de Jesucristo, la Iglesia, voz santa, voz dulcísima y entre todas la más agradable a los oídos del celestial Esposo.
+
+EL OFICIO DIVINO PIDE LA DEVOCIÓN INTERIOR
+
+En el Oficio Divino —dice San Agustín— "ora Jesús por nosotros como nuestro Sacerdote, ora en nosotros como nuestra Cabeza, es invocado por nosotros como nuestro Dios". Y añade Pío XII: "A la excelsa dignidad de esta oración de la Iglesia debe corresponder la intensa devoción de nuestra alma. Y puesto que la voz del orante repite los cánticos escritos por inspiración del Espíritu Santo, que exaltan y proclaman la perfectísima grandeza de Dios, es también necesario que a esta voz acompañe el movimiento interior de nuestro espíritu…, según dice San Benito: Salmódiemos de tal forma que nuestra mente concuerde con nuestra voz".
+
+VÍSPERAS
+
+Los piadosos israelitas, a ejemplo del rey David, se reunían por la tarde en el templo de Jerusalén para asistir al Sacrificio vespertino, que consistía en la inmolación de un cordero. Igual que los israelitas, se congregaban al atardecer los primitivos cristianos para ofrecer al Señor el sacrificio de sus alabanzas. Las Vísperas corresponden, en el Oficio diurno, a los Laudes del nocturno, y por eso guardan con éstos gran analogía.`,
+    },
+    lecturaEspiritual: {
+      titulo: "Del monje que al marcharse del monasterio contra la voluntad de Benito",
+      fuente: "Vida de San Benito - Capítulo XXV",
+      contenido: `GREGORIO.- Un monje suyo, proclive a la inconstancia, no quería perseverar en el monasterio. Y aunque el hombre de Dios le corregía asiduamente y le amonestaba con frecuencia, de ningún modo quería permanecer más en la comunidad y se empeñaba con importunos ruegos a que le dejara marchar.
+
+Un día, cansado ya el venerable abad de tanta impertinencia, le mandó airado que se fuese. No bien hubo abandonado el monasterio, cuando le salió al encuentro un dragón, que abriendo sus fauces contra él amenazaba con devorarle. Entonces, tembloroso y jadeante empezó a gritar con fuerte voz: "¡Corred, corred, que este dragón quiere devorarme!". Acudieron rápidamente los monjes; no vieron al dragón, pero condujeron al monasterio al monje, despavorido y tembloroso, quien en seguida hizo promesa de no abandonar jamás el monasterio. Y desde aquel momento permaneció constante en su promesa, gracias a que por las oraciones del santo varón había podido ver a aquel dragón que quería devorarle y al que antes seguía sin ver.`,
+    },
+  },
+
+  // DÍA 16
+  {
+    dia: 16,
+    lecturaEspiritual: {
+      titulo: "De doscientos modios de harina hallados delante del monasterio",
+      fuente: "Vida de San Benito - Capítulo XXI",
+      contenido: `En otra ocasión, sobrevino en la región de la Campania una gran hambre que afligía a todo el mundo por la falta de alimentos. Empezaba también ya a escasear el trigo en el monasterio de Benito y se habían consumido casi todos los panes, de tal manera que a la hora de la refección de los monjes sólo pudieron hallarse cinco. Viéndolos el venerable abad contristados, trató primero de corregir con suave reprensión su pusilanimidad y luego de animarlos con esta promesa, diciendo: "¿Por qué está triste vuestro corazón por la falta de pan? Hoy ciertamente hay poco, pero mañana lo tendréis en abundancia". Al día siguiente encontraron delante de la puerta del monasterio doscientos modios de harina metidos en sacos, sin que hasta el día de hoy se haya podido saber de quién se valió Dios todopoderoso para llevarlos allí. Viendo esto, los monjes alabaron a Dios y aprendieron a no dudar más de la abundancia, aun en tiempo de escasez.
+
+PEDRO.- Dime, por favor, si este siervo de Dios tenía siempre espíritu de profecía o si este espíritu invadía su alma sólo de vez en cuando.
+
+GREGORIO.- El espíritu de profecía, Pedro, no está continuamente inspirando la mente de los profetas, porque si el Espíritu Santo, según está escrito, inspira donde quiere (Jn 3,8), también has de saber que inspira cuando quiere. Por eso, preguntado el profeta Natán por el rey David, si podía construir el templo, primeramente le dijo que sí y luego que no (2Sam 7,17). Y por lo mismo, cuando el profeta Eliseo vio llorar a la mujer sunamita, sin conocer la causa de su llanto, dijo al criado que la impedía acercarse: Déjala, porque su alma está llena de amargura y el Señor me lo ha ocultado y no me lo ha revelado (2Re 4,27). Dios todopoderoso actúa así por disposición de su soberana bondad, porque unas veces da el espíritu de profecía y otras lo retira, eleva las almas de los profetas a las alturas y al mismo tiempo las mantiene en la humildad, para que vean lo que son por la gracia de Dios, cuando reciben este espíritu, y lo que son por sí mismos, cuando les falta.
+
+PEDRO.- Que es así como dices, lo manifiesta tu mismo razonamiento. Pero cuéntame por favor, todo lo que sepas del venerable abad Benito.`,
+    },
+  },
+
+  // DÍA 17
+  {
+    dia: 17,
+    lecturaEspiritual: {
+      titulo: "Que escribió una Regla monástica",
+      fuente: "Vida de San Benito - Capítulo XXXVI",
+      contenido: `GREGORIO.- Con gusto, Pedro, seguiría contándote cosas de este venerable abad, pero algunas las omitiré adrede, porque tengo prisa en contar los hechos de otros personajes. Con todo, no quiero que ignores que el hombre de Dios, no sólo resplandeció en el mundo por sus muchos milagros, sino que también brilló, y de una manera bastante luminosa, por su doctrina, pues escribió una Regla para monjes, notable por su discreción y clara en su lenguaje. El que quiera conocer con más detalle su vida y costumbres, podrá encontrar en las ordenaciones de esta Regla todo lo que enseñó con el ejemplo, pues el santo varón de ningún modo pudo enseñar otra cosa sino lo que había vivido.`,
+    },
+  },
+
+  // DÍA 18
+  {
+    dia: 18,
+    comentario: `A partir de hoy comienza una segunda etapa de este itinerario, en la cual vamos a buscar aumentar la intensidad de nuestras oraciones y penitencias, en una preparación más próxima para la Pascua. Recordemos seleccionar los 3 sacrificios que ofreceremos a Dios durante estos 40 días.
+
+En la app, en la sección de ajustes, en el apartado de "Realitas" podrán seleccionarlas para ir recordando y marcando todos los días a partir del miércoles de cenizas.
+
+Por otra parte, respecto al pilar de "Lectio", también damos inicio a esta segunda etapa. A partir de este día y hasta la semana santa, iremos leyendo y meditando la obra magna del patrono de Europa, "La Regla". La sabiduría de este libro, escrito entre los años 516-530 d.C, hace que tras 1500 años siga siendo utilizado hoy en día. Su vigencia, denota la prudencia del santo que fue capaz de escribir una norma adaptable a múltiples tiempos y geografías. E incluso como iremos descubriendo al leerla, tiene mucho para decirnos hoy en día a cada uno de nosotros.`,
+    lecturaLiturgica: {
+      titulo: "Miércoles de Ceniza",
+      contenido: `La Cuaresma propiamente dicha empieza el primer domingo de Cuaresma, pero en cuanto a los ayunos y abstinencias comienza el Miércoles de Ceniza. Su objeto es preparar dignamente la celebración anual de la Pasión, Muerte y Resurrección del Salvador, y prepáralas con una más intensa oración, con prácticas de penitencia, con exhortaciones apremiantes a la conversión, con obras de misericordia y con lecturas bíblicas y patrísticas conmovedoras, de las que ofrecen un riquísimo mosaico tanto el Breviario como el Misal cuaresmales.
+
+Antiguamente preocupaban especialmente a la Iglesia, durante la Cuaresma la preparación de los catecúmenos para el bautismo solemne y la reconciliación de los pecadores y penitentes públicos; hoy su preocupación principal es el CUMPLIMIENTO PASCUAL y la recristianización de la sociedad cristiana, tendiente siempre a paganizarse.
+
+En lo posible asistamos a Misa hoy y recibamos la imposición de las cenizas que nos recuerda que somos polvo, "Meménto, homo, qui pulvis es, et in púlverem revertéris".`,
+    },
+    lecturaEspiritual: {
+      titulo: "Prólogo de la Regla",
+      fuente: "Regla de San Benito - Prólogo",
+      contenido: `Escucha, hijo, los preceptos del Maestro, e inclina el oído de tu corazón; recibe con gusto el consejo de un padre piadoso, y cúmplelo verdaderamente. Así volverás por el trabajo de la obediencia, a Aquel de quien te habías alejado por la desidia de la desobediencia. Mi palabra se dirige ahora a ti, quienquiera que seas, que renuncias a tus propias voluntades y tomas las preclaras y fortísimas armas de la obediencia, para militar por Cristo Señor, verdadero Rey.
+
+Ante todo pídele con una oración muy constante que lleve a su término toda obra buena que comiences, para que Aquel que se dignó contarnos en el número de sus hijos, no tenga nunca que entristecerse por nuestras malas acciones. En todo tiempo, pues, debemos obedecerle con los bienes suyos que Él depositó en nosotros, de tal modo que nunca, como padre airado, desherede a sus hijos, ni como señor temible, irritado por nuestras maldades, entregue a la pena eterna, como a pésimos siervos, a los que no quisieron seguirle a la gloria.
+
+Levantémonos, pues, de una vez, ya que la Escritura nos exhorta y nos dice: "Ya es hora de levantarnos del sueño" (Rm 13,11). Abramos los ojos a la luz divina, y oigamos con oído atento lo que diariamente nos amonesta la voz de Dios que clama diciendo: "Si oyeren hoy su voz, no endurezcan sus corazones" (Sal 94,8). Y otra vez: "El que tenga oídos para oír (Mt 11,15), escuche lo que el Espíritu dice a las iglesias" (Ap 2,7). ¿Y qué dice? "Vengan, hijos, escúchenme, yo les enseñaré el temor del Señor" (Sal 33,12). "Corran mientras tienen la luz de la vida, para que no los sorprendan las tinieblas de la muerte" (Jn 12,35).
+
+Y el Señor, que busca su obrero entre la muchedumbre del pueblo al que dirige este llamado, dice de nuevo: "¿Quién es el hombre que quiere la vida y desea ver días felices?" (Sal 33,13). Si tú, al oírlo, respondes "Yo", Dios te dice: "Si quieres poseer la vida verdadera y eterna, guarda tu lengua del mal, y que tus labios no hablen con falsedad. Apártate del mal y haz el bien; busca la paz y síguela" (Sal 33,14s). Y si hacen esto, pondré mis ojos sobre ustedes, y mis oídos oirán sus preces, y antes de que me invoquen les diré: "Aquí estoy". ¿Qué cosa más dulce para nosotros, carísimos hermanos, que esta voz del Señor que nos invita? Vean cómo el Señor nos muestra piadosamente el camino de la vida.
+
+Ciñamos, pues, nuestra cintura con la fe y la práctica de las buenas obras, y sigamos sus caminos guiados por el Evangelio, para merecer ver en su reino a Aquel que nos llamó.
+
+Si queremos habitar en la morada de su reino, puesto que no se llega allí sino corriendo con obras buenas, preguntemos al Señor con el Profeta diciéndole: "Señor, ¿quién habitará en tu morada, o quién descansará en tu monte santo?" (Sal 14,1). Hecha esta pregunta, hermanos, oigamos al Señor que nos responde y nos muestra el camino de esta morada diciendo: "El que anda sin pecado y practica la justicia; el que dice la verdad en su corazón y no tiene dolo en su lengua; el que no hizo mal a su prójimo ni admitió que se lo afrentara" (Sal 14,2s). El que apartó de la mirada de su corazón al maligno diablo tentador y a la misma tentación, y lo aniquiló, y tomó sus nacientes pensamientos y los estrelló contra Cristo.
+
+Por eso dice también el Señor en el Evangelio: "Al que oye estas mis palabras y las practica, lo compararé con un hombre prudente que edificó su casa sobre piedra; vinieron los ríos, soplaron los vientos y embistieron contra aquella casa, pero no se cayó, porque estaba fundada sobre piedra" (Mt 7,24s).
+
+Vamos, pues, a instituir una escuela del servicio divino, y al hacerlo, esperamos no establecer nada que sea áspero o penoso. Pero si, por una razón de equidad, para corregir los vicios o para conservar la caridad, se dispone algo más estricto, no huyas enseguida aterrado del camino de la salvación, porque éste no se puede emprender sino por un comienzo estrecho. Mas cuando progresamos en la vida monástica y en la fe, se dilata nuestro corazón, y corremos con inefable dulzura de caridad por el camino de los mandamientos de Dios. De este modo, no apartándonos nunca de su magisterio, y perseverando en su doctrina en el monasterio hasta la muerte, participemos de los sufrimientos de Cristo por la paciencia, a fin de merecer también acompañarlo en su reino. Amén.`,
+    },
+  },
+
+  // DÍA 19
+  {
+    dia: 19,
+    comentario: `El día de hoy leeremos completo el capítulo IV, de "Los instrumentos de las buenas obras". Lo leamos con atención, y dado que son 74, pongamos empeño diariamente en meditar en el que recibimos al iniciar cada día.`,
+    lecturaEspiritual: {
+      titulo: "Los instrumentos de las buenas obras",
+      fuente: "Regla de San Benito - Capítulo IV",
+      contenido: `1 Primero, amar al Señor Dios con todo el corazón, con toda el alma y con todas las fuerzas;
+2 después, al prójimo como a sí mismo.
+3 Luego, no matar;
+4 no cometer adulterio,
+5 no hurtar,
+6 no codiciar,
+7 no levantar falso testimonio,
+8 honrar a todos los hombres,
+9 no hacer a otro lo que uno no quiere para sí.
+10 Negarse a sí mismo para seguir a Cristo.
+11 Castigar el cuerpo,
+12 no entregarse a los deleites,
+13 amar el ayuno.
+14 Alegrar a los pobres,
+15 vestir al desnudo,
+16 visitar al enfermo,
+17 sepultar al muerto.
+18 Socorrer al atribulado,
+19 consolar al afligido.
+20 Hacerse extraño al proceder del mundo,
+21 no anteponer nada al amor de Cristo.
+22 No ceder a la ira,
+23 no guardar rencor.
+24 No tener dolo en el corazón,
+25 no dar paz falsa.
+26 No abandonar la caridad.
+27 No jurar, no sea que acaso perjure,
+28 decir la verdad con el corazón y con la boca.
+29 No devolver mal por mal.
+30 No hacer injurias, sino soportar pacientemente las que le hicieren.
+31 Amar a los enemigos.
+32 No maldecir a los que lo maldicen, sino más bien bendecirlos.
+33 Sufrir persecución por la justicia.
+34 No ser soberbio,
+35 ni aficionado al vino,
+36 ni glotón,
+37 ni dormilón,
+38 ni perezoso,
+39 ni murmurador,
+40 ni detractor.
+41 Poner su esperanza en Dios.
+42 Cuando viere en sí algo bueno, atribúyalo a Dios, no a sí mismo;
+43 en cambio, sepa que el mal siempre lo ha hecho él, e impúteselo a sí mismo.
+44 Temer el día del juicio,
+45 sentir terror del infierno,
+46 desear la vida eterna con la mayor avidez espiritual,
+47 tener la muerte presente ante los ojos cada día.
+48 Velar a toda hora sobre las acciones de su vida,
+49 saber de cierto que, en todo lugar, Dios lo está mirando.
+50 Estrellar inmediatamente contra Cristo los malos pensamientos que vienen a su corazón, y manifestarlos al anciano espiritual,
+51 guardar su boca de conversación mala o perversa,
+52 no amar hablar mucho,
+53 no hablar palabras vanas o que mueven a risa,
+54 no amar la risa excesiva o destemplada.
+55 Oír con gusto las lecturas santas,
+56 darse frecuentemente a la oración,
+57 confesar diariamente a Dios en la oración, con lágrimas y gemidos, las culpas pasadas,
+58 enmendarse en adelante de esas mismas faltas.
+59 No ceder a los deseos de la carne,
+60 odiar la propia voluntad,
+61 obedecer en todo los preceptos del abad, aun cuando él -lo que no suceda- obre de otro modo, acordándose de aquel precepto del Señor: "Hagan lo que ellos dicen, pero no hagan lo que ellos hacen" (Mt 23,3).
+62 No querer ser llamado santo antes de serlo, sino serlo primero para que lo digan con verdad.
+63 Poner por obra diariamente los preceptos de Dios,
+64 amar la castidad,
+65 no odiar a nadie,
+66 no tener celos,
+67 no tener envidia,
+68 no amar la contienda,
+69 huir la vanagloria.
+70 Venerar a los ancianos,
+71 amar a los más jóvenes.
+72 Orar por los enemigos en el amor de Cristo;
+73 reconciliarse antes de la puesta del sol con quien se haya tenido alguna discordia.
+74 Y no desesperar nunca de la misericordia de Dios.
+
+Estos son los instrumentos del arte espiritual. Si los usamos día y noche, sin cesar, y los devolvemos el día del juicio, el Señor nos recompensará con aquel premio que Él mismo prometió: "Ni el ojo vio, ni el oído oyó, ni llegó al corazón del hombre lo que Dios ha preparado a los que lo aman" (1 Co 2,9). El taller, empero, donde debemos practicar con diligencia todas estas cosas, es el recinto del monasterio y la estabilidad en la comunidad.`,
+    },
+  },
+
+  // DÍA 20
+  {
+    dia: 20,
+    lecturaEspiritual: {
+      titulo: "La obediencia",
+      fuente: "Regla de San Benito - Capítulo V",
+      contenido: `El primer grado de humildad es una obediencia sin demora. Esta es la que conviene a aquellos que nada estiman tanto como a Cristo. Ya sea en razón del santo servicio que han profesado, o por el temor del infierno, o por la gloria de la vida eterna, en cuanto el superior les manda algo, sin admitir dilación alguna, lo realizan como si Dios se lo mandara. El Señor dice de éstos: "En cuanto me oyó, me obedeció" (Sal 17,45). Y dice también a los que enseñan: "El que a ustedes oye, a mí me oye" (Lc 10,16). Estos tales, dejan al momento sus cosas, abandonan la propia voluntad, desocupan sus manos y dejan sin terminar lo que estaban haciendo, y obedeciendo a pie juntillas, ponen por obra la voz del que manda. Y así, en un instante, con la celeridad que da el temor de Dios, se realizan como juntamente y con prontitud ambas cosas: el mandato del maestro y la ejecución del discípulo. Es que el amor los incita a avanzar hacia la vida eterna. Por eso toman el camino estrecho del que habla el Señor cuando dice: "Angosto es el camino que conduce a la vida" (Mt 7,14). Y así, no viven a su capricho ni obedecen a sus propios deseos y gustos, sino que andan bajo el juicio e imperio de otro, viven en los monasterios, y desean que los gobierne un abad. Sin duda estos tales practican aquella sentencia del Señor que dice: "No vine a hacer mi voluntad, sino la de Aquel que me envió" (Jn 6,38).
+
+Pero esta misma obediencia será entonces agradable a Dios y dulce a los hombres, si la orden se ejecuta sin vacilación, sin tardanza, sin tibieza, sin murmuración o sin negarse a obedecer, porque la obediencia que se rinde a los mayores, a Dios se rinde. Él efectivamente dijo: "El que a ustedes oye, a mí me oye" (Lc 10,16). Y los discípulos deben prestarla de buen grado porque "Dios ama al que da con alegría" (2 Co 9,7). Pero si el discípulo obedece con disgusto y murmura, no solamente con la boca sino también con el corazón, aunque cumpla lo mandado, su obediencia no será ya agradable a Dios que ve el corazón del que murmura. Obrando así no consigue gracia alguna, sino que incurre en la pena de los murmuradores, si no satisface y se enmienda.`,
+    },
+  },
+
+  // DÍA 21
+  {
+    dia: 21,
+    lecturaEspiritual: {
+      titulo: "El silencio",
+      fuente: "Regla de San Benito - Capítulo VI",
+      contenido: `Hagamos lo que dice el Profeta: "Yo dije: guardaré mis caminos para no pecar con mi lengua; puse un freno a mi boca, enmudecí, me humillé y me abstuve de hablar aun cosas buenas" (Sal 38,2s). El Profeta nos muestra aquí que si a veces se deben omitir hasta conversaciones buenas por amor al silencio, con cuanta mayor razón se deben evitar las palabras malas por la pena del pecado.
+
+Por tanto, dada la importancia del silencio, rara vez se dé permiso a los discípulos perfectos para hablar aun de cosas buenas, santas y edificantes, porque está escrito: "Si hablas mucho no evitarás el pecado" (Pr 10,19), y en otra parte: "La muerte y la vida están en poder de la lengua" (Pr 18,21). Pues hablar y enseñar le corresponde al maestro, pero callar y escuchar le toca al discípulo.
+
+Por eso, cuando haya que pedir algo al superior, pídase con toda humildad y respetuosa sumisión. En cuanto a las bromas, las palabras ociosas y todo lo que haga reír, lo condenamos a una eterna clausura en todo lugar, y no permitimos que el discípulo abra su boca para tales expresiones.`,
+    },
+  },
+
+  // DÍA 22
+  {
+    dia: 22,
+    lecturaLiturgica: {
+      titulo: "Programa de Cuaresma",
+      contenido: `Hoy empieza propiamente la Santa Cuaresma. Tiene por objeto prepararnos para la conmemoración piadosa de la Pasión, Muerte y Resurrección de Nuestro Divino Redentor. La santa Iglesia nos prescribe para este tiempo: oración más frecuente, ayunos y abstinencias, recogimiento y limosnas.
+
+1° Oración: La primera y mejor oración de Cuaresma debe ser la Santa Misa, para la que la Iglesia ha compuesto textos diferentes y hermosísimos cada día; el Viacrucis, que ha de procurarse hacer siquiera los miércoles y viernes; el salmo "Miserere" y los Salmos Penitenciales.
+
+2° Ayunos y Abstinencias: En América son días de ayuno y abstinencia, el Miércoles de Ceniza y el Viernes Santo, y de abstinencia los viernes; estando obligados al ayuno desde los 21 años hasta los 60, y a la abstinencia desde los 7 años en adelante, salvo dispensa.
+
+3° Recogimiento: La forma práctica de vivir recogidamente en Cuaresma es absteniéndose de bailes, cines, diversiones peligrosas, fiestas carnavalescas, etc.
+
+4° Limosna: La mejor es la que se hace con los ahorros producidos con los ayunos y abstinencias y con la supresión de fiestas, diversiones vanas y fútiles regalos.`,
+    },
+    lecturaEspiritual: {
+      titulo: "La humildad (Parte I)",
+      fuente: "Regla de San Benito - Capítulo VII",
+      contenido: `Clama, hermanos, la divina Escritura diciéndonos: "Todo el que se ensalza será humillado y el que se humilla será ensalzado" (Lc 14,11). Al decir esto nos muestra que toda exaltación es una forma de soberbia. El Profeta indica que se guarda de ella diciendo: "Señor, ni mi corazón fue ambicioso ni mis ojos altaneros; no anduve buscando grandezas ni maravillas superiores a mí." Pero ¿qué sucederá? "Si no he tenido sentimientos humildes, y si mi alma se ha envanecido, Tú tratarás mi alma como a un niño que es apartado del pecho de su madre" (Sal 130,1s).
+
+Por eso, hermanos, si queremos alcanzar la cumbre de la más alta humildad, si queremos llegar rápidamente a aquella exaltación celestial a la que se sube por la humildad de la vida presente, tenemos que levantar con nuestros actos ascendentes la escala que se le apareció en sueños a Jacob, en la cual veía ángeles que subían y bajaban. Sin duda alguna, aquel bajar y subir no significa otra cosa sino que por la exaltación se baja y por la humildad se sube. Ahora bien, la escala misma así levantada es nuestra vida en el mundo, a la que el Señor levanta hasta el cielo cuando el corazón se humilla. Decimos, en efecto, que los dos lados de esta escala son nuestro cuerpo y nuestra alma, y en esos dos lados la vocación divina ha puesto los diversos escalones de humildad y de disciplina por los que debemos subir.
+
+Así, pues, "el primer grado de humildad" consiste en que uno tenga siempre delante de los ojos el temor de Dios, y nunca lo olvide. Recuerde, pues, continuamente todo lo que Dios ha mandado, y medite sin cesar en su alma cómo el infierno abrasa, a causa de sus pecados, a aquellos que desprecian a Dios, y cómo la vida eterna está preparada para los que temen a Dios. Guárdese a toda hora de pecados y vicios, esto es, los de los pensamientos, de la lengua, de las manos, de los pies y de la voluntad propia, y apresúrese a cortar los deseos de la carne. Piense el hombre que Dios lo mira siempre desde el cielo, y que en todo lugar, la mirada de la divinidad ve sus obras, y que a toda hora los ángeles se las anuncian.
+
+En cuanto a la voluntad propia, la Escritura nos prohíbe hacerla cuando dice: "Apártate de tus voluntades" (Si 18,30). Además pedimos a Dios en la Oración que se haga en nosotros su voluntad. Justamente, pues, se nos enseña a no hacer nuestra voluntad cuidándonos de lo que la Escritura nos advierte: "Hay caminos que parecen rectos a los hombres, pero su término se hunde en lo profundo del infierno" (Pr 16,25).
+
+En cuanto a los deseos de la carne, creamos que Dios está siempre presente, pues el Profeta dice al Señor: "Ante ti están todos mis deseos" (Sal 37,10). Debemos, pues, cuidarnos del mal deseo, porque la muerte está apostada a la entrada del deleite. Por eso la Escritura nos da este precepto: "No vayas en pos de tus concupiscencias" (Si 18,30).`,
+    },
+  },
+
+  // DÍA 23
+  {
+    dia: 23,
+    lecturaEspiritual: {
+      titulo: "La humildad (Parte II)",
+      fuente: "Regla de San Benito - Capítulo VII",
+      contenido: `"El segundo grado de humildad" consiste en que uno no ame su propia voluntad, ni se complazca en hacer sus gustos, sino que imite con hechos al Señor que dice: "No vine a hacer mi voluntad sino la de Aquel que me envió" (Jn 6,38). Dice también la Escritura: "La voluntad tiene su pena, y la necesidad engendra la corona."
+
+"El tercer grado de humildad" consiste en que uno, por amor de Dios, se someta al superior en cualquier obediencia, imitando al Señor de quien dice el Apóstol: "Se hizo obediente hasta la muerte" (Flp 2,8).
+
+"El cuarto grado de humildad" consiste en que, en la misma obediencia, así se impongan cosas duras y molestas o se reciba cualquier injuria, uno se abrace con la paciencia y calle en su interior, y soportándolo todo, no se canse ni desista, pues dice la Escritura: "El que perseverare hasta el fin se salvará" (Mt 10,22), y también: "Confórtese tu corazón y soporta al Señor" (Sal 26,10). Y para mostrar que el fiel debe sufrir por el Señor todas las cosas, aun las más adversas, dice en la persona de los que sufren: "Por ti soportamos la muerte cada día; nos consideran como ovejas de matadero" (Rm 8,36). Pero seguros de la recompensa divina que esperan, prosiguen gozosos diciendo: "Pero en todo esto triunfamos por Aquel que nos amó" (Rm 8,37). En las adversidades e injurias cumplen con paciencia el precepto del Señor, y a quien les golpea una mejilla, le ofrecen la otra; a quien les quita la túnica le dejan el manto, y si los obligan a andar una milla, van dos (cf. Mt 5,39ss); con el apóstol Pablo soportan a los falsos hermanos (cf. 2 Co 11,26), y bendicen a los que los maldicen (cf. 1 Co 4,12 y Rm 12,14).
+
+"El quinto grado de humildad" consiste en que uno no le oculte a su abad todos los malos pensamientos que llegan a su corazón y las malas acciones cometidas en secreto, sino que los confiese humildemente. La Escritura nos exhorta a hacer esto diciendo: "Revela al Señor tu camino y espera en Él" (Sal 36,5).
+
+"El sexto grado de humildad" consiste en que el monje esté contento con todo lo que es vil y despreciable, y que juzgándose obrero malo e indigno para todo lo que se le mande, se diga a sí mismo con el Profeta: "Fui reducido a la nada y nada supe; yo era como un jumento en tu presencia, pero siempre estaré contigo" (Sal 72,22s).
+
+"El séptimo grado de humildad" consiste en que uno no sólo diga con la lengua que es el inferior y el más vil de todos, sino que también lo crea con el más profundo sentimiento del corazón, humillándose y diciendo con el Profeta: "Soy un gusano y no un hombre, oprobio de los hombres y desecho de la plebe" (Sal 21,7).
+
+"El octavo grado de humildad" consiste en que el monje no haga nada sino lo que la Regla del monasterio o el ejemplo de los mayores le indica que debe hacer.
+
+"El noveno grado de humildad" consiste en que el monje no permita a su lengua que hable. Guarde, pues, silencio y no hable hasta ser preguntado, porque la Escritura enseña que "en el mucho hablar no se evita el pecado" (Pr 10,19).
+
+"El décimo grado de humildad" consiste en que uno no se ría fácil y prontamente, porque está escrito: "El necio en la risa levanta su voz" (Si 21,23).
+
+"El undécimo grado de humildad" consiste en que el monje, cuando hable, lo haga con dulzura y sin reír, con humildad y con gravedad, diciendo pocas y juiciosas palabras, y sin levantar la voz, pues está escrito: "Se reconoce al sabio por sus pocas palabras."
+
+"El duodécimo grado de humildad" consiste en que el monje no sólo tenga humildad en su corazón, sino que la demuestre siempre a cuantos lo vean aun con su propio cuerpo, es decir, que en la Obra de Dios, en el oratorio, en el monasterio, en el huerto, en el camino, en el campo, o en cualquier lugar, ya esté sentado o andando o parado, esté siempre con la cabeza inclinada y la mirada fija en tierra, y creyéndose en todo momento reo por sus pecados, se vea ya en el tremendo juicio. Y diga siempre en su corazón lo que decía aquel publicano del Evangelio con los ojos fijos en la tierra: "Señor, no soy digno yo, pecador, de levantar mis ojos al cielo" (cf. Lc 18,13).
+
+Cuando el monje haya subido estos grados de humildad, llegará pronto a aquel amor de Dios que "siendo perfecto excluye todo temor" (1 Jn 4,18), en virtud del cual lo que antes observaba no sin temor, empezará a cumplirlo como naturalmente, como por costumbre, y no ya por temor del infierno sino por amor a Cristo, por el mismo hábito bueno y por el atractivo de las virtudes. Todo lo cual el Señor se dignará manifestar por el Espíritu Santo en su obrero, cuando ya esté limpio de vicios y pecados.`,
+    },
+  },
+
+  // DÍA 29
+  {
+    dia: 29,
+    lecturaLiturgica: {
+      titulo: "El Oficio Divino (III)",
+      contenido: `ORGANIZACIÓN DEL OFICIO DIVINO
+
+El Oficio Divino, tal como hoy y desde los primeros siglos de la Iglesia está organizado, abarca todo el año eclesiástico, y en éste todos los períodos o temporadas litúrgicas con todas las fiestas que se suceden, todas las semanas, todos los días y las principales horas de cada día. Desde el principio del año hasta su fin, desde la salida del sol hasta su ocaso, resuena sin cesar, gracias al Oficio Divino, la alabanza divina en alguna parte del mundo.
+
+Uno de los primeros en organizar formalmente y casi de manera definitiva el Oficio Divino fue San Benito, en cuya Regla consta en detalle dicha organización. De este modo organizó San Benito el fondo de la piedad de sus hijos, al que, por lo mismo, no permitió que "antepusieran nada" a las ocupaciones del día.
+
+Según este sistema, la oración u Oficio nocturno está dividido en cuatro partes, correspondientes a las cuatro "vigilias" en que los antiguos dividían la noche. A las tres primeras vigilias o divisiones nocturnas corresponde el Oficio de maitines con sus tres nocturnos, que debe rezarse regularmente en seguida de la media noche; y a la cuarta, el Oficio de laudes, que habría de empezar al despuntar el alba.
+
+Por idéntico modo, la Iglesia repartió el Oficio diurno en cinco partes, de tres en tres horas, según la división grecorromana del día, nombrando Prima a las seis de la mañana; Tercia, a las nueve; Sexta, al mediodía; Nona, a las tres de la tarde; y Vísperas, a las seis. Más adelante, se añadió el Oficio de completas, con que se termina, al anochecer, el rezo diurno.
+
+COMPLETAS
+
+Este último oficio diurno es, lo mismo que el de Prima, de origen monástico y posterior a todos los demás. En Occidente fue, indudablemente, el Patriarca San Benito su primer autor. Instituyó para completar (de ahí su nombre, que también es de San Benito) ese sagrado septenario número de oficios diurnos.
+
+Hay en las Completas un recuerdo de la lectura espiritual de los monjes (la Capítula), una confesión pública de las faltas del día (el Confíteor y sus anexos), una salmodia muy oportuna, un himno para ahuyentar los malos sueños y fantasmas nocturnos, el cántico de Simeón Nunc dimittis con una antífona alusiva a la Muerte y Resurrección de Jesucristo.
+
+Sigue una Antífona a la Santísima Virgen (la "Salve", el "Ave Regina", el "Alma Redemptoris", o el "Regina coeli") con su oración correspondiente y empieza el sagrado silencio de la noche. Ya pueden dormir tranquilos los cristianos bajo la guardia de sus Ángeles tutelares.`,
+    },
+    lecturaEspiritual: {
+      titulo: "Lectura del día",
+      fuente: "Regla de San Benito",
+      contenido: `"Escucha, hijo, los preceptos del maestro e inclina el oído de tu corazón; recibe con gusto el consejo de un padre piadoso y ponlo por obra, a fin de que por el trabajo de la obediencia vuelvas a Aquel de quien te habías alejado por la desidia de la desobediencia."
+
+Esta lectura será provista próximamente. Mientras tanto, te invitamos a rezar el Oficio Divino del día.`,
+    },
+  },
+
+  // DÍA 36
+  {
+    dia: 36,
+    lecturaLiturgica: {
+      titulo: "El Oficio Divino (IV)",
+      contenido: `ELEMENTOS DEL OFICIO DIVINO
+
+Tres son los elementos constitutivos del Oficio Divino: la alabanza, la lectura y la oración, los cuales originan ese coloquio jamás interrumpido entre la Esposa y el Esposo, entre Jesucristo y su Iglesia. "En la alabanza la Esposa habla al Esposo y se complace en decirle toda clase de elogios; en la lectura es el Esposo quien la habla y la regocija a ella con su voz; y finalmente, en la oración, la Esposa, que ha encontrado al Esposo, le confía sus anhelos, sus dolores y sus necesidades y sus sentimientos de gratitud."
+
+La alabanza litúrgica comprende textos de la Sagrada Escritura y de la Tradición. De la Sagrada Escritura son los Salmos, que por su número y frecuente uso forman el fondo principal, y los cánticos, así del Nuevo como del Antiguo Testamento.
+
+De la Tradición eclesiástica son los himnos, como el "Te Deum" y el "Gloria in excelsis", bastante parecidos a los salmos; y los demás verdaderos poemas, divididos en estrofas y compuestos conforme a las reglas de la métrica clásica o a las de la poesía rítmica.
+
+La lectura la proporcionan los libros del Antiguo y Nuevo Testamento, los Santos Padres, las Actas de los Mártires y las Leyendas de los Santos. Es, pues, una lectura santa, abundante y muy sustanciosa. Por eso el Breviario es un compendio de toda la doctrina sagrada y una recopilación preciosa de acontecimientos y de datos históricos y religiosos.
+
+Las oraciones usadas en el Oficio Divino son muy numerosas y de muy diferente hechura. Las más salientes y repetidas son las "Colectas", las cuales son comunes al Breviario y al Misal. Muchos de los salmos, himnos y cánticos son fervorosas plegarias, actos de contrición, gritos de júbilo. Quien quiera aprender a rezar, que maneje el Breviario, y encontrará fórmulas insuperables de oraciones.
+
+LA ASISTENCIA DE LOS FIELES AL SERVICIO DIVINO
+
+"En los tiempos antiguos, la asistencia de los fieles a las Horas del Oficio era mayor; pero fue disminuyendo gradualmente. En rigor de derecho, nada se manda a los seglares en esta materia; pero es sumamente de desear que también ellos tomen parte activa en el canto o en el rezo del Oficio de Vísperas, que en los días festivos se celebren en su propia parroquia."`,
+    },
+    lecturaEspiritual: {
+      titulo: "Lectura del día",
+      fuente: "Regla de San Benito",
+      contenido: `"Escucha, hijo, los preceptos del maestro e inclina el oído de tu corazón; recibe con gusto el consejo de un padre piadoso y ponlo por obra, a fin de que por el trabajo de la obediencia vuelvas a Aquel de quien te habías alejado por la desidia de la desobediencia."
+
+Esta lectura será provista próximamente. Mientras tanto, te invitamos a rezar el Oficio Divino del día.`,
     },
   },
 ];

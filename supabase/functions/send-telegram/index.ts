@@ -219,6 +219,23 @@ function formatearFechaLegible(fechaStr: string): string {
   return formatted.charAt(0).toUpperCase() + formatted.slice(1);
 }
 
+// Comentarios diarios (del PDF Mensajes Diarios)
+const COMENTARIOS: { [dia: number]: string } = {
+  1: `Hoy damos inicio a este itinerario de 64 días que culminará en la Pascua, guiados por la Liturgia y nuestro patrono, San Benito. Siguiendo su regla buscaremos hacer de nuestras vidas una "escuela de servicio divino", cuyo objetivo es reordenar la existencia cotidiana —oración, trabajo, tiempo, relaciones humanas y uso de la tecnología— a la luz de Dios.`,
+  2: `Hoy es día de Fiesta, acompañemos la festividad en lo posible con la Santa Misa y/o Vísperas, prestando atención a las lecturas. Que esta celebración llene de alegría nuestra jornada. Acompañemos con el rezo del Oficio Divino para que la liturgia vaya empapando toda la jornada.`,
+  3: `Un pequeño comentario sobre la frase que recibimos al iniciar cada día en el mensaje de Laudes: las mismas son extraídas del capítulo IV de la Regla, "Los instrumentos de las buenas obras". Consiste en un listado de consejos de San Benito para alcanzar la Santidad. El capítulo contiene 74 instrumentos, por ello es que cada día iremos compartiendo uno para poder ir teniéndolo especialmente presente en esa jornada.`,
+  4: `Como indica el mensaje miércoles y viernes es día de ayuno y abstinencia siguiendo la tradición de la Iglesia. Se considera ayuno a hacer una sola comida formal al día, bien sea al mediodía o por la noche. Y dos colaciones. El mate y otras infusiones no rompen el ayuno.`,
+  10: `Hoy recordamos a Santa Escolástica, hermana de San Benito, con quien compartió la vocación monástica y la santidad.`,
+  13: `Estamos a pocos días de iniciar la Cuaresma, e intensificar este camino que iniciamos en Septuagésima. Vayamos rezando y consultando a nuestro director espiritual o confesor, para seleccionar 3 sacrificios para ofrecer durante los 40 días de la Cuaresma. En la app, en la sección de ajustes, en el apartado de "Realitas" podrán seleccionarlas.`,
+  18: `A partir de hoy comienza una segunda etapa de este itinerario, en la cual vamos a buscar aumentar la intensidad de nuestras oraciones y penitencias, en una preparación más próxima para la Pascua. Recordemos seleccionar los 3 sacrificios que ofreceremos a Dios durante estos 40 días. Respecto al pilar de "Lectio", a partir de hoy iremos leyendo y meditando la obra magna de San Benito, "La Regla".`,
+  19: `El día de hoy leeremos completo el capítulo IV, de "Los instrumentos de las buenas obras". Lo leamos con atención, y dado que son 74, pongamos empeño diariamente en meditar en el que recibimos al iniciar cada día.`,
+};
+
+// Obtener comentario del día
+function getComentarioDelDia(dia: number): string | null {
+  return COMENTARIOS[dia] || null;
+}
+
 // Obtener instrumento del día (1-64 → índice 0-63, si >64 cicla)
 function getInstrumentoDelDia(dia: number): string {
   const index = ((dia - 1) % INSTRUMENTOS.length);
@@ -246,6 +263,7 @@ function generarMensajeLaudes(): string | null {
 
   const fechaLegible = formatearFechaLegible(diaLiturgico.fecha);
   const instrumento = getInstrumentoDelDia(diaLiturgico.dia);
+  const comentario = getComentarioDelDia(diaLiturgico.dia);
 
   let mensaje = `🗓 Día ${diaLiturgico.dia} - ${diaLiturgico.fiesta}
 ${fechaLegible}`;
@@ -255,6 +273,13 @@ ${fechaLegible}`;
     mensaje += `
 
 🍽 Día de ayuno y abstinencia de carne`;
+  }
+
+  // Agregar comentario del día si existe
+  if (comentario) {
+    mensaje += `
+
+📝 ${comentario}`;
   }
 
   mensaje += `
