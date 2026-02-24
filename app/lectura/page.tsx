@@ -197,33 +197,35 @@ function LecturaContent() {
         )}
 
         {/* Lectura Espiritual */}
-        <article className="card p-6 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <BookOpen className="w-5 h-5 text-[var(--primary)]" />
-            <h2 className="text-lg font-semibold text-[var(--text-primary)]">
-              Lectura Espiritual
-            </h2>
-          </div>
+        {lectura.lecturaEspiritual && (
+          <article className="card p-6 mb-6">
+            <div className="flex items-center gap-2 mb-4">
+              <BookOpen className="w-5 h-5 text-[var(--primary)]" />
+              <h2 className="text-lg font-semibold text-[var(--text-primary)]">
+                Lectura Espiritual
+              </h2>
+            </div>
 
-          <h3 className="text-md font-medium text-[var(--text-primary)] mb-2">
-            {lectura.lecturaEspiritual.titulo}
-          </h3>
+            <h3 className="text-md font-medium text-[var(--text-primary)] mb-2">
+              {lectura.lecturaEspiritual.titulo}
+            </h3>
 
-          <p className="text-sm text-[var(--text-muted)] mb-4 italic">
-            {lectura.lecturaEspiritual.fuente}
-          </p>
+            <p className="text-sm text-[var(--text-muted)] mb-4 italic">
+              {lectura.lecturaEspiritual.fuente}
+            </p>
 
-          <div className="prose prose-stone max-w-none">
-            {lectura.lecturaEspiritual.contenido.split("\n\n").map((parrafo, index) => (
-              <p
-                key={index}
-                className="text-[var(--text-primary)] leading-relaxed mb-4 last:mb-0"
-              >
-                {parrafo}
-              </p>
-            ))}
-          </div>
-        </article>
+            <div className="prose prose-stone max-w-none">
+              {lectura.lecturaEspiritual.contenido.split("\n\n").map((parrafo, index) => (
+                <p
+                  key={index}
+                  className="text-[var(--text-primary)] leading-relaxed mb-4 last:mb-0"
+                >
+                  {parrafo}
+                </p>
+              ))}
+            </div>
+          </article>
+        )}
 
         {/* Link a iMass para el Oficio */}
         <section className="mb-6">

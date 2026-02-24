@@ -8,7 +8,7 @@ export interface Lectura {
     titulo: string;
     contenido: string;
   };
-  lecturaEspiritual: {
+  lecturaEspiritual?: {
     titulo: string;
     fuente: string;
     contenido: string;
@@ -633,6 +633,57 @@ Cuando el monje haya subido estos grados de humildad, llegará pronto a aquel am
     },
   },
 
+  // DÍA 24
+  {
+    dia: 24,
+    comentario: `Hoy es día de fiesta, recordemos vivirlo con espíritu festivo y recordemos que podemos suspender una de las tres penitencias para el día de hoy. Dejamos la lectura de la epístola de este santo, que narra su elección como apóstol.¡San Matías, ora pro nobis! Epístola Lección de los Hechos de los Apóstoles (I, 15-26) En aquellos días Levantándose Pedro en medio de los hermanos (hallábanse reunidas unas 120 personas), dijo Hermanos es necesario que se cumpla la Escritura que el Espíritu Santo predijo por boca de David, acerca de Judas, que fue el caudillo de los que prendieron a Jesús el cual era de nuestro número, y suerte nuestro apostolado. Adquirió un campo con el precio de su traición; y ahorcándose reventó por medio y se esparcieron todas sus entrañas. Notorio es el caso a todos los habitantes de Jerusalén, de modo que aquel campo recibió en su lengua el nombre de "Hacéldama", esto es, "campo de la sangre". Porque escrito está en el libro de los Salmos "Desierta queda su morada, y no haya quien habite en ella"; y "reciba otro su episcopado". Conviene, pues, que estos varones que han estado en nuestra compañía todo el tiempo que el Señor Jesús vivió entre nosotros, empezando desde el bautismo de Juan hasta el día en que subió de entre nosotros al cielo, uno de éstos sea con nosotros testigo de su resurrección. Propusieron, pues, a dos a José, llamado Barsabás, por sobrenombre el Justo, y a Matías. Y orando dijeron "Tú, Señor, que conoces los corazones de todos, muéstranos cuál de estos dos has elegido para ocupar el lugar de este ministerio y apostolado, del cual prevaricó Judas, para irse a su lugar". Y echando suerte entre ellos, cayó la suerte en Matías, y fue contado entre los once Apóstoles.`,
+    lecturaEspiritual: {
+      titulo: "San Matías, Apóstol",
+      fuente: "Regla de San Benito - Capítulo XIX",
+      contenido: `EL MODO DE SALMODIAR 1 Creemos que Dios está presente en todas partes, y que "los ojos del Señor vigilan en todo lugar a buenos y malos" (Pr 15,3), 2 pero debemos creer esto sobre todo y sin la menor vacilación, cuando asistimos a la Obra de Dios. 3 Por tanto, acordémonos siempre de lo que dice el Profeta: "Sirvan al Señor con temor" (Sal 2,11). 4 Y otra vez: "Canten sabiamente" (Sal 46,8). 5 Y, "En presencia de los ángeles cantaré para ti" (Sal 137,1). 6 Consideremos, pues, cómo conviene estar en la presencia de la Divinidad y de sus ángeles, 7 y asistamos a la salmodia de tal modo que nuestra mente concuerde con nuestra voz.`,
+    },
+  },
+
+  // DÍA 25
+  {
+    dia: 25,
+    lecturaEspiritual: {
+      titulo: "Miércoles de Témporas",
+      fuente: "Regla de San Benito - Capítulo XX",
+      contenido: `LA REVERENCIA EN LA ORACIÓN 1 Si cuando queremos sugerir algo a hombres poderosos, no osamos hacerlo sino con humildad y reverencia, 2 con cuánta mayor razón se ha de suplicar al Señor Dios de todas las cosas con toda humildad y pura devoción. 3 Y sepamos que seremos escuchados, no por hablar mucho, sino por la pureza de corazón y compunción de lágrimas. 4 Por eso la oración debe ser breve y pura, a no ser que se prolongue por un afecto inspirado por la gracia divina. 5 Pero en comunidad abréviese la oración en lo posible, y cuando el superior dé la señal, levántense todos juntos.`,
+    },
+  },
+
+  // DÍA 26
+  {
+    dia: 26,
+    lecturaEspiritual: {
+      titulo: "San Alejandro",
+      fuente: "Regla de San Benito - Capítulo XLIX",
+      contenido: `LA OBSERVANCIA DE LA CUARESMA 1 Aunque la vida del monje debería tener en todo tiempo una observancia cuaresmal, 2 sin embargo, como son pocos los que tienen semejante fortaleza, los exhortamos a que en estos días de Cuaresma guarden su vida con suma pureza, 3 y a que borren también en estos días santos todas las negligencias de otros tiempos. 4 Lo cual haremos convenientemente, si nos apartamos de todo vicio y nos entregamos a la oración con lágrimas, a la lectura, a la compunción del corazón y a la abstinencia. 5 Por eso, añadamos en estos días algo a la tarea habitual de nuestro servicio, como oraciones particulares o abstinencia de comida y bebida, 6 de modo que cada uno, con gozo del Espíritu Santo, ofrezca voluntariamente a Dios algo sobre la medida establecida, 7 esto es, que prive a su cuerpo de algo de alimento, de bebida, de sueño, de conversación y de bromas, y espere la Pascua con la alegría del deseo espiritual. 8 Lo que cada uno ofrece propóngaselo a su abad, y hágalo con su oración y consentimiento, 9 porque lo que se hace sin permiso del padre espiritual, hay que considerarlo más como presunción y vanagloria que como algo meritorio. 10 Así, pues, todas las cosas hay que hacerlas con la aprobación del abad.`,
+    },
+  },
+
+  // DÍA 27
+  {
+    dia: 27,
+    lecturaEspiritual: {
+      titulo: "Viernes de Témporas",
+      fuente: "Regla de San Benito - Capítulo XXII",
+      contenido: `COMO HAN DE DORMIR LOS MONJES 1 Duerma cada cual en su cama. 2 Reciban de su abad la ropa de cama adecuada a su género de vida. 3 Si es posible, duerman todos en un mismo local, pero si el número no lo permite, duerman de a diez o de a veinte, con ancianos que velen sobre ellos. 4 En este dormitorio arda constantemente una lámpara hasta el amanecer. 5 Duerman vestidos, y ceñidos con cintos o cuerdas. Cuando duerman, no tengan a su lado los cuchillos, no sea que se hieran durante el sueño. 6 Estén así los monjes siempre preparados, y cuando se dé la señal, levántense sin tardanza y apresúrense a anticiparse unos a otros para la Obra de Dios, aunque con toda gravedad y modestia. 7 Los hermanos más jóvenes no tengan las camas contiguas, sino intercaladas con las de los ancianos. 8 Cuando se levanten para la Obra de Dios, anímense discretamente unos a otros, para que los soñolientos no puedan excusarse.`,
+    },
+  },
+
+  // DÍA 28
+  {
+    dia: 28,
+    lecturaEspiritual: {
+      titulo: "Sábado de Témporas",
+      fuente: "Regla de San Benito - Capítulo XLI",
+      contenido: `A QUÉ HORAS SE DEBE COMER 1 Desde la santa Pascua hasta Pentecostés, coman los monjes a la hora sexta, y cenen al anochecer. 2 Desde Pentecostés, durante el verano, si los monjes no trabajan en el campo o no les molesta un calor excesivo, ayunen los miércoles y viernes hasta nona, 3 y los demás días coman a sexta. 4 Pero si trabajan en el campo, o el calor del verano es excesivo, la comida manténgase a la hora sexta. Quede esto a juicio del abad. 5 Éste debe temperar y disponer todo de modo que las almas se salven, y que los hermanos hagan lo que hacen sin justa murmuración. 6 Desde el catorce de setiembre hasta el principio de Cuaresma, coman siempre los hermanos a la hora nona. 7 En Cuaresma, hasta Pascua, coman a la hora de vísperas. 8 Las mismas Vísperas celébrense de tal modo que los que comen, no necesiten luz de lámparas, sino que todo se concluya con la luz del día. 9 Y siempre calcúlese también la hora de la cena o la de la única comida de tal modo que todo se haga con luz natural.`,
+    },
+  },
+
   // DÍA 29
   {
     dia: 29,
@@ -656,12 +707,66 @@ Hay en las Completas un recuerdo de la lectura espiritual de los monjes (la Cap�
 
 Sigue una Antífona a la Santísima Virgen (la "Salve", el "Ave Regina", el "Alma Redemptoris", o el "Regina coeli") con su oración correspondiente y empieza el sagrado silencio de la noche. Ya pueden dormir tranquilos los cristianos bajo la guardia de sus Ángeles tutelares.`,
     },
-    lecturaEspiritual: {
-      titulo: "Lectura del día",
-      fuente: "Regla de San Benito",
-      contenido: `"Escucha, hijo, los preceptos del maestro e inclina el oído de tu corazón; recibe con gusto el consejo de un padre piadoso y ponlo por obra, a fin de que por el trabajo de la obediencia vuelvas a Aquel de quien te habías alejado por la desidia de la desobediencia."
+  },
 
-Esta lectura será provista próximamente. Mientras tanto, te invitamos a rezar el Oficio Divino del día.`,
+  // DÍA 30
+  {
+    dia: 30,
+    lecturaEspiritual: {
+      titulo: "Santos Jovino y Basileo",
+      fuente: "Regla de San Benito - Capítulo XLII",
+      contenido: `QUE NADIE HABLE DESPUÉS DE COMPLETAS 1 Los monjes deben esforzarse en guardar silencio en todo momento, pero sobre todo en las horas de la noche. 2 Por eso, en todo tiempo, ya sea de ayuno o de refección, se procederá así: 3 Si se trata de tiempo en que no se ayuna, después de levantarse de la cena, siéntense todos juntos, y uno lea las "Colaciones" o las "Vidas de los Padres", o algo que edifique a los oyentes, 4 pero no el Heptateuco o los Reyes, porque no les será útil a los espíritus débiles oír esta parte de la Escritura en aquella hora. Léase, sin embargo, en otras horas. 5 Si es día de ayuno, díganse Vísperas, y tras un corto intervalo acudan enseguida a la lectura de las "Colaciones", como dijimos. 6 Lean cuatro o cinco páginas o lo que permita la hora, 7 para que durante ese tiempo de lectura puedan reunirse todos, porque quizás alguno estuvo ocupado en cumplir algún encargo, 8 y todos juntos recen Completas. Al salir de Completas, ninguno tiene ya permiso para decir nada a nadie. 9 Si se encuentra a alguno que quebranta esta regla de silencio, sométaselo a un severo castigo, 10 salvo si lo hace porque es necesario atender a los huéspedes, o si quizás el abad manda algo a alguien. 11 Pero aun esto mismo hágase con suma gravedad y discretísima moderación.`,
+    },
+  },
+
+  // DÍA 31
+  {
+    dia: 31,
+    lecturaEspiritual: {
+      titulo: "San Emeterio y Celedonio",
+      fuente: "Regla de San Benito - Capítulo XLIII",
+      contenido: `LOS QUE LLEGAN TARDE A LA OBRA DE DIOS O A LA MESA 1 Cuando sea la hora del Oficio divino, ni bien oigan la señal, dejen todo lo que tengan entre manos y acudan con gran rapidez, 2 pero con gravedad, para no provocar disipación. 3 Nada, pues, se anteponga a la Obra de Dios. 4 Si alguno llega a las Vigilias después del Gloria del salmo 94 (que por esto queremos que se diga muy pausadamente y con lentitud), 5 no ocupe su puesto en el coro, sino el último de todos o el lugar separado que el abad determine para tales negligentes, para que sea visto por él y por todos. 6 Luego, al terminar la Obra de Dios, haga penitencia con pública satisfacción. 7 Juzgamos que éstos deben colocarse en el último lugar o aparte, para que, al ser vistos por todos, se corrijan al menos por su misma vergüenza. 8 Pero si se quedan fuera del oratorio, habrá alguno quizás que se vuelva a acostar y a dormir, o bien se siente afuera y se entretenga charlando y dé ocasión al maligno. 9 Que entren, pues, para que no lo pierdan todo y en adelante se enmienden. 10 En las Horas diurnas, quien no llega a la Obra de Dios hasta después del verso y del Gloria del primer salmo que se dice después del verso, quédese en el último lugar, según la disposición que arriba dijimos, 11 y no se atreva a unirse al coro de los que salmodian, hasta terminar esta satisfacción, a no ser que el abad lo perdone y se lo permita; 12 pero con tal que el culpable satisfaga por su falta. 13 Quien por su negligencia o culpa no llega a la mesa antes del verso, de modo que todos juntos digan el verso y oren y se sienten a la mesa a un tiempo, 14 sea corregido por esto hasta dos veces. 15 Si después no se enmienda, no se le permita participar de la mesa común, 16 sino que, privado de la compañía de todos, coma solo, sin tomar su porción de vino, hasta que dé satisfacción y se enmiende. 17 Reciba el mismo castigo el que no esté presente cuando se dice el verso después de la comida. 18 Nadie se atreva a tomar algo de comida o bebida ni antes ni después de la hora establecida. 19 Pero si el superior le ofrece algo a alguien, y éste lo rehúsa, cuando lo desee, no reciba lo que antes rehusó, ni nada, absolutamente nada, antes de la enmienda correspondiente.`,
+    },
+  },
+
+  // DÍA 32
+  {
+    dia: 32,
+    lecturaEspiritual: {
+      titulo: "San Casimiro, Confesor",
+      fuente: "Regla de San Benito - Capítulo XXXIII",
+      contenido: `SI LOS MONJES DEBEN TENER ALGO PROPIO 1 En el monasterio se ha de cortar radicalmente este vicio. 2 Que nadie se permita dar o recibir cosa alguna sin mandato del abad, 3 ni tener en propiedad nada absolutamente, ni libro, ni tablillas, ni pluma, nada en absoluto, 4 como a quienes no les es lícito disponer de su cuerpo ni seguir sus propios deseos. 5 Todo lo necesario deben esperarlo del padre del monasterio, y no les está permitido tener nada que el abad no les haya dado o concedido. 6 Y que "todas las cosas sean comunes a todos" (Hch 4,32), como está escrito, de modo que nadie piense o diga que algo es suyo. 7 Si se sorprende a alguno que se complace en este pésimo vicio, amonésteselo una y otra vez, 8 y si no se enmienda, sométaselo a la corrección.`,
+    },
+  },
+
+  // DÍA 33
+  {
+    dia: 33,
+    lecturaEspiritual: {
+      titulo: "San Adrián",
+      fuente: "Regla de San Benito - Capítulo XXXIV",
+      contenido: `SI TODOS DEBEN RECIBIR IGUALMENTE LO NECESARIO 1 Está escrito: "Repartíase a cada uno de acuerdo a lo que necesitaba" (Hch 4,35). 2 No decimos con esto que haya acepción de personas, no lo permita Dios, sino consideración de las flaquezas. 3 Por eso, el que necesita menos, dé gracias a Dios y no se contriste; 4 en cambio, el que necesita más, humíllese por su flaqueza y no se engría por la misericordia. 5 Así todos los miembros estarán en paz. 6 Ante todo, que el mal de la murmuración no se manifieste por ningún motivo en ninguna palabra o gesto. 7 Si alguno es sorprendido en esto, sométaselo a una sanción muy severa.`,
+    },
+  },
+
+  // DÍA 34
+  {
+    dia: 34,
+    lecturaEspiritual: {
+      titulo: "Santas Perpetua y Felicidad, Mártires",
+      fuente: "Regla de San Benito - Capítulo XXXI",
+      contenido: `COMO DEBE SER EL MAYORDOMO DEL MONASTERIO 1 Elíjase como mayordomo del monasterio a uno de la comunidad que sea sabio, maduro de costumbres, sobrio y frugal, que no sea ni altivo, ni agitado, ni propenso a injuriar, ni tardo, ni pródigo, 2 sino temeroso de Dios, y que sea como un padre para toda la comunidad. 3 Tenga el cuidado de todo. 4 No haga nada sin orden del abad, 5 sino que cumpla todo lo que se le mande. 6 No contriste a los hermanos. 7 Si quizás algún hermano pide algo sin razón, no lo entristezca con su desprecio, sino niéguele razonablemente y con humildad lo que aquél pide indebidamente. 8 Mire por su alma, acordándose siempre de aquello del Apóstol: "Quien bien administra, se procura un buen puesto" (1 Tm 3,13). 9 Cuide con toda solicitud de los enfermos, niños, huéspedes y pobres, sabiendo que, sin duda, de todos éstos ha de dar cuenta en el día del juicio. 10 Mire todos los utensilios y bienes del monasterio como si fuesen vasos sagrados del altar. 11 No trate nada con negligencia. 12 No sea avaro ni pródigo, ni dilapide los bienes del monasterio. Obre en todo con mesura y según el mandato del abad. 13 Ante todo tenga humildad, y al que no tiene qué darle, déle una respuesta amable, 14 porque está escrito: "Más vale una palabra amable que la mejor dádiva" (Si 18,17). 15 Tenga bajo su cuidado todo lo que el abad le encargue, y no se entrometa en lo que aquél le prohíba. 16 Proporcione a los hermanos el sustento establecido sin ninguna arrogancia ni dilación, para que no se escandalicen, acordándose de lo que merece, según la palabra divina, aquel que "escandaliza a alguno de los pequeños" (Mt 18,6). 17 Si la comunidad es numerosa, dénsele ayudantes, con cuya asistencia cumpla él mismo con buen ánimo el oficio que se le ha confiado. 18 Dense las cosas que se han de dar, y pídanse las que se han de pedir, en las horas que corresponde, 19 para que nadie se perturbe ni aflija en la casa de Dios.`,
+    },
+  },
+
+  // DÍA 35
+  {
+    dia: 35,
+    comentario: `Hoy es día de fiesta para la comunidad de San Benito, ya que Santo Tomás “el más sabio de los santos y el más santo de los sabios” es uno de nuestros principales patronos. Por ello no dejemos de celebrar el día de hoy como corresponde. Pidiendo la intercesión de este gran santo y doctor de la Iglesia. Dejamos la Epístola correspondiente a la Misa del santo que hoy celebramos Epístola Lección del Libro de la Sabiduría (Sap. VII, 7-14) Deseé inteligencia, y me fue concedida; e invoqué al Espíritu de sabiduría, y vino a mí y la preferí a los reinos y tronos y en nada estimé las riquezas en comparación de ella ni comparé con ella las el oro, respecto de ella, es are-piedras preciosas; porque todo na menuda y la plata en su comparación, será despreciada como lodo. La amé más que a la salud y a la hermosura; y me propuse tenerla por luz, porque es inextinguible su resplandor. Todos los demás bienes me vinieron con ella, y por su mano recibí riquezas sin cuento; y me gozaba en todas ellas, porque me guiaba esta sabiduría; e ignoraba yo que fuese madre de todos estos bienes. Aprendíla sin ficción y la comunico sin envidia, y no encubro sus riquezas porque es un tesoro infinito para los hombres; y los que lo gozan se han hecho partícipes de la amistad de Dios, y agradables a Él, por haber enseñado la sabiduría.`,
+    lecturaEspiritual: {
+      titulo: "Santo Tomás de Aquino, Confesor y Doctor",
+      fuente: "Regla de San Benito - Capítulo XXXV",
+      contenido: `LOS SEMANEROS DE COCINA 1 Sírvanse los hermanos unos a otros, de tal modo que nadie se dispense del trabajo de la cocina, a no ser por enfermedad o por estar ocupado en un asunto de mucha utilidad, 2 porque de ahí se adquiere el premio de una caridad muy grande. 3 Dése ayuda a los débiles, para que no hagan este trabajo con tristeza; 4 y aun tengan todos ayudantes según el estado de la comunidad y la situación del lugar. 5 Si la comunidad es numerosa, el mayordomo sea dispensado de la cocina, como también los que, como ya dijimos, están ocupados en cosas de mayor utilidad. 6 Los demás sírvanse unos a otros con caridad. 7 El que termina el servicio semanal, haga limpieza el sábado. 8 Laven las toallas con las que los hermanos se secan las manos y los pies. 9 Tanto el que sale como el que entra, laven los pies a todos. 10 Devuelva al mayordomo los utensilios de su ministerio limpios y sanos, 11 y el mayordomo, a su vez, entréguelos al que entra, para saber lo que da y lo que recibe. 12 Los semaneros recibirán una hora antes de la comida, un poco de vino y de pan sobre la porción que les corresponde, 13 para que a la hora de la refección sirvan a sus hermanos sin murmuración y sin grave molestia, 14 pero en las solemnidades esperen hasta después de la misa. 15 Al terminar los Laudes del domingo, los semaneros que entran y los que salen, se pondrán de rodillas en el oratorio a los pies de todos, pidiendo que oren por ellos. 16 El que termina su semana, diga este verso: "Bendito seas, Señor Dios, porque me has ayudado y consolado" (cf. Dn 3,22; Sal 85,17). 17 Dicho esto tres veces, el que sale recibirá la bendición. Luego seguirá el que entra diciendo: "Oh Dios, ven en mi ayuda, apresúrate, Señor, a socorrerme" (Sal 69,2). 18 Todos repitan también esto tres veces, y luego de recibir la bendición, entre a servir.`,
     },
   },
 
