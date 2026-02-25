@@ -792,11 +792,21 @@ LA ASISTENCIA DE LOS FIELES AL SERVICIO DIVINO
 "En los tiempos antiguos, la asistencia de los fieles a las Horas del Oficio era mayor; pero fue disminuyendo gradualmente. En rigor de derecho, nada se manda a los seglares en esta materia; pero es sumamente de desear que también ellos tomen parte activa en el canto o en el rezo del Oficio de Vísperas, que en los días festivos se celebren en su propia parroquia."`,
     },
     lecturaEspiritual: {
-      titulo: "Lectura del día",
-      fuente: "Regla de San Benito",
-      contenido: `"Escucha, hijo, los preceptos del maestro e inclina el oído de tu corazón; recibe con gusto el consejo de un padre piadoso y ponlo por obra, a fin de que por el trabajo de la obediencia vuelvas a Aquel de quien te habías alejado por la desidia de la desobediencia."
+      titulo: "Los Hermanos Enfermos",
+      fuente: "Regla de San Benito - Capítulo XXXVI",
+      contenido: `1 Ante todo y sobre todo se ha de atender a los hermanos enfermos, sirviéndolos como a Cristo en persona, 2 pues Él mismo dijo: "Enfermo estuve y me visitaron" (Mt 25,36), 3 y
 
-Esta lectura será provista próximamente. Mientras tanto, te invitamos a rezar el Oficio Divino del día.`,
+"Lo que hicieron a uno de estos pequeños, a mí me lo hicieron" (Mt 25,40). 4 Pero consideren los mismos enfermos que se los sirve para honrar a Dios, y no molesten con pretensiones excesivas a sus hermanos que los sirven. 5 Sin embargo,
+
+se los debe soportar pacientemente, porque tales enfermos hacen ganar una recompensa mayor. 6 Por tanto el abad tenga sumo cuidado de que no padezcan ninguna negligencia.
+
+7 Para los hermanos enfermos haya un local aparte atendido por un servidor temeroso de Dios, diligente y solícito. 8 Ofrézcase a los enfermos, siempre que sea conveniente, el
+
+uso de baños; pero a los sanos, especialmente a los jóvenes, permítaselos más difícilmente. 9 A los enfermos muy débiles les es permitido comer carne para reponerse,
+
+pero cuando mejoren, dejen de hacerlo, como se acostumbra.
+
+10 Preocúpese mucho el abad de que los mayordomos y los servidores no descuiden a los enfermos, porque él es el responsable de toda falta cometida por los discípulos.`,
     },
   },
 ];
