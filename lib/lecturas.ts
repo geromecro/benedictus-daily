@@ -809,6 +809,336 @@ pero cuando mejoren, dejen de hacerlo, como se acostumbra.
 10 Preocúpese mucho el abad de que los mayordomos y los servidores no descuiden a los enfermos, porque él es el responsable de toda falta cometida por los discípulos.`,
     },
   },
+
+  // DÍA 37
+  {
+    dia: 37,
+    lecturaEspiritual: {
+      titulo: "El Lector de la Semana",
+      fuente: "Regla de San Benito - Capítulo XXXVIII",
+      contenido: `1 En la mesa de los hermanos no debe faltar la lectura. Pero no debe leer allí el que de buenas a primeras toma el libro, sino que el lector de toda la semana ha de comenzar su oficio el domingo. 2 Después de la misa y comunión, el que entra en función pida a todos que oren por él, para que Dios aparte de él el espíritu de vanidad. 3 Y digan todos tres veces en el oratorio este verso que comenzará el lector: "Señor, ábreme los labios, y mi boca anunciará tus alabanzas" (Sal 50,17). 4 Reciba luego la bendición y comience su oficio de lector.
+
+5 Guárdese sumo silencio, de modo que no se oiga en la mesa ni el susurro ni la voz de nadie, sino sólo la del lector.
+
+6 Sírvanse los hermanos unos a otros, de modo que los que comen y beben, tengan lo necesario y no les haga falta pedir nada; 7 pero si necesitan algo, pídanlo llamando con un sonido más bien que con la voz. 8 Y nadie se atreva allí a preguntar algo sobre la lectura o sobre cualquier otra cosa, para que no haya ocasión de hablar, 9 a no ser que el superior quiera decir algo brevemente para edificación.
+
+10 El hermano lector de la semana tomará un poco de vino con agua antes de comenzar a leer, a causa de la santa Comunión, y para que no le resulte penoso soportar el ayuno. 11 Luego tomará su alimento con los semaneros de cocina y los servidores.
+
+12 No lean ni canten todos los hermanos por orden, sino los que edifiquen a los oyentes.`,
+    },
+  },
+
+  // DÍA 38
+  {
+    dia: 38,
+    lecturaEspiritual: {
+      titulo: "El Trabajo Manual de Cada Día",
+      fuente: "Regla de San Benito - Capítulo XLVIII",
+      contenido: `1 La ociosidad es enemiga del alma. Por eso los hermanos deben ocuparse en ciertos tiempos en el trabajo manual, y a ciertas horas en la lectura espiritual. 2 Creemos, por lo tanto, que ambas ocupaciones pueden ordenarse de la manera siguiente:
+
+3 Desde Pascua hasta el catorce de septiembre, desde la mañana, al salir de Prima, hasta aproximadamente la hora cuarta, trabajen en lo que sea necesario. 4 Desde la hora cuarta hasta aproximadamente la hora de sexta, dedíquense a la lectura. 5 Después de Sexta, cuando se hayan levantado de la mesa, descansen en sus camas con sumo silencio, y si tal vez alguno quiere leer, lea para sí, de modo que no moleste a nadie. 6 Nona dígase más temprano, mediada la hora octava, y luego vuelvan a trabajar en lo que haga falta hasta Vísperas.
+
+7 Si las condiciones del lugar o la pobreza les obligan a recoger la cosecha por sí mismos, no se entristezcan, 8 porque entonces son verdaderamente monjes si viven del trabajo de sus manos, como nuestros Padres y los Apóstoles. 9 Sin embargo, dispóngase todo con mesura, por deferencia para con los débiles.
+
+10 Desde el catorce de septiembre hasta el comienzo de Cuaresma, dedíquense a la lectura hasta el fin de la hora segunda. 11 Tercia dígase a la hora segunda, y luego trabajen en lo que se les mande hasta nona. 12 A la primera señal para la Hora de Nona, deje cada uno su trabajo, y estén listos para cuando toquen la segunda señal. 13 Después de comer, ocúpense todos en la lectura o en los salmos.
+
+14 En los días de Cuaresma, desde la mañana hasta el fin de la hora tercera, ocúpense en sus lecturas, y luego trabajen en lo que se les mande, hasta la hora décima. 15 En estos días de Cuaresma, reciban todos un libro de la biblioteca que deberán leer ordenada e íntegramente. 16 Estos libros se han de distribuir al principio de Cuaresma.
+
+17 Ante todo desígnense uno o dos ancianos, para que recorran el monasterio durante las horas en que los hermanos se dedican a la lectura. 18 Vean si acaso no hay algún hermano perezoso que se entrega al ocio y a la charla, que no atiende a la lectura, y que no sólo no saca ningún provecho para sí, sino que aún distrae a los demás. 19 Si se halla a alguien así, lo que ojalá no suceda, repréndanselo una y otra vez, 20 y si no se enmienda, aplíquesele el castigo de la Regla, de modo que los demás teman.
+
+21 Y no se comunique un hermano con otro en las horas indebidas.
+
+22 El domingo dedíquense también todos a la lectura, salvo los que están ocupados en los distintos oficios. 23 A aquel que sea tan negligente o perezoso que no quiera o no pueda meditar o leer, encárguesele un trabajo, para que no esté ocioso.
+
+24 A los hermanos enfermos o débiles encárgueseles un trabajo o una labor tal que, ni estén ociosos, ni se sientan agobiados por el peso del trabajo o se vean obligados a abandonarlo. 25 El abad debe considerar la debilidad de éstos.`,
+    },
+  },
+
+  // DÍA 39
+  {
+    dia: 39,
+    lecturaEspiritual: {
+      titulo: "Los Hermanos que Trabajan Lejos del Oratorio o Están de Viaje",
+      fuente: "Regla de San Benito - Capítulo L",
+      contenido: `1 Los hermanos que trabajan muy lejos y no pueden acudir al oratorio a la hora debida, 2 y el abad reconoce que es así, 3 hagan la Obra de Dios allí mismo donde trabajan, doblando las rodillas con temor de Dios.
+
+4 Del mismo modo, los que han salido de viaje, no dejen pasar las horas establecidas, sino récenlas por su cuenta como puedan, y no descuiden pagar la prestación de su servicio.`,
+    },
+  },
+
+  // DÍA 40
+  {
+    dia: 40,
+    comentario: `La Providencia ha querido que hoy, en el día de San Gregorio Papa, autor de la vida de San Benito que leímos durante Septuagésima, inicie justamente la novena al Patriarca de Occidente. Hoy hasta el día 20 de marzo, rezaremos adicionalmente una novena a nuestro patrono pidiendo que nos ayude a vivir con verdadero espíritu benedictino este itinerario.`,
+    lecturaEspiritual: {
+      titulo: "El Oratorio del Monasterio",
+      fuente: "Regla de San Benito - Capítulo LII",
+      contenido: `1 Sea el oratorio lo que dice su nombre, y no se lo use para otra cosa, ni se guarde nada allí. 2 Cuando terminen la Obra de Dios, salgan todos en perfecto silencio, guardando reverencia a Dios, 3 de modo que si quizás un hermano quiere orar privadamente, no se lo impida la importunidad de otro.
+
+4 Y si alguno, en otra ocasión, quiere orar por su cuenta con más recogimiento, que entre sencillamente y ore, pero no en alta voz, sino con lágrimas y con el corazón atento. 5 Por lo tanto, al que no ora así, no se le permita quedarse en el oratorio al concluir la Obra de Dios, no sea que, como se dijo, moleste a otro.`,
+    },
+  },
+
+  // DÍA 41
+  {
+    dia: 41,
+    lecturaEspiritual: {
+      titulo: "Cómo Debe Ser el Abad (Parte 1)",
+      fuente: "Regla de San Benito - Capítulo II",
+      contenido: `1 Un abad digno de presidir un monasterio debe acordarse siempre de cómo se lo llama, y llenar con obras el nombre de superior. 2 Se cree, en efecto, que hace las veces de Cristo en el monasterio, puesto que se lo llama con ese nombre, 3 según lo que dice el Apóstol: "Recibieron el espíritu de adopción de hijos, por el cual clamamos: Abba, Padre" (Rm 8,15).
+
+4 Por lo tanto, el abad no debe enseñar, establecer o mandar nada que se aparte del precepto del Señor, 5 sino que su mandato y su doctrina deben difundir el fermento de la justicia divina en las almas de los discípulos. 6 Recuerde siempre el abad que se le pedirá cuenta en el tremendo juicio de Dios de estas dos cosas: de su doctrina, y de la obediencia de sus discípulos. 7 Y sepa el abad que el pastor será el culpable del detrimento que el Padre de familias encuentre en sus ovejas. 8 Pero si usa toda su diligencia de pastor con el rebaño inquieto y desobediente, y emplea todos sus cuidados para corregir su mal comportamiento, 9 este pastor será absuelto en el juicio del Señor, y podrá decir con el Profeta: "No escondí tu justicia en mi corazón; manifesté tu verdad y tu salvación, pero ellos, desdeñándome, me despreciaron" (Sal 39,11 e Is 1,2). 10 Y entonces, por fin, la muerte misma sea el castigo de las ovejas desobedientes encomendadas a su cuidado.
+
+11 Por tanto, cuando alguien recibe el nombre de abad, debe gobernar a sus discípulos con doble doctrina, 12 esto es, debe enseñar todo lo bueno y lo santo más con obras que con palabras. A los discípulos capaces proponga con palabras los mandatos del Señor, pero a los duros de corazón y a los más simples muestre con sus obras los preceptos divinos. 13 Y cuanto enseñe a sus discípulos que es malo, declare con su modo de obrar que no se debe hacer, no sea que predicando a los demás sea él hallado réprobo, 14 y que si peca, Dios le diga: "¿Por qué predicas tú mis preceptos y tomas en tu boca mi alianza? pues tú odias la disciplina y echaste mis palabras a tus espaldas" (Sal 49,16s), 15 y "Tú, que veías una paja en el ojo de tu hermano ¿no viste una viga en el tuyo?" (cf. Mt 7,3).
+
+16 No haga distinción de personas en el monasterio. 17 No ame a uno más que a otro, sino al que hallare mejor por sus buenas obras o por la obediencia. 18 No anteponga el hombre libre al que viene a la religión de la condición servil, a no ser que exista otra causa razonable. 19 Si el abad cree justamente que ésta existe, hágalo así, cualquiera fuere su rango. De lo contrario, que cada uno ocupe su lugar, 20 porque tanto el siervo como el libre, todos somos uno en Cristo, y servimos bajo un único Señor en una misma milicia, porque no hay acepción de personas ante Dios. 21 Él nos prefiere solamente si nos ve mejores que otros en las buenas obras y en la humildad. 22 Sea, pues, igual su caridad para con todos, y tenga con todos una única actitud según los méritos de cada uno.`,
+    },
+  },
+
+  // DÍA 42
+  {
+    dia: 42,
+    lecturaEspiritual: {
+      titulo: "Cómo Debe Ser el Abad (Parte 2)",
+      fuente: "Regla de San Benito - Capítulo II",
+      contenido: `23 El abad debe, pues, guardar siempre en su enseñanza, aquella norma del Apóstol que dice: "Reprende, exhorta, amonesta" (2 Tm 4,2), 24 es decir, que debe actuar según las circunstancias, ya sea con severidad o con dulzura, mostrando rigor de maestro o afecto de padre piadoso. 25 Debe, pues, reprender más duramente a los indisciplinados e inquietos, pero a los obedientes, mansos y pacientes, debe exhortarlos para que progresen; y le advertimos que amoneste y castigue a los negligentes y a los arrogantes.
+
+26 No disimule los pecados de los transgresores, sino que, cuando empiecen a brotar, córtelos de raíz en cuanto pueda, acordándose de la desgracia de Helí, sacerdote de Silo.
+
+27 A los mejores y más capaces corríjalos de palabra una o dos veces; pero a los malos, a los duros, 28 a los soberbios y a los desobedientes reprimalos en el comienzo del pecado con azotes y otro castigo corporal, sabiendo que está escrito: "Al necio no se lo corrige con palabras" (Pr 29,19), 29 y también: "Pega a tu hijo con la vara, y librarás su alma de la muerte" (Pr 23,14).
+
+30 El abad debe acordarse siempre de lo que es, debe recordar el nombre que lleva, y saber que a quien más se le confía, más se le exige. 31 Y sepa qué difícil y ardua es la tarea que toma: regir almas y servir los temperamentos de muchos, pues con unos debe emplear halagos, reprensiones con otros, y con otros consejos. 32 Deberá conformarse y adaptarse a todos según su condición e inteligencia, de modo que no sólo no padezca detrimento la grey que le ha sido confiada, sino que él pueda alegrarse con el crecimiento del buen rebaño.
+
+33 Ante todo no se preocupe de las cosas pasajeras, terrenas y caducas, de tal modo que descuide o no dé importancia a la salud de las almas encomendadas a él. 34 Piense siempre que recibió el gobierno de almas de las que ha de dar cuenta. 35 Y para que no se excuse en la escasez de recursos, acuérdese de que está escrito: "Busquen el reino de Dios y su justicia, y todas estas cosas se les darán por añadidura" (Mt 6,33), 36 y también: "Nada falta a los que le temen" (Sal 33,10).
+
+37 Sepa que quien recibe almas para gobernar, debe prepararse para dar cuenta de ellas. 38 Tenga por seguro que, en el día del juicio, ha de dar cuenta al Señor de tantas almas como hermanos haya tenido confiados a su cuidado, además, por cierto, de su propia alma. 39 Y así, temiendo siempre la cuenta que va a rendir como pastor de las ovejas a él confiadas, al cuidar de las cuentas ajenas, se vuelve cuidadoso de la suya propia, 40 y al corregir a los otros con sus exhortaciones, él mismo se corrige de sus vicios.`,
+    },
+  },
+
+  // DÍA 43
+  {
+    dia: 43,
+    comentario: `Dentro de los domingos de la cuaresma, el domingo Laetare es un domingo especial como podemos aprender en la lectura litúrgica del día. Es un día excepcional de alegría dentro de la compunción y espíritu de sacrificio de la Cuaresma. El nombre Laetare viene del introito de este domingo que inicia: "Laetare, Jerusalem", alégrate Jerusalén.`,
+    lecturaLiturgica: {
+      titulo: "El Domingo Laetare",
+      contenido: `El domingo "Laetáre" viene a alegrar y reconfortar a los ayunadores de Cuaresma. El Celebrante puede cambiar los ornamentos de color morado por los de color rosa. El órgano deja oír sus acordes. Las flores aparecen en el altar. Todo indica que es éste un domingo excepcional dentro de la Cuaresma, un día de asueto y de santa expansión. Pero a esto solamente tienen derecho los que han venido practicando fielmente los rigores cuaresmales. Para los demás debe ser un domingo de reproches y de censuras.
+
+Tú, oh cristiano, que lees esto y que te preparas a asistir a la Misa: ¿cómo estás cumpliendo las observancias de Cuaresma? ¿Has ayunado, has hecho limosnas, has vivido con cierto recogimiento, te has retirado de las habituales diversiones mundanas? Si todavía no has empezado a hacerlo, suple la falta en esta segunda mitad de la Cuaresma.`,
+    },
+    lecturaEspiritual: {
+      titulo: "Convocación de los Hermanos a Consejo",
+      fuente: "Regla de San Benito - Capítulo III",
+      contenido: `1 Siempre que en el monasterio haya que tratar asuntos de importancia, convoque el abad a toda la comunidad, y exponga él mismo de qué se ha de tratar. 2 Oiga el consejo de los hermanos, reflexione consigo mismo, y haga lo que juzgue más útil. 3 Hemos dicho que todos sean llamados a consejo porque muchas veces el Señor revela al más joven lo que es mejor.
+
+4 Los hermanos den su consejo con toda sumisión y humildad, y no se atrevan a defender con insolencia su opinión. 5 La decisión dependa del parecer del abad, y todos obedecerán lo que él juzgue ser más oportuno. 6 Pero así como conviene que los discípulos obedezcan al maestro, así corresponde que éste disponga todo con probidad y justicia.
+
+7 Todos sigan, pues, la Regla como maestra en todas las cosas, y nadie se aparte temerariamente de ella. 8 Nadie siga en el monasterio la voluntad de su propio corazón.
+
+9 Ninguno se atreva a discutir con su abad atrevidamente, o fuera del monasterio. 10 Pero si alguno se atreve, quede sujeto a la disciplina regular. 11 Mas el mismo abad haga todo con temor de Dios y observando la Regla, sabiendo que ha de dar cuenta, sin duda alguna, de todos sus juicios a Dios, justísimo juez.
+
+12 Pero si las cosas que han de tratarse para utilidad del monasterio son de menor importancia, tome consejo solamente de los ancianos, 13 según está escrito: "Hazlo todo con consejo, y después de hecho no te arrepentirás" (Pr 31,4 Vet lat; y Si 32,24).`,
+    },
+  },
+
+  // DÍA 44
+  {
+    dia: 44,
+    lecturaEspiritual: {
+      titulo: "Con Qué Solicitud Debe el Abad Cuidar de los Excomulgados",
+      fuente: "Regla de San Benito - Capítulo XXVII",
+      contenido: `1 Cuide el abad con la mayor solicitud de los hermanos culpables, porque "no necesitan médico los sanos, sino los enfermos" (Mt 9,12). 2 Por eso debe usar todos los recursos, como un sabio médico. Envíe, pues, "sempectas", esto es, hermanos ancianos prudentes 3 que, como en secreto, consuelen al hermano vacilante, lo animen para que haga una humilde satisfacción, y lo consuelen "para que no sea abatido por una excesiva tristeza" (2 Co 2,7), 4 sino que, como dice el Apóstol, "experimente una mayor caridad" (2 Co 2,8); y todos oren por él.
+
+5 Debe, pues, el abad extremar la solicitud y procurar con toda sagacidad e industria no perder ninguna de las ovejas confiadas a él. 6 Sepa, en efecto, que ha recibido el cuidado de almas enfermas, no el dominio tiránico sobre las sanas, 7 y tema lo que Dios dice en la amenaza del Profeta: "Tomaban lo que veían gordo y desechaban lo flaco" (Ez 34,3s).
+
+8 Imite el ejemplo de piedad del buen Pastor, que dejó noventa y nueve ovejas en los montes, y se fue a buscar una que se había perdido. 9 Y tanto se compadeció de su flaqueza, que se dignó cargarla sobre sus sagrados hombros y volverla así al rebaño.`,
+    },
+  },
+
+  // DÍA 45
+  {
+    dia: 45,
+    lecturaEspiritual: {
+      titulo: "El Orden de la Comunidad",
+      fuente: "Regla de San Benito - Capítulo LXIII",
+      contenido: `1 Guarde cada uno su puesto en el monasterio según su antigüedad en la vida monástica, o de acuerdo al mérito de su vida, o según lo disponga el abad. 2 Éste no debe perturbar la grey que le ha sido confiada, disponiendo algo injustamente, como si tuviera un poder arbitrario, 3 sino que debe pensar siempre que ha de rendir cuenta a Dios de todos sus juicios y acciones.
+
+4 Por lo tanto, mantengan el orden que él haya dispuesto, o el que tengan los mismos hermanos, para acercarse a la paz y a la comunión, para entonar salmos, y para colocarse en el coro.
+
+5 En ningún lugar, absolutamente, sea la edad la que determine el orden o dé preeminencia, 6 porque Samuel y Daniel siendo niños, juzgaron a los ancianos. 7 Así, excepto los que, como dijimos, el abad haya promovido por motivos superiores, o degradado por alguna causa, todos los demás guarden el orden de su ingreso a la vida monástica. 8 Por ejemplo, el que llegó al monasterio a la segunda hora del día, sepa que es menor que el que llegó a la primera, cualquiera sea su edad o dignidad. 9 Pero con los niños, mantengan todos la disciplina en todas las cosas.
+
+10 Los jóvenes honren a sus mayores, y los mayores amen a los más jóvenes. 11 Al dirigirse a alguien, nadie llame a otro por su solo nombre, 12 sino que los mayores digan "hermanos" a los más jóvenes, y los jóvenes díganles "nonos" a sus mayores, que es expresión que denota reverencia paternal.
+
+13 Al abad, puesto que se considera que hace las veces de Cristo, llámeselo "señor" y "abad", no para que se engría, sino por el honor y el amor de Cristo. 14 Por eso piense en esto, y muéstrese digno de tal honor.
+
+15 Dondequiera que se encuentren los hermanos, el menor pida la bendición al mayor. 16 Al pasar un mayor, levántese el más joven y cédale el asiento, sin atreverse a sentarse junto a él, si su anciano no se lo manda, 17 cumpliendo así lo que está escrito: "Adelántense para honrarse unos a otros" (Rm 12,10).
+
+18 Los niños y los adolescentes guarden sus puestos ordenadamente en el oratorio y en la mesa. 19 Fuera de allí y dondequiera que sea, estén sujetos a vigilancia y a disciplina, hasta que lleguen a la edad de la reflexión.`,
+    },
+  },
+
+  // DÍA 46
+  {
+    dia: 46,
+    lecturaEspiritual: {
+      titulo: "La Ordenación del Abad",
+      fuente: "Regla de San Benito - Capítulo LXIV",
+      contenido: `1 Cuando hay que ordenar un abad, téngase siempre como norma que se ha de establecer a aquel a quien toda la comunidad, guiada por el temor de Dios, esté de acuerdo en elegir, o al que elija sólo una parte de la comunidad, aunque pequeña, pero con más sano criterio.
+
+2 El que ha de ser ordenado, debe ser elegido por el mérito de su vida y la doctrina de su sabiduría, aun cuando fuera el último de la comunidad.
+
+3 Pero si toda la comunidad, lo que Dios no permita, elige de común acuerdo a uno que sea tolerante con sus vicios, 4 y estos vicios de algún modo llegan al conocimiento del obispo a cuya diócesis pertenece el lugar en cuestión, o son conocidos por los abades o cristianos vecinos, 5 impidan éstos la conspiración de los malos, y establezcan en la casa de Dios un administrador digno, 6 sabiendo que han de ser bien recompensados, si obran con rectitud y por celo de Dios, y que, contrariamente, pecan si no lo hacen.
+
+7 El que ha sido ordenado abad, considere siempre la carga que tomó sobre sí, y a quién ha de rendir cuenta de su administración. 8 Y sepa que debe más servir que mandar. 9 Debe ser docto en la ley divina, para que sepa y tenga de dónde sacar cosas nuevas y viejas; sea casto, sobrio, misericordioso, 10 y siempre prefiera la misericordia a la justicia, para que él lo alcance lo mismo. 11 Odie los vicios, pero ame a los hermanos. 12 Aun al corregir, obre con prudencia y no se exceda, no sea que por raspar demasiado la herrumbre se quiebre el recipiente; 13 tenga siempre presente su debilidad, y recuerde que no hay que quebrar la caña hendida (cf. Mt 12,20). 14 No decimos con esto que deje crecer los vicios, sino que debe cortarlos con prudencia y caridad, según vea que conviene a cada uno, como ya dijimos. 15 Y trate de ser más amado que temido.
+
+16 No sea turbulento ni ansioso, no sea exagerado ni obstinado, no sea celoso ni demasiado suspicaz, porque nunca tendrá descanso. 17 Sea próvido y considerado en todas sus disposiciones, y ya se trate de cosas de Dios o de cosas del siglo, discierna y modere el trabajo que encomienda, 18 recordando la discreción del santo Jacob que decía: "Si fatigo mis rebaños haciéndolos andar demasiado, morirán todos en un día" (Gn 33,13). 19 Tomando, pues, este y otros testimonios de discreción, que es madre de virtudes, modere todo de modo que los fuertes deseen más y los débiles no rehúyan.
+
+20 Sobre todo, guarde íntegramente la presente Regla, 21 para que, habiendo administrado bien, oiga del Señor lo que oyó aquel siervo bueno que distribuyó a su tiempo el trigo entre sus consiervos: 22 "En verdad les digo" - dice - "que lo establecerá sobre todos sus bienes" (Mt 24,47).`,
+    },
+  },
+
+  // DÍA 47
+  {
+    dia: 47,
+    lecturaEspiritual: {
+      titulo: "Los Porteros del Monasterio",
+      fuente: "Regla de San Benito - Capítulo LXVI",
+      contenido: `1 A la puerta del monasterio póngase a un anciano discreto, que sepa recibir recados y transmitirlos, y cuya madurez no le permita estar ocioso.
+
+2 Este portero debe tener su celda junto a la puerta, para que los que lleguen encuentren siempre presente quién les responda. 3 En cuanto alguien golpee o llame un pobre, responda enseguida "Deo gratias" o "Benedic", 4 y con toda la mansedumbre que inspira el temor de Dios, conteste prontamente con fervor de caridad.
+
+5 Si este portero necesita un ayudante, désele un hermano más joven.
+
+6 Si es posible, debe construirse el monasterio de modo que tenga todo lo necesario, esto es, agua, molino, huerta, y que las diversas artes se ejerzan dentro del monasterio, 7 para que los monjes no tengan necesidad de andar fuera, porque esto no conviene en modo alguno a sus almas.
+
+8 Queremos que esta Regla se lea muchas veces en comunidad, para que ninguno de los hermanos alegue ignorancia.`,
+    },
+  },
+
+  // DÍA 48
+  {
+    dia: 48,
+    lecturaEspiritual: {
+      titulo: "Cómo Han de Ser Corregidos los Niños en su Menor Edad",
+      fuente: "Regla de San Benito - Capítulo XXX",
+      contenido: `1 Cada uno debe ser tratado según su edad y capacidad. 2 Por eso, los niños y los adolescentes, o aquellos que son incapaces de comprender la gravedad de la pena de la excomunión, 3 siempre que cometan una falta, deberán ser sancionados con rigurosos ayunos o corregidos con ásperos azotes, para que sanen.`,
+    },
+  },
+
+  // DÍA 49
+  {
+    dia: 49,
+    comentario: `Hoy es un día de celebración especial, celebramos al patriarca que nos está guiando y acompañando en este itinerario que iniciamos en Septuagésima, Fuit vir vitae gratia Benedictus et nomine. No dejemos de asistir a Misa y encomendarnos a su intercesión por los frutos de este camino de preparación a la Pascua.`,
+    lecturaLiturgica: {
+      titulo: "Misa propia de San Benito",
+      contenido: `San Benito, gran patriarca de los montes de Occidente posee una Misa propia que incluye incluso una secuencia: "Laeta quies magni Ducis". Dejamos el link para quienes puedan escucharla y transcribimos el texto:
+
+LATÍN
+
+Læta quies* magni ducis,
+Dona ferens novæ lucis,
+Hódie recólitur.
+
+Caris datur piæ menti,
+Corde sonet in ardénti,
+Quídquid foris prómitur.
+
+Hunc per callem oriéntis
+Admirémur ascéndentis
+Patriárchæ spéciem.
+
+Amplum semen magnæ prolis
+Illum fecit instar solis
+Ábrahæ persímilem.
+
+Corvum cernis ministrántem,
+Hinc Elíam latitántem
+Specu nosce párvulo.
+
+Elisǽus dignoscátur,
+Cum secúris revocátur
+De torréntis álveo.
+
+Illum Joseph candor morum,
+Illum Jacob futurórum
+Mens efféci cónscia.
+
+Ipse memor suæ gentis,
+Nos perdúcat in manéntis.
+Semper Christi gáudia.
+Amen. (T.P. Allelúja.)
+
+TRADUCCIÓN
+
+Hoy se celebra
+El reposo* feliz del gran Caudillo,
+Que trae dones de una nueva luz.
+
+La gracia es dada al alma piadosa:
+Resuene en el corazón fervoroso
+Cuanto se expresa exteriormente.
+
+Del esplendoroso Patriarca
+Admiremos el ascenso
+Por la senda de Oriente.
+
+La amplia estirpe de su gran simiente
+Hácelo resplandecer cual sol
+A semejanza de Abrahán.
+
+Mira el cuervo que le sirve,
+Reconociéndole en la angosta cueva
+Donde se oculta como Elías.
+
+A Eliseo se parece,
+Cuando hace subir el hacha
+Del cauce del río.
+
+La mente le parangona
+A José por sus santas maneras,
+Y a Jacob por sus vaticinios.
+
+Que él, que siempre se acordó de sus hijos,
+Nos conduzca a la gloria
+De Cristo que permanece para siempre.
+Amén. (T.P. Aleluya).`,
+    },
+    lecturaEspiritual: {
+      titulo: "La Profecía que de su Muerte Hizo a los Monjes",
+      fuente: "Vida de San Benito - Capítulo XXXVII",
+      contenido: `En el mismo año que había de salir de esta vida, anunció el día de su santísima muerte a algunos de los monjes que vivían con él y a otros que estaban lejos; a los que estaban presentes les recomendó que guardaran silencio de lo que habían oído y a los ausentes les indicó la señal que les daría cuando su alma saliera del cuerpo.
+
+Seis días antes de su muerte mandó abrir su sepultura. Pronto fue atacado por la fiebre y comenzó a fatigarse a causa de su violento ardor. Como la enfermedad se agravaba cada día más, al sexto día se hizo llevar por sus discípulos al oratorio, donde confortado para la salida de este mundo con la recepción del cuerpo y la sangre del Señor y apoyando sus débiles miembros en las manos de sus discípulos, permaneció de pie con las manos levantadas al cielo y exhaló el último suspiro, entre palabras de oración.
+
+En el mismo día, dos de sus monjes, uno que vivía en el mismo monasterio y otro que estaba lejos de él tuvieron una misma e idéntica visión. Vieron en efecto un camino adornado de tapices y resplandeciente de innumerables lámparas, que en dirección a Oriente iba desde su monasterio al cielo. En la parte superior del camino, un hombre de aspecto venerable y lleno de luz les preguntó si sabían qué camino era el que estaban viendo. Al contestarle ellos que lo ignoraban, les dijo: "Éste es el camino por el cual el amado del Señor, Benito, ha subido al cielo". Así, pues, los presentes vieron la muerte del santo varón y los ausentes la conocieron por la señal que les había dado.
+
+Fue sepultado en el oratorio de San Juan Bautista, que él mismo había edificado sobre el destruido altar de Apolo. Y tanto aquí como en la cueva de Subiaco, donde antes había habitado, brilla hasta el día de hoy por sus milagros, cuando lo merece la fe de quienes los piden.`,
+    },
+  },
+
+  // DÍA 50
+  {
+    dia: 50,
+    comentario: `La semana que viene inicia la Semana Santa, y hoy iniciamos la semana de Pasión que la precede. Es momento de intensificar la preparación ya próxima a la semana más importante del año del cristiano. Desde hoy se velan las imágenes religiosas con mantos morados, anunciando la pasión que se avecina.`,
+    lecturaLiturgica: {
+      titulo: "Primer Domingo de Pasión",
+      contenido: `La Cuaresma anda ya adelantada. Pronto asomará la "Pascua florida" y entraremos en los conmovedores misterios de la Semana Santa. Hoy mismo, Domingo de Pasión, aparecen los altares y las estatuas cubiertos de luto, anunciando el luto y el duelo de la Iglesia, y de todos sus buenos hijos, por la vecina Muerte del Salvador.
+
+¿Has cumplido tú ya con Pascua, o te preparas de verdad a cumplir pronto con ese sagrado deber? ¿Has confesado y comulgado durante la Cuaresma, o te preparas a confesar y comulgar en esta su última quincena? ¿Cuántos años hace que no te has confesado y que no has comulgado por Pascua? ¿Por qué no lo has hecho? ¿Por qué estás resuelto a no hacerlo tampoco este año? ¿Tienes miedo a no ser perdonado? ¿Te parecen demasiado grandes y numerosos tus pecados?
+
+Si piensas así, irrogas gravísima injuria al Salvador, que murió por ti y por ti derramó su sangre. A Dios no le asustan tus pecados, pues desea perdonártelos; en cambio, le ofende tu poca confianza en Él, que es misericordioso y perdonador hasta lo infinito. Confiésate, pues, y vuelca en el Corazón de Jesús tus miserias, que Él te las trocará por riquezas de gracia.`,
+    },
+    lecturaEspiritual: {
+      titulo: "La Profecía que de su Muerte Hizo a los Monjes",
+      fuente: "Vida de San Benito - Capítulo XXXVII",
+      contenido: `En el mismo año que había de salir de esta vida, anunció el día de su santísima muerte a algunos de los monjes que vivían con él y a otros que estaban lejos; a los que estaban presentes les recomendó que guardaran silencio de lo que habían oído y a los ausentes les indicó la señal que les daría cuando su alma saliera del cuerpo.
+
+Seis días antes de su muerte mandó abrir su sepultura. Pronto fue atacado por la fiebre y comenzó a fatigarse a causa de su violento ardor. Como la enfermedad se agravaba cada día más, al sexto día se hizo llevar por sus discípulos al oratorio, donde confortado para la salida de este mundo con la recepción del cuerpo y la sangre del Señor y apoyando sus débiles miembros en las manos de sus discípulos, permaneció de pie con las manos levantadas al cielo y exhaló el último suspiro, entre palabras de oración.
+
+En el mismo día, dos de sus monjes, uno que vivía en el mismo monasterio y otro que estaba lejos de él tuvieron una misma e idéntica visión. Vieron en efecto un camino adornado de tapices y resplandeciente de innumerables lámparas, que en dirección a Oriente iba desde su monasterio al cielo. En la parte superior del camino, un hombre de aspecto venerable y lleno de luz les preguntó si sabían qué camino era el que estaban viendo. Al contestarle ellos que lo ignoraban, les dijo: "Éste es el camino por el cual el amado del Señor, Benito, ha subido al cielo". Así, pues, los presentes vieron la muerte del santo varón y los ausentes la conocieron por la señal que les había dado.
+
+Fue sepultado en el oratorio de San Juan Bautista, que él mismo había edificado sobre el destruido altar de Apolo. Y tanto aquí como en la cueva de Subiaco, donde antes había habitado, brilla hasta el día de hoy por sus milagros, cuando lo merece la fe de quienes los piden.`,
+    },
+  },
 ];
 
 // Lectura por defecto para días sin contenido cargado
