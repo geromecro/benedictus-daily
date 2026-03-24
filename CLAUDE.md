@@ -164,8 +164,12 @@ The app follows a 4-pillar spiritual framework from the Benedictus program:
 ## Readings Status
 
 Daily readings are stored in `lib/lecturas.ts`:
-- **Days 1-9**: Populated with "Vida de San Benito" excerpts
-- **Days 10-64**: Pending content (55 days remaining)
+- **Days 1-17**: Populated with "Vida de San Benito" excerpts
+- **Days 18-28, 30-35, 37-48, 51-56**: Populated with "Regla de San Benito" excerpts
+- **Days 29, 36, 43, 49, 50**: Have both liturgical and spiritual readings
+- **Days 49-50**: Include "Vida de San Benito" Cap. XXXVII
+- **Days 57-64**: Pending content (8 days remaining)
+- **Source PDF**: `/Users/geronimo/Downloads/Mensajes Diarios-4.pdf` (days 1-56)
 
 ## Language
 

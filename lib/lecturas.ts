@@ -1030,7 +1030,7 @@ Tú, oh cristiano, que lees esto y que te preparas a asistir a la Misa: ¿cómo 
     comentario: `Hoy es un día de celebración especial, celebramos al patriarca que nos está guiando y acompañando en este itinerario que iniciamos en Septuagésima, Fuit vir vitae gratia Benedictus et nomine. No dejemos de asistir a Misa y encomendarnos a su intercesión por los frutos de este camino de preparación a la Pascua.`,
     lecturaLiturgica: {
       titulo: "Misa propia de San Benito",
-      contenido: `San Benito, gran patriarca de los montes de Occidente posee una Misa propia que incluye incluso una secuencia: "Laeta quies magni Ducis". Dejamos el link para quienes puedan escucharla y transcribimos el texto:
+      contenido: `San Benito, gran patriarca de los monjes de Occidente posee una Misa propia que incluye incluso una secuencia: "Laeta quies magni Ducis". Dejamos el link para quienes puedan escucharla y transcribimos el texto:
 
 LATÍN
 
@@ -1137,6 +1137,67 @@ Seis días antes de su muerte mandó abrir su sepultura. Pronto fue atacado por 
 En el mismo día, dos de sus monjes, uno que vivía en el mismo monasterio y otro que estaba lejos de él tuvieron una misma e idéntica visión. Vieron en efecto un camino adornado de tapices y resplandeciente de innumerables lámparas, que en dirección a Oriente iba desde su monasterio al cielo. En la parte superior del camino, un hombre de aspecto venerable y lleno de luz les preguntó si sabían qué camino era el que estaban viendo. Al contestarle ellos que lo ignoraban, les dijo: "Éste es el camino por el cual el amado del Señor, Benito, ha subido al cielo". Así, pues, los presentes vieron la muerte del santo varón y los ausentes la conocieron por la señal que les había dado.
 
 Fue sepultado en el oratorio de San Juan Bautista, que él mismo había edificado sobre el destruido altar de Apolo. Y tanto aquí como en la cueva de Subiaco, donde antes había habitado, brilla hasta el día de hoy por sus milagros, cuando lo merece la fe de quienes los piden.`,
+    },
+  },
+
+  // DÍA 51
+  {
+    dia: 51,
+    lecturaEspiritual: {
+      titulo: "Si a un Hermano le Mandan Cosas Imposibles",
+      fuente: "Regla de San Benito - Capítulo LXVIII",
+      contenido: `1 Si sucede que a un hermano se le mandan cosas difíciles o imposibles, reciba éste el precepto del que manda con toda mansedumbre y obediencia. 2 Pero si ve que el peso de la carga excede absolutamente la medida de sus fuerzas, exponga a su superior las causas de su imposibilidad con paciencia y oportunamente, 3 y no con soberbia, resistencia o contradicción. 4 Pero si después de esta sugerencia, el superior mantiene su decisión, sepa el más joven que así conviene, 5 y confiando por la caridad en el auxilio de Dios, obedezca.`,
+    },
+  },
+
+  // DÍA 52
+  {
+    dia: 52,
+    lecturaEspiritual: {
+      titulo: "Que se Obedezcan Unos a Otros",
+      fuente: "Regla de San Benito - Capítulo LXXI",
+      contenido: `1 El bien de la obediencia debe ser practicado por todos, no sólo respecto del abad, sino que los hermanos también deben obedecerse unos a otros, 2 sabiendo que por este camino de la obediencia irán a Dios. 3 Den prioridad a lo que mande el abad o las autoridades instituidas por él, a lo que no permitimos que se antepongan órdenes privadas, pero en todo lo demás, 4 los más jóvenes obedezcan a los mayores con toda caridad y solicitud. 5 Y si se halla algún rebelde, sea corregido. 6 Si algún hermano es corregido en algo por su abad o por algún superior, aunque fuere por un motivo mínimo, 7 o nota que el ánimo de alguno de ellos está un tanto irritado o resentido contra él, 8 al punto y sin demora arrójese a sus pies y permanezca postrado en tierra dando satisfacción, hasta que aquella inquietud se sosiegue con la bendición. 9 Pero si alguno menosprecia hacerlo, sométaselo a pena corporal, y si fuere contumaz, expúlsenlo del monasterio.`,
+    },
+  },
+
+  // DÍA 53
+  {
+    dia: 53,
+    lecturaEspiritual: {
+      titulo: "El Buen Celo que Han de Tener los Monjes",
+      fuente: "Regla de San Benito - Capítulo LXXII",
+      contenido: `1 Así como hay un mal celo de amargura que separa de Dios y lleva al infierno, 2 hay también un celo bueno que separa de los vicios y conduce a Dios y a la vida eterna. 3 Practiquen, pues, los monjes este celo con la más ardiente caridad, 4 esto es, "adelántense para honrarse unos a otros" (Rm 12,10); 5 tolérense con suma paciencia sus debilidades, tanto corporales como morales; 6 obedézcanse unos a otros a porfía; 7 nadie busque lo que le parece útil para sí, sino más bien para otro; 8 practiquen la caridad fraterna castamente; 9 teman a Dios con amor; 10 amen a su abad con una caridad sincera y humilde; 11 y nada absolutamente antepongan a Cristo, 12 el cual nos lleve a todos juntamente a la vida eterna.`,
+    },
+  },
+
+  // DÍA 54
+  {
+    dia: 54,
+    lecturaEspiritual: {
+      titulo: "La Recepción de los Huéspedes",
+      fuente: "Regla de San Benito - Capítulo LIII",
+      contenido: `1 Recíbanse a todos los huéspedes que llegan como a Cristo, pues Él mismo ha de decir: "Huésped fui y me recibieron" (Mt 25,35). 2 A todos dése el honor que corresponde, pero sobre todo a los hermanos en la fe y a los peregrinos. 3 Cuando se anuncie un huésped, el superior o los hermanos salgan a su encuentro con la más solícita caridad. 4 Oren primero juntos y dense luego la paz. 5 No den este beso de paz antes de la oración, sino después de ella, a causa de las ilusiones diabólicas. 6 Muestren la mayor humildad al saludar a todos los huéspedes que llegan o se van, 7 inclinando la cabeza o postrando todo el cuerpo en tierra, adorando en ellos a Cristo, que es a quien se recibe. 8 Lleven a orar a los huéspedes que reciben, y luego el superior, o quien éste mandare, siéntese con ellos. 9 Léanle al huésped la Ley divina para que se edifique, y trátenlo luego con toda cortesía. 10 En atención al huésped, el superior no ayunará (a no ser que sea un día de ayuno importante que no pueda quebrantarse), 11 pero los hermanos continúen ayunando como de costumbre. 12 El abad vierta el agua para lavar las manos de los huéspedes, 13 y tanto el abad como toda la comunidad laven los pies a los huéspedes. 14 Después de lavarlos, digan este verso: "Hemos recibido, Señor, tu misericordia en medio de tu templo" (Sal 47,10). 15 Al recibir a pobres y peregrinos se tendrá el máximo de cuidado y solicitud, porque en ellos se recibe especialmente a Cristo, pues cuando se recibe a ricos, el mismo temor que inspiran, induce a respetarlos. 16 Debe haber una cocina aparte para el abad y los huéspedes, para que éstos, que nunca faltan en el monasterio, no incomoden a los hermanos, si llegan a horas imprevistas. 17 Dos hermanos que cumplan bien su oficio, encárguense de esta cocina durante un año. 18 Si es necesario, se les proporcionará ayudantes para que sirvan sin murmuración; por el contrario, cuando estén menos ocupados, vayan a trabajar a donde se los mande. 19 Y no sólo con éstos, sino con todos los que trabajan en oficios del monasterio, téngase esta consideración 20 de concederles ayuda cuando lo necesiten, pero luego, cuando estén desocupados, obedezcan lo que les manden. 21 Un hermano, cuya alma esté poseída del temor de Dios, se encargará de la hospedería, 22 en la cual habrá un número suficiente de camas preparadas. Y la casa de Dios sea sabiamente administrada por varones sabios. 23 No trate con los huéspedes ni converse con ellos quien no estuviere encargado de hacerlo. 24 Pero si alguno los encuentra o los ve, salúdelos humildemente, como dijimos, pida la bendición y pase de largo, diciendo que no le es lícito hablar con un huésped.`,
+    },
+  },
+
+  // DÍA 55
+  {
+    dia: 55,
+    lecturaEspiritual: {
+      titulo: "El Vestido y Calzado de los Monjes",
+      fuente: "Regla de San Benito - Capítulo LV",
+      contenido: `1 Dése a los hermanos la ropa que necesiten según el tipo de las regiones en que viven o el clima de ellas, 2 pues en las regiones frías se necesita más, y en las cálidas menos. 3 Esta apreciación le corresponde al abad. 4 Por nuestra parte, sin embargo, creemos que en lugares templados a cada monje le basta tener cogulla y túnica 5 (la cogulla velluda en invierno, y ligera y usada en verano), 6 un escapulario para el trabajo, y medias y zapatos para los pies. 7 No se quejen los monjes del color o de la tosquedad de estas prendas, sino acéptenlas tales cuales se puedan conseguir en la provincia donde vivan, o que puedan comprarse más baratas. 8 Preocúpese el abad de la medida de estos mismos vestidos, para que no les queden cortos a los que los usan, sino a su medida. 9 Cuando reciban vestidos nuevos, devuelvan siempre al mismo tiempo los viejos, que han de guardarse en la ropería para los pobres. 10 Pues al monje le bastan dos túnicas y dos cogullas, para poder cambiarse de noche y para lavarlas; 11 tener más que esto es superfluo y debe suprimirse. 12 Devuelvan también las medias y todo lo viejo, cuando reciban lo nuevo. 13 Los que salen de viaje, reciban ropa interior de la ropería, y al volver devuélvanla lavada. 14 Haya también cogullas y túnicas un poco mejores que las de diario; recíbanlas de la ropería los que salen de viaje, y devuélvanlas al regresar. 15 Como ropa de cama es suficiente una estera, una manta, un cobertor y una almohada. 16 El abad ha de revisar frecuentemente las camas, para evitar que se guarde allí algo en propiedad. 17 Y si se descubre que alguien tiene alguna cosa que el abad no le haya concedido, sométaselo a gravísimo castigo. 18 Para cortar de raíz este vicio de la propiedad, provea el abad todas las cosas que son necesarias, 19 esto es: cogulla, túnica, medias, zapatos, cinturón, cuchillo, pluma, aguja, pañuelo y tablillas para escribir, para eliminar así todo pretexto de necesidad. 20 Sin embargo, tenga siempre presente el abad aquella sentencia de los Hechos de los Apóstoles: "Se daba a cada uno lo que necesitaba" (Hch 4,35). 21 Así, pues, atienda el abad a las flaquezas de los necesitados y no a la mala voluntad de los envidiosos. 22 Y en todas sus decisiones piense en la retribución de Dios.`,
+    },
+  },
+
+  // DÍA 56
+  {
+    dia: 56,
+    comentario: `Hoy sábado de pasión terminamos el tiempo de cuaresma para dar inicio al tiempo de Semana Santa. Hoy concluimos así mismo la lectura de la Santa Regla del Patriarca San Benito. Con el deseo de seguir su escuela de servicio divino, y mantener el centro en la liturgia en esta Semana Santa, que es abundantemente rica en textos, ritos y cantos. Por ello durante la semana santa iremos compartiendo los textos que la liturgia nos va proponiendo para cada día.`,
+    lecturaEspiritual: {
+      titulo: "En esta Regla no Está Contenida Toda la Práctica de la Justicia",
+      fuente: "Regla de San Benito - Capítulo LXXIII",
+      contenido: `1 Hemos escrito esta Regla para que, observándola en los monasterios, manifestemos tener alguna honestidad de costumbres, o un principio de vida monástica. 2 Pero para el que corre hacia la perfección de la vida monástica, están las enseñanzas de los santos Padres, cuya observancia lleva al hombre a la cumbre de la perfección. 3 Porque ¿qué página o qué sentencia de autoridad divina del Antiguo o del Nuevo Testamento, no es rectísima norma de vida humana? 4 O ¿qué libro de los santos Padres católicos no nos apremia a que, por un camino recto, alcancemos a nuestro Creador? 5 Y también las Colaciones de los Padres, las Instituciones y sus Vidas, como también la Regla de nuestro Padre san Basilio, 6 ¿qué otra cosa son sino instrumento de virtudes para monjes de vida santa y obedientes? 7 Pero para nosotros, perezosos, licenciosos y negligentes, son motivo de vergüenza y confusión. 8 Quienquiera, pues, que te apresuras hacia la patria celestial, practica, con la ayuda de Cristo, esta mínima Regla de iniciación que hemos delineado, 9 y entonces, por fin, llegarás, con la protección de Dios, a las cumbres de doctrina y virtudes que arriba dijimos. Amén.`,
     },
   },
 ];

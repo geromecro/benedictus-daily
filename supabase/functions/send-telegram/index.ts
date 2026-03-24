@@ -238,6 +238,7 @@ const COMENTARIOS: { [dia: number]: string } = {
   43: `Dentro de los domingos de la cuaresma, el domingo Laetare es un domingo especial. Es un día excepcional de alegría dentro de la compunción y espíritu de sacrificio de la Cuaresma. El nombre Laetare viene del introito de este domingo que inicia: "Laetare, Jerusalem", alégrate Jerusalén.`,
   49: `Hoy es un día de celebración especial, celebramos al patriarca que nos está guiando y acompañando en este itinerario que iniciamos en Septuagésima, Fuit vir vitae gratia Benedictus et nomine. No dejemos de asistir a Misa y encomendarnos a su intercesión por los frutos de este camino de preparación a la Pascua.`,
   50: `La semana que viene inicia la Semana Santa, y hoy iniciamos la semana de Pasión que la precede. Es momento de intensificar la preparación ya próxima a la semana más importante del año del cristiano. Desde hoy se velan las imágenes religiosas con mantos morados, anunciando la pasión que se avecina.`,
+  56: `Hoy sábado de pasión terminamos el tiempo de cuaresma para dar inicio al tiempo de Semana Santa. Hoy concluimos así mismo la lectura de la Santa Regla del Patriarca San Benito. Con el deseo de seguir su escuela de servicio divino, y mantener el centro en la liturgia en esta Semana Santa, que es abundantemente rica en textos, ritos y cantos. Por ello durante la semana santa iremos compartiendo los textos que la liturgia nos va proponiendo para cada día.`,
 };
 
 // Obtener comentario del día
