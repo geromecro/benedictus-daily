@@ -168,8 +168,10 @@ Daily readings are stored in `lib/lecturas.ts`:
 - **Days 18-28, 30-35, 37-48, 51-56**: Populated with "Regla de San Benito" excerpts
 - **Days 29, 36, 43, 49, 50**: Have both liturgical and spiritual readings
 - **Days 49-50**: Include "Vida de San Benito" Cap. XXXVII
-- **Days 57-64**: Pending content (8 days remaining)
-- **Source PDF**: `/Users/geronimo/Downloads/Mensajes Diarios-4.pdf` (days 1-56)
+- **Days 57-64**: Holy Week readings (Passion narratives from Matthew, Mark, Luke, John + liturgical texts)
+- **Day 65**: Easter Monday closing comentario (no readings)
+- **All 65 days complete** - no pending content
+- **Source PDF**: `/Users/geronimo/Downloads/Mensajes Diarios-5.pdf` (days 1-65)
 
 ## Language
 
